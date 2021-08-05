@@ -1,0 +1,145 @@
+@-webkit-keyframes middle {
+  from {
+    -webkit-transform: rotate(20deg) translate(0, 0);
+            transform: rotate(20deg) translate(0, 0);
+  }
+  to {
+    -webkit-transform: rotate(0) translate(0%, -100%);
+            transform: rotate(0) translate(0%, -100%);
+    background-color: #F1A72B;
+  }
+}
+
+@keyframes middle {
+  from {
+    -webkit-transform: rotate(20deg) translate(0, 0);
+            transform: rotate(20deg) translate(0, 0);
+  }
+  to {
+    -webkit-transform: rotate(0) translate(0%, -100%);
+            transform: rotate(0) translate(0%, -100%);
+    background-color: #F1A72B;
+  }
+}
+
+@-webkit-keyframes bottom {
+  from {
+    -webkit-transform: rotate(45deg) translate(0);
+            transform: rotate(45deg) translate(0);
+  }
+  to {
+    -webkit-transform: rotate(0deg) translate(0%, -200%);
+            transform: rotate(0deg) translate(0%, -200%);
+    background-color: #F1A72B;
+  }
+}
+
+@keyframes bottom {
+  from {
+    -webkit-transform: rotate(45deg) translate(0);
+            transform: rotate(45deg) translate(0);
+  }
+  to {
+    -webkit-transform: rotate(0deg) translate(0%, -200%);
+            transform: rotate(0deg) translate(0%, -200%);
+    background-color: #F1A72B;
+  }
+}
+
+@-webkit-keyframes disappear {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+.middle {
+  -webkit-animation: middle 0.75s linear;
+          animation: middle 0.75s linear;
+}
+
+.bottom {
+  -webkit-animation: bottom 0.75s linear;
+          animation: bottom 0.75s linear;
+}
+
+.disappear {
+  -webkit-animation: disappear 0.75s linear;
+          animation: disappear 0.75s linear;
+}
+
+body {
+  background-color: #FFFFF2;
+  color: #323232;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #F1A72B;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+nav {
+  position: relative;
+  margin-left: 30%;
+}
+
+nav ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav li a, nav li a:visited {
+  font: 72px 'Playfair Display', serif;
+  color: #F1E9CE;
+}
+
+nav li a:hover {
+  -webkit-text-decoration: underline solid;
+          text-decoration: underline solid;
+}
+
+#top {
+  -webkit-transform-origin: -5% -0%;
+          transform-origin: -5% -0%;
+  background-color: #F1A72B;
+}
+
+#middle {
+  -webkit-transform-origin: -5% 0%;
+          transform-origin: -5% 0%;
+  -webkit-transform: rotate(20deg);
+          transform: rotate(20deg);
+}
+
+#bottom {
+  -webkit-transform-origin: -5% -50%;
+          transform-origin: -5% -50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=style.css.map */

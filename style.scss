@@ -1,0 +1,96 @@
+// colours:
+
+$bkgd: #FFFFF2;
+$bkgd-dark: #F1E9CE;
+$black: rgb(50,50,50);
+$accent1: #F1A72B;
+
+// animations:
+
+@keyframes middle {
+    from {transform:rotate(20deg) translate(0,0);} 
+    to {transform: rotate(0) translate(0%,-100%);background-color: $accent1;}
+}
+
+@keyframes bottom {
+    from {transform:rotate(45deg) translate(0);} 
+    to {transform: rotate(0deg) translate(0%,-200%);background-color: $accent1;}
+}
+
+@keyframes disappear {
+    from {opacity:100%} to {opacity:0%}
+}
+
+
+.middle {
+    animation: middle 0.75s linear;
+}
+
+.bottom {
+    animation: bottom 0.75s linear;
+}
+
+.disappear {
+    animation: disappear 0.75s linear;
+}
+// general styling:
+
+body {
+    background-color: $bkgd;
+    color: $black;
+    font-family:  'Lato', sans-serif;
+    margin:0;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $accent1;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+nav {
+
+    position:relative;
+    margin-left:30%;
+
+    ul {
+        padding-inline-start: 0;
+    }
+
+    li {
+        list-style-type: none;
+
+        a, a:visited {
+            font: 72px 'Playfair Display', serif;
+            color: $bkgd-dark;
+        }
+
+        a:hover {
+            text-decoration: underline solid;
+        }
+
+    }
+
+}
+
+#top {
+    transform-origin: -5% -0%;
+    background-color: $accent1;
+}
+
+#middle {
+    transform-origin: -5% 0%;
+    transform: rotate(20deg);
+}
+
+#bottom {
+    transform-origin: -5% -50%;
+    transform: rotate(45deg)
+}
