@@ -6,7 +6,7 @@
   to {
     -webkit-transform: rotate(0) translate(0%, -100%);
             transform: rotate(0) translate(0%, -100%);
-    background-color: #F1A72B;
+    background-color: #8B7ADD;
   }
 }
 
@@ -18,7 +18,7 @@
   to {
     -webkit-transform: rotate(0) translate(0%, -100%);
             transform: rotate(0) translate(0%, -100%);
-    background-color: #F1A72B;
+    background-color: #8B7ADD;
   }
 }
 
@@ -30,7 +30,7 @@
   to {
     -webkit-transform: rotate(0deg) translate(0%, -200%);
             transform: rotate(0deg) translate(0%, -200%);
-    background-color: #F1A72B;
+    background-color: #8B7ADD;
   }
 }
 
@@ -42,7 +42,7 @@
   to {
     -webkit-transform: rotate(0deg) translate(0%, -200%);
             transform: rotate(0deg) translate(0%, -200%);
-    background-color: #F1A72B;
+    background-color: #8B7ADD;
   }
 }
 
@@ -64,6 +64,50 @@
   }
 }
 
+@-webkit-keyframes slide-up {
+  0% {
+    max-height: 300px;
+    opacity: 100%;
+  }
+  100% {
+    max-height: 0px;
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    max-height: 300px;
+    opacity: 100%;
+  }
+  100% {
+    max-height: 0px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate-menu {
+  from {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate-menu {
+  from {
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 .middle {
   -webkit-animation: middle 0.75s linear;
           animation: middle 0.75s linear;
@@ -75,33 +119,52 @@
 }
 
 .disappear {
-  -webkit-animation: disappear 0.75s linear;
-          animation: disappear 0.75s linear;
+  -webkit-animation: disappear 0.75s;
+          animation: disappear 0.75s;
+}
+
+.slide-up {
+  -webkit-animation: slide-up 0.75s;
+          animation: slide-up 0.75s;
+}
+
+.rotate-menu {
+  -webkit-animation: rotate-menu 1s;
+          animation: rotate-menu 1s;
 }
 
 body {
-  background-color: #FFFFF2;
+  background-color: #FFFAF2;
   color: #323232;
   font-family: 'Lato', sans-serif;
   margin: 0;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font: 72px 'Playfair Display', serif;
+}
+
+h2 {
+  font: 36px 'Playfair Display', serif;
+}
+
+h2 strong {
+  color: #8B7ADD;
+  font-weight: normal;
 }
 
 a, a:visited {
   text-decoration: none;
-  color: #F1A72B;
+  color: #8B7ADD;
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 nav {
   position: relative;
-  margin-left: 30%;
+  margin-left: 10%;
 }
 
 nav ul {
@@ -113,20 +176,78 @@ nav li {
   list-style-type: none;
 }
 
-nav li a, nav li a:visited {
+section {
+  padding: 52px 50px;
+}
+
+section h1 {
+  margin: 0;
+}
+
+#menu-btn {
+  width: 50px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  position: fixed;
+  top: 10%;
+  z-index: 2;
+}
+
+#menu-btn.rotate-menu {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFAF2;
+}
+
+#main-nav hr {
+  border: 2px solid #8B7ADD;
+  margin: 20px 0;
+  width: 75%;
+  position: relative;
+  left: 100%;
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+#main-nav a, #main-nav a:visited {
   font: 72px 'Playfair Display', serif;
   color: #F1E9CE;
 }
 
-nav li a:hover {
+#main-nav a:hover {
   -webkit-text-decoration: underline solid;
           text-decoration: underline solid;
+}
+
+#main-nav #bottom-line {
+  width: 90%;
+}
+
+#main-nav #contact-links {
+  position: fixed;
+  right: 50px;
+  top: 200px;
+}
+
+#main-nav #contact-links li {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #8B7ADD;
+  margin: 10px;
 }
 
 #top {
   -webkit-transform-origin: -5% -0%;
           transform-origin: -5% -0%;
-  background-color: #F1A72B;
+  background-color: #8B7ADD;
 }
 
 #middle {
@@ -141,5 +262,35 @@ nav li a:hover {
           transform-origin: -5% -50%;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+
+#main-nav.hidden.welcome-nav {
+  display: block;
+}
+
+#main-nav.hidden.welcome-nav #top, #main-nav.hidden.welcome-nav #middle, #main-nav.hidden.welcome-nav #bottom {
+  -webkit-transform: none;
+          transform: none;
+}
+
+#main-nav.hidden.welcome-nav #site-links {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 50px;
+}
+
+#main-nav.hidden.welcome-nav #site-links a {
+  font-size: 125px;
+}
+
+#main-nav.hidden.welcome-nav #site-links #top {
+  background-color: transparent;
+}
+
+#main-nav.hidden.welcome-nav #contact-links {
+  top: 100px;
 }
 /*# sourceMappingURL=style.css.map */

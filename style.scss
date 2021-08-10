@@ -1,9 +1,11 @@
 // colours:
 
-$bkgd: #FFFFF2;
+$bkgd: #FFFAF2;
 $bkgd-dark: #F1E9CE;
 $black: rgb(50,50,50);
-$accent1: #F1A72B;
+$accent1: #8B7ADD;
+
+// -------------------------------------------------------
 
 // animations:
 
@@ -21,6 +23,15 @@ $accent1: #F1A72B;
     from {opacity:100%} to {opacity:0%}
 }
 
+@keyframes slide-up {
+    0% {max-height:300px;opacity:100%}
+    100% {max-height:0px;opacity:0}
+}
+
+@keyframes rotate-menu {
+    from {transform: rotate(-90deg);} to {transform: rotate(0deg);}
+}
+
 
 .middle {
     animation: middle 0.75s linear;
@@ -31,8 +42,23 @@ $accent1: #F1A72B;
 }
 
 .disappear {
-    animation: disappear 0.75s linear;
+    animation: disappear 0.75s;
 }
+
+.slide-up {
+    animation: slide-up 0.75s;
+}
+
+.rotate-menu {
+    animation: rotate-menu 1s;
+}
+
+.rerotate-menu {
+    //animation: rotate-menu 1s reverse;
+}
+
+// -------------------------------------------------------
+
 // general styling:
 
 body {
@@ -43,7 +69,16 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font: 72px 'Playfair Display', serif;
+}
+
+h2 {
+    font: 36px 'Playfair Display', serif;
+
+    strong {
+        color: $accent1;
+        font-weight: normal;
+    }
 }
 
 a, a:visited {
@@ -52,13 +87,11 @@ a, a:visited {
 }
 
 .hidden {
-    visibility: hidden;
+    display: none;
 }
 
 nav {
-
     position:relative;
-    margin-left:30%;
 
     ul {
         padding-inline-start: 0;
@@ -67,15 +100,77 @@ nav {
     li {
         list-style-type: none;
 
-        a, a:visited {
-            font: 72px 'Playfair Display', serif;
-            color: $bkgd-dark;
-        }
+    }
 
-        a:hover {
-            text-decoration: underline solid;
-        }
+}
 
+section {
+    padding: 52px 50px;
+
+    h1 {
+        margin:0;
+    }
+
+}
+
+#menu-btn {
+    width:50px;
+    transform: rotate(-90deg);
+    position:fixed;
+    top:10%;
+    z-index: 2;
+}
+
+#menu-btn.rotate-menu {
+    transform: rotate(0deg);
+}
+
+// -------------------------------------------------------
+
+// nav:
+
+#main-nav {
+    position:fixed;
+    top:0;
+    height:100%;
+    width:100%;
+    background-color: $bkgd;
+    margin-left:10%;
+
+    hr {
+        border: 2px solid $accent1;
+        margin: 20px 0;
+        width:75%;
+        position: relative;
+        left:100%;
+        transform: translate(-100%);
+    }
+
+    a, a:visited {
+        font: 72px 'Playfair Display', serif;
+        color: $bkgd-dark;
+    }
+
+    a:hover {
+        text-decoration: underline solid;
+    }
+
+    #bottom-line {
+        width:90%;
+    }
+
+    #contact-links {
+        position:fixed;
+        right:50px;
+        top: 200px;
+
+        li {
+            width:50px;
+            height:50px;
+            border-radius: 100%;
+            background-color: $accent1;
+            margin:10px;
+        }
     }
 
 }
@@ -94,3 +189,36 @@ nav {
     transform-origin: -5% -50%;
     transform: rotate(45deg)
 }
+
+#main-nav.hidden.welcome-nav {
+
+    display:block;
+
+    #top, #middle, #bottom {
+        transform: none;
+    }
+
+    #site-links {
+        transform: rotate(90deg);
+        width:fit-content;
+        top:50px;
+        
+        a {
+            font-size: 125px;
+        }
+
+        #top {
+            background-color: transparent;
+        }
+    }
+    
+    #contact-links {
+        top:100px;
+    }
+
+}
+
+// -------------------------------------------------------
+
+// welcome:
+
