@@ -138,6 +138,7 @@ body {
   color: #323232;
   font-family: 'Lato', sans-serif;
   margin: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -164,7 +165,6 @@ a, a:visited {
 
 nav {
   position: relative;
-  margin-left: 10%;
 }
 
 nav ul {
@@ -198,6 +198,34 @@ section h1 {
           transform: rotate(0deg);
 }
 
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn {
+  padding: 20px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #8B7ADD, #B0A5E8);
+  font-size: 18px;
+  color: white;
+}
+
+a.btn, a:visited.btn {
+  color: white;
+}
+
+.purple {
+  background-color: #B0A5E8;
+}
+
 #main-nav {
   position: fixed;
   top: 0;
@@ -228,6 +256,10 @@ section h1 {
 
 #main-nav #bottom-line {
   width: 90%;
+}
+
+#main-nav #site-links {
+  margin-left: 10%;
 }
 
 #main-nav #contact-links {
@@ -292,5 +324,104 @@ section h1 {
 
 #main-nav.hidden.welcome-nav #contact-links {
   top: 100px;
+}
+
+#welcome-img {
+  width: -webkit-fill-available;
+  margin: 0 -100px;
+  position: absolute;
+  top: 0%;
+  z-index: -2;
+}
+
+#welcome-text {
+  margin: 200px 0;
+  margin-right: 65%;
+}
+
+#welcome .projects-btn {
+  margin: 50px 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+  #welcome-img {
+    top: 5%;
+  }
+  #welcome-text {
+    margin: 150px 0;
+    margin-right: 65%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #welcome-img {
+    top: 10%;
+  }
+  #welcome-text {
+    margin-right: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #welcome-text {
+    margin-right: 60%;
+  }
+  #welcome-text p {
+    margin-right: -40%;
+  }
+}
+
+#about-me {
+  margin: 100px 0;
+}
+
+#about-me #about-img {
+  background-color: #8B7ADD;
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+#about-me #about-text {
+  margin-left: 50px;
+  max-width: 65%;
+}
+
+#skills {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.skill {
+  background-color: #8B7ADD;
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.intro {
+  margin: 50px 0;
+}
+
+.project {
+  padding: 100px 50px;
+  margin: 0 -50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .project-img {
+  width: 50%;
+  height: 400px;
+  background-color: #8B7ADD;
+}
+
+.project .project-text {
+  width: 45%;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */

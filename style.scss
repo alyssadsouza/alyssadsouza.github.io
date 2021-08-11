@@ -4,6 +4,7 @@ $bkgd: #FFFAF2;
 $bkgd-dark: #F1E9CE;
 $black: rgb(50,50,50);
 $accent1: #8B7ADD;
+$accent1a: #B0A5E8;
 
 // -------------------------------------------------------
 
@@ -66,6 +67,7 @@ body {
     color: $black;
     font-family:  'Lato', sans-serif;
     margin:0;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -125,6 +127,29 @@ section {
     transform: rotate(0deg);
 }
 
+.flex {
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background: linear-gradient(45deg, $accent1, $accent1a);
+    font-size: 18px;
+    color: white;
+}
+
+a.btn, a:visited.btn {
+    color: white;
+}
+
+.purple {
+    background-color: $accent1a;
+}
+
 // -------------------------------------------------------
 
 // nav:
@@ -135,7 +160,6 @@ section {
     height:100%;
     width:100%;
     background-color: $bkgd;
-    margin-left:10%;
 
     hr {
         border: 2px solid $accent1;
@@ -157,6 +181,10 @@ section {
 
     #bottom-line {
         width:90%;
+    }
+
+    #site-links {
+        margin-left:10%;
     }
 
     #contact-links {
@@ -222,3 +250,130 @@ section {
 
 // welcome:
 
+#welcome-img {
+    width:-webkit-fill-available;
+    margin: 0 -100px;
+    position:absolute;
+    top:0%;
+    z-index: -2;
+}
+
+#welcome-text {
+    margin: 200px 0;
+    margin-right: 65%;
+}
+
+#welcome {
+
+    .projects-btn {
+        margin:50px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+@media screen and (max-width:1200px) {
+    
+    #welcome-img {
+        top: 5%;
+    }
+
+    #welcome-text {
+        margin: 150px 0;
+        margin-right: 65%;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    
+    #welcome-img {
+        top: 10%;
+    }
+
+    #welcome-text {
+        margin-right:50%;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    
+    #welcome-text {
+        margin-right:60%;
+
+        p {
+            margin-right: -40%;
+        }
+    }
+
+}
+
+@media screen and (max-width:600px) {
+    
+}
+
+// -------------------------------------------------------
+
+// about:
+
+#about-me {
+
+    margin: 100px 0;
+
+    #about-img {
+
+        background-color: $accent1;
+        border-radius: 100%;
+        width: 300px;
+        height: 300px;
+    
+    }
+    
+    #about-text {
+        margin-left: 50px;
+        max-width: 65%;
+    }
+
+}
+
+#skills {
+    justify-content: center;
+}
+
+.skill {
+    background-color: $accent1;
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+// -------------------------------------------------------
+
+// projects:
+
+.intro {
+    margin: 50px 0;
+}
+
+.project {
+    padding: 100px 50px;
+    margin: 0 -50px;
+    justify-content: space-between;
+
+    .project-img {
+        width:50%;
+        height:400px;
+        background-color: $accent1;
+
+    }
+
+    .project-text {
+        width:45%;
+        margin-right: 20px;
+
+    }
+
+}
