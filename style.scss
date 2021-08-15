@@ -24,15 +24,60 @@ $accent1a: #B0A5E8;
     from {opacity:100%} to {opacity:0%}
 }
 
+@keyframes appear {
+    from {opacity:0%} to {opacity:100%}
+}
+
+@keyframes slide-in {
+    from {opacity:0; transform: translate(0,100px);}
+    to {opacity: 100%; transform: translate(0);}
+}
+
 @keyframes slide-up {
     0% {max-height:300px;opacity:100%}
     100% {max-height:0px;opacity:0}
 }
 
 @keyframes rotate-menu {
-    from {transform: rotate(-90deg);} to {transform: rotate(0deg);}
+    from {transform: rotate(-90deg);left:0%;} to {transform: rotate(0deg);left:2%}
 }
 
+@keyframes re-rotate-menu {
+    from {transform: rotate(0deg);left:2%} to {transform: rotate(-90deg);left:0%;}
+}
+
+@keyframes middle-rotate {
+    from {
+        transform: translate(0,-75%); 
+        opacity:0;
+    } 
+    to {
+        transform-origin: -5% 0%; 
+        transform: rotate(20deg);
+        opacity:100%;
+    }
+}
+
+@keyframes bottom-rotate {
+    from {
+        transform: translate(0,-150%);
+        opacity:0;
+    } 
+    to {
+        transform-origin: -5% -50%; 
+        transform: rotate(45deg);
+        opacity:100%;
+    }
+}
+
+.openNav {
+    #middle {
+        animation: middle-rotate 1s;
+    }
+    #bottom {
+        animation: bottom-rotate 1s;
+    }
+}
 
 .middle {
     animation: middle 0.75s linear;
@@ -43,7 +88,15 @@ $accent1a: #B0A5E8;
 }
 
 .disappear {
-    animation: disappear 0.75s;
+    animation: disappear 0.5s;
+}
+
+.appear {
+    animation: appear 0.5s;
+}
+
+.slide-in {
+    animation: slide-in 1s;
 }
 
 .slide-up {
@@ -55,7 +108,7 @@ $accent1a: #B0A5E8;
 }
 
 .rerotate-menu {
-    //animation: rotate-menu 1s reverse;
+    animation: re-rotate-menu 1s;
 }
 
 // -------------------------------------------------------
@@ -68,6 +121,25 @@ body {
     font-family:  'Lato', sans-serif;
     margin:0;
     overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    height: 0px;
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: darken($bkgd,15%);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darken($bkgd,5%);
+    border-radius: 20px;
+    border: none;
+}
+
+::selection {
+    background-color:$accent1a;
 }
 
 h1 {
@@ -92,6 +164,10 @@ a, a:visited {
     display: none;
 }
 
+.hide {
+    opacity:0;
+}
+
 nav {
     position:relative;
 
@@ -108,11 +184,17 @@ nav {
 
 section {
     padding: 52px 50px;
+    margin-bottom: 100px;
+    //opacity: 0;
 
     h1 {
         margin:0;
     }
 
+}
+
+section.slide-in {
+    opacity: 100%;
 }
 
 #menu-btn {
@@ -121,10 +203,12 @@ section {
     position:fixed;
     top:10%;
     z-index: 2;
+    cursor: pointer;
 }
 
 #menu-btn.rotate-menu {
     transform: rotate(0deg);
+    left:2%;
 }
 
 .flex {
@@ -142,12 +226,44 @@ section {
     color: white;
 }
 
-a.btn, a:visited.btn {
+.btn-grad {background-image: linear-gradient(to right, $accent1 0%, $accent1a  51%, $accent1  100%)}
+.btn-grad {
+    margin-top: 10px;
+    padding: 15px 45px;
+    position:relative;
+    left:50%;
+    transform: translate(-50%);
+    text-align: center;
+    font: 20px "Lato", sans-serif;
+    width: fit-content;
+    transition: 0.5s;
+    background-size: 200% auto;      
+    border-radius: 10px;
+    display: block;
+    border:none;
+    z-index: 0;
+}
+
+.btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.btn-grad, a:visited.btn-grad {
     color: white;
+}
+
+a.btn-grad:hover {
+    color: darken($accent1, 40%);
 }
 
 .purple {
     background-color: $accent1a;
+
+    ::selection {
+        background-color: $accent1;
+    }
 }
 
 // -------------------------------------------------------
@@ -160,6 +276,7 @@ a.btn, a:visited.btn {
     height:100%;
     width:100%;
     background-color: $bkgd;
+    z-index: 1;
 
     hr {
         border: 2px solid $accent1;
@@ -218,34 +335,6 @@ a.btn, a:visited.btn {
     transform: rotate(45deg)
 }
 
-#main-nav.hidden.welcome-nav {
-
-    display:block;
-
-    #top, #middle, #bottom {
-        transform: none;
-    }
-
-    #site-links {
-        transform: rotate(90deg);
-        width:fit-content;
-        top:50px;
-        
-        a {
-            font-size: 125px;
-        }
-
-        #top {
-            background-color: transparent;
-        }
-    }
-    
-    #contact-links {
-        top:100px;
-    }
-
-}
-
 // -------------------------------------------------------
 
 // welcome:
@@ -270,6 +359,8 @@ a.btn, a:visited.btn {
         width: 100%;
         text-align: center;
     }
+
+    margin-bottom: 0;
 
 }
 
