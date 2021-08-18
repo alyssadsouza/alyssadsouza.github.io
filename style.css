@@ -433,6 +433,7 @@ section h1, section div {
 section h1 {
   margin: 0;
   padding: 50px;
+  padding-right: 1px;
 }
 
 section.slide-in {
@@ -724,6 +725,9 @@ a.btn-grad:hover {
 @media only screen and (max-width: 768px) {
   section div, section h1 {
     padding: 50px;
+  }
+  section h1 {
+    padding-right: 1px;
   }
   #main-nav {
     -webkit-padding-start: 10%;
