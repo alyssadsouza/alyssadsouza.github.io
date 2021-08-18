@@ -5,6 +5,7 @@ $bkgd-dark: #F1E9CE;
 $black: rgb(50,50,50);
 $accent1: #8B7ADD;
 $accent1a: #B0A5E8;
+$accent2: #EFC33C;
 
 // -------------------------------------------------------
 
@@ -183,12 +184,15 @@ nav {
 }
 
 section {
-    padding: 52px 50px;
-    margin-bottom: 100px;
-    //opacity: 0;
+    margin-bottom: 10%;
+
+    h1, div {
+        padding: 2.5% 5%;
+    }
 
     h1 {
-        margin:0;
+        padding:50px;
+        margin: 0;
     }
 
 }
@@ -201,7 +205,7 @@ section.slide-in {
     width:50px;
     transform: rotate(-90deg);
     position:fixed;
-    top:10%;
+    top:75px;
     z-index: 2;
     cursor: pointer;
 }
@@ -226,7 +230,7 @@ section.slide-in {
     color: white;
 }
 
-.btn-grad {background-image: linear-gradient(to right, $accent1 0%, $accent1a  51%, $accent1  100%)}
+.btn-grad {background-image: linear-gradient(to right, $accent1 0%, $accent2  51%, $accent1  100%)}
 .btn-grad {
     margin-top: 10px;
     padding: 15px 45px;
@@ -255,7 +259,7 @@ a.btn-grad, a:visited.btn-grad {
 }
 
 a.btn-grad:hover {
-    color: darken($accent1, 40%);
+    color: $black;
 }
 
 .purple {
@@ -280,7 +284,7 @@ a.btn-grad:hover {
 
     hr {
         border: 2px solid $accent1;
-        margin: 20px 0;
+        margin: 2% 0;
         width:75%;
         position: relative;
         left:100%;
@@ -340,22 +344,21 @@ a.btn-grad:hover {
 // welcome:
 
 #welcome-img {
-    width:-webkit-fill-available;
-    margin: 0 -100px;
+    width:100%;
     position:absolute;
-    top:0%;
+    top:10%;
     z-index: -2;
 }
 
 #welcome-text {
-    margin: 200px 0;
-    margin-right: 65%;
+    margin: 10% 0;
+    max-width: 30%;
 }
 
 #welcome {
 
     .projects-btn {
-        margin:50px 0;
+        margin:5% 0;
         width: 100%;
         text-align: center;
     }
@@ -364,62 +367,23 @@ a.btn-grad:hover {
 
 }
 
-
-@media screen and (max-width:1200px) {
-    
-    #welcome-img {
-        top: 5%;
-    }
-
-    #welcome-text {
-        margin: 150px 0;
-        margin-right: 65%;
-    }
-
-}
-
-@media screen and (max-width:900px) {
-    
-    #welcome-img {
-        top: 10%;
-    }
-
-    #welcome-text {
-        margin-right:50%;
-    }
-
-}
-
-@media screen and (max-width:800px) {
-    
-    #welcome-text {
-        margin-right:60%;
-
-        p {
-            margin-right: -40%;
-        }
-    }
-
-}
-
-@media screen and (max-width:600px) {
-    
-}
-
 // -------------------------------------------------------
 
 // about:
 
 #about-me {
 
-    margin: 100px 0;
+    justify-content: center;
 
     #about-img {
 
         background-color: $accent1;
         border-radius: 100%;
-        width: 300px;
-        height: 300px;
+        width:200px;
+        height:200px;
+        padding:0;
+        background-image: url("images//profile.jpg");
+        background-size: cover;
     
     }
     
@@ -432,13 +396,15 @@ a.btn-grad:hover {
 
 #skills {
     justify-content: center;
+    padding:0;
 }
 
 .skill {
     background-color: $accent1;
-    margin: 30px;
-    width: 200px;
-    height: 200px;
+    width:150px;
+    height:150px;
+    padding:0;
+    margin: 1%;
 }
 
 // -------------------------------------------------------
@@ -446,24 +412,103 @@ a.btn-grad:hover {
 // projects:
 
 .intro {
-    margin: 50px 0;
+    padding-top: 0;
 }
 
 .project {
-    padding: 100px 50px;
-    margin: 0 -50px;
+    padding: 10% 5%;
     justify-content: space-between;
 
     .project-img {
-        width:50%;
-        height:400px;
+        padding: 0;
+        min-width:600px;
         background-color: $accent1;
 
     }
 
     .project-text {
-        width:45%;
-        margin-right: 20px;
+        max-width:50%;
+        padding: 0;
+
+    }
+
+}
+
+// -------------------------------------------------------
+
+// responsive design:
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    #welcome {
+
+        #welcome-text {
+            max-width: 40%;
+        }
+
+    }
+
+    #about-me {
+
+        #about-text {
+            margin-left:0;
+        }
+        
+    }
+
+}
+
+@media only screen and (max-device-width: 600px) {
+
+    section {
+        div, h1 {
+            padding:50px;
+        }
+    }
+
+    #welcome {
+
+        #welcome-img {
+            top:15%;
+            width: 150%;
+            left: -50%;
+        }
+    
+        #welcome-text {
+            max-width: 100%;
+            margin-top: 50%;
+
+            .projects-btn {
+                padding:0;
+            }
+        }
+
+    }
+
+    #about {
+
+        #about-text {
+            margin-left: 0;
+            padding:20px 0;
+            max-width: 100%;
+        }
+
+    }
+
+    #projects {
+
+        .project {
+            padding: 50px;
+
+            .project-img {
+                max-width: 100%;
+            }
+            
+            .project-text {
+                max-width: 100%;
+            }
+
+        }
 
     }
 

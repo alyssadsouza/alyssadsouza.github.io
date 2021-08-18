@@ -363,11 +363,15 @@ nav li {
 }
 
 section {
-  padding: 52px 50px;
-  margin-bottom: 100px;
+  margin-bottom: 10%;
+}
+
+section h1, section div {
+  padding: 2.5% 5%;
 }
 
 section h1 {
+  padding: 50px;
   margin: 0;
 }
 
@@ -380,7 +384,7 @@ section.slide-in {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   position: fixed;
-  top: 10%;
+  top: 75px;
   z-index: 2;
   cursor: pointer;
 }
@@ -412,8 +416,8 @@ section.slide-in {
 }
 
 .btn-grad {
-  background-image: -webkit-gradient(linear, left top, right top, from(#8B7ADD), color-stop(51%, #B0A5E8), to(#8B7ADD));
-  background-image: linear-gradient(to right, #8B7ADD 0%, #B0A5E8 51%, #8B7ADD 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8B7ADD), color-stop(51%, #EFC33C), to(#8B7ADD));
+  background-image: linear-gradient(to right, #8B7ADD 0%, #EFC33C 51%, #8B7ADD 100%);
 }
 
 .btn-grad {
@@ -449,7 +453,7 @@ a.btn-grad, a:visited.btn-grad {
 }
 
 a.btn-grad:hover {
-  color: #2a1c6f;
+  color: #323232;
 }
 
 .purple {
@@ -475,7 +479,7 @@ a.btn-grad:hover {
 
 #main-nav hr {
   border: 2px solid #8B7ADD;
-  margin: 20px 0;
+  margin: 2% 0;
   width: 75%;
   position: relative;
   left: 100%;
@@ -536,16 +540,15 @@ a.btn-grad:hover {
 }
 
 #welcome-img {
-  width: -webkit-fill-available;
-  margin: 0 -100px;
+  width: 100%;
   position: absolute;
-  top: 0%;
+  top: 10%;
   z-index: -2;
 }
 
 #welcome-text {
-  margin: 200px 0;
-  margin-right: 65%;
+  margin: 10% 0;
+  max-width: 30%;
 }
 
 #welcome {
@@ -553,48 +556,25 @@ a.btn-grad:hover {
 }
 
 #welcome .projects-btn {
-  margin: 50px 0;
+  margin: 5% 0;
   width: 100%;
   text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
-  #welcome-img {
-    top: 5%;
-  }
-  #welcome-text {
-    margin: 150px 0;
-    margin-right: 65%;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  #welcome-img {
-    top: 10%;
-  }
-  #welcome-text {
-    margin-right: 50%;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #welcome-text {
-    margin-right: 60%;
-  }
-  #welcome-text p {
-    margin-right: -40%;
-  }
-}
-
 #about-me {
-  margin: 100px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #about-me #about-img {
   background-color: #8B7ADD;
   border-radius: 100%;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
+  padding: 0;
+  background-image: url("images//profile.jpg");
+  background-size: cover;
 }
 
 #about-me #about-text {
@@ -606,35 +586,77 @@ a.btn-grad:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0;
 }
 
 .skill {
   background-color: #8B7ADD;
-  margin: 30px;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  margin: 1%;
 }
 
 .intro {
-  margin: 50px 0;
+  padding-top: 0;
 }
 
 .project {
-  padding: 100px 50px;
-  margin: 0 -50px;
+  padding: 10% 5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
 .project .project-img {
-  width: 50%;
-  height: 400px;
+  padding: 0;
+  min-width: 600px;
   background-color: #8B7ADD;
 }
 
 .project .project-text {
-  width: 45%;
-  margin-right: 20px;
+  max-width: 50%;
+  padding: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #welcome #welcome-text {
+    max-width: 40%;
+  }
+  #about-me #about-text {
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-device-width: 600px) {
+  section div, section h1 {
+    padding: 50px;
+  }
+  #welcome #welcome-img {
+    top: 15%;
+    width: 150%;
+    left: -50%;
+  }
+  #welcome #welcome-text {
+    max-width: 100%;
+    margin-top: 50%;
+  }
+  #welcome #welcome-text .projects-btn {
+    padding: 0;
+  }
+  #about #about-text {
+    margin-left: 0;
+    padding: 20px 0;
+    max-width: 100%;
+  }
+  #projects .project {
+    padding: 50px;
+  }
+  #projects .project .project-img {
+    max-width: 100%;
+  }
+  #projects .project .project-text {
+    max-width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
