@@ -1,11 +1,12 @@
 // colours:
 
-$bkgd: #FFFAF2;
-$bkgd-dark: #F1E9CE;
-$black: rgb(50,50,50);
+$bkgd: #383a5c;
+$bkgd-dark: #42457a;
+$text: white;
+$dark-text: rgb(50,50,50);
 $accent1: #8B7ADD;
 $accent1a: #B0A5E8;
-$accent2: #EFC33C;
+$accent2: #af836a;
 
 // -------------------------------------------------------
 
@@ -71,6 +72,16 @@ $accent2: #EFC33C;
     }
 }
 
+@keyframes type {
+    from {max-width: 0;} to {max-width: 100%}
+}
+
+@keyframes blink-caret {
+    0% {border-color: transparent}
+    50% {border-color: $accent2;}
+    100% {border-color: transparent}
+}
+
 .openNav {
     #middle {
         animation: middle-rotate 1s;
@@ -100,6 +111,12 @@ $accent2: #EFC33C;
     animation: slide-in 1s;
 }
 
+section.slide-in {
+    h1 {
+        opacity: 0%;
+    }
+}
+
 .slide-up {
     animation: slide-up 0.75s;
 }
@@ -112,14 +129,20 @@ $accent2: #EFC33C;
     animation: re-rotate-menu 1s;
 }
 
+.type {
+    animation: type 3s steps(40, end), blink-caret .75s step-end infinite;
+    overflow-x: hidden;
+}
+
 // -------------------------------------------------------
 
 // general styling:
 
 body {
     background-color: $bkgd;
-    color: $black;
+    color: $text;
     font-family:  'Lato', sans-serif;
+    font-weight: 200;
     margin:0;
     overflow-x: hidden;
 }
@@ -140,15 +163,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::selection {
-    background-color:$accent1a;
+    background-color:darken($accent1,10%);
 }
 
 h1 {
-    font: 72px 'Playfair Display', serif;
+    font: 80px 'Rajdhani', sans-serif;
+    width: fit-content;
+    border-right: 4px solid $accent2;
+    animation: blink-caret .75s step-end infinite;
+    white-space: nowrap;
 }
 
 h2 {
-    font: 36px 'Playfair Display', serif;
+    font: 56px 'Rajdhani', sans-serif;
 
     strong {
         color: $accent1;
@@ -184,15 +211,15 @@ nav {
 }
 
 section {
-    margin-bottom: 10%;
+    margin-bottom: 20%;
 
     h1, div {
         padding: 2.5% 5%;
     }
 
     h1 {
-        padding:50px;
-        margin: 0;
+        margin:0;
+        padding: 50px;
     }
 
 }
@@ -255,19 +282,16 @@ section.slide-in {
 }
 
 a.btn-grad, a:visited.btn-grad {
-    color: white;
+    color: $bkgd;
 }
 
 a.btn-grad:hover {
-    color: $black;
+    color: $text;
 }
 
 .purple {
     background-color: $accent1a;
-
-    ::selection {
-        background-color: $accent1;
-    }
+    color: $dark-text;
 }
 
 // -------------------------------------------------------
@@ -292,12 +316,13 @@ a.btn-grad:hover {
     }
 
     a, a:visited {
-        font: 72px 'Playfair Display', serif;
+        font: 72px 'Rajdhani', sans-serif;
         color: $bkgd-dark;
     }
 
     a:hover {
-        text-decoration: underline solid;
+        color: $accent2;
+        transition: color 0.5s;
     }
 
     #bottom-line {
@@ -363,7 +388,9 @@ a.btn-grad:hover {
         text-align: center;
     }
 
-    margin-bottom: 0;
+    h1 {
+        width: fit-content;
+    }
 
 }
 
@@ -394,6 +421,11 @@ a.btn-grad:hover {
 
 }
 
+#tech-skills {
+    background: linear-gradient(45deg, $accent1a, $accent2);
+    margin: 5% 0;
+}
+
 #skills {
     justify-content: center;
     padding:0;
@@ -416,7 +448,7 @@ a.btn-grad:hover {
 }
 
 .project {
-    padding: 10% 5%;
+    padding: 5%;
     justify-content: space-between;
 
     .project-img {
@@ -475,10 +507,6 @@ a.btn-grad:hover {
         div, h1 {
             padding:50px;
         }
-    }
-
-    h1 {
-        font-size: 64px;
     }
 
     #main-nav {

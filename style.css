@@ -242,6 +242,48 @@
   }
 }
 
+@-webkit-keyframes type {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes type {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@-webkit-keyframes blink-caret {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #af836a;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink-caret {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #af836a;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
 .openNav #middle {
   -webkit-animation: middle-rotate 1s;
           animation: middle-rotate 1s;
@@ -277,6 +319,10 @@
           animation: slide-in 1s;
 }
 
+section.slide-in h1 {
+  opacity: 0%;
+}
+
 .slide-up {
   -webkit-animation: slide-up 0.75s;
           animation: slide-up 0.75s;
@@ -292,10 +338,17 @@
           animation: re-rotate-menu 1s;
 }
 
+.type {
+  -webkit-animation: type 3s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: type 3s steps(40, end), blink-caret 0.75s step-end infinite;
+  overflow-x: hidden;
+}
+
 body {
-  background-color: #FFFAF2;
-  color: #323232;
+  background-color: #383a5c;
+  color: white;
   font-family: 'Lato', sans-serif;
+  font-weight: 200;
   margin: 0;
   overflow-x: hidden;
 }
@@ -306,29 +359,36 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #ffdda6;
+  background: #1b1c2c;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #fff0d9;
+  background-color: #2e304c;
   border-radius: 20px;
   border: none;
 }
 
 ::-moz-selection {
-  background-color: #B0A5E8;
+  background-color: #6851d3;
 }
 
 ::selection {
-  background-color: #B0A5E8;
+  background-color: #6851d3;
 }
 
 h1 {
-  font: 72px 'Playfair Display', serif;
+  font: 80px 'Rajdhani', sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-right: 4px solid #af836a;
+  -webkit-animation: blink-caret .75s step-end infinite;
+          animation: blink-caret .75s step-end infinite;
+  white-space: nowrap;
 }
 
 h2 {
-  font: 36px 'Playfair Display', serif;
+  font: 56px 'Rajdhani', sans-serif;
 }
 
 h2 strong {
@@ -363,7 +423,7 @@ nav li {
 }
 
 section {
-  margin-bottom: 10%;
+  margin-bottom: 20%;
 }
 
 section h1, section div {
@@ -371,8 +431,8 @@ section h1, section div {
 }
 
 section h1 {
-  padding: 50px;
   margin: 0;
+  padding: 50px;
 }
 
 section.slide-in {
@@ -416,8 +476,8 @@ section.slide-in {
 }
 
 .btn-grad {
-  background-image: -webkit-gradient(linear, left top, right top, from(#8B7ADD), color-stop(51%, #EFC33C), to(#8B7ADD));
-  background-image: linear-gradient(to right, #8B7ADD 0%, #EFC33C 51%, #8B7ADD 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#8B7ADD), color-stop(51%, #af836a), to(#8B7ADD));
+  background-image: linear-gradient(to right, #8B7ADD 0%, #af836a 51%, #8B7ADD 100%);
 }
 
 .btn-grad {
@@ -449,23 +509,16 @@ section.slide-in {
 }
 
 a.btn-grad, a:visited.btn-grad {
-  color: white;
+  color: #383a5c;
 }
 
 a.btn-grad:hover {
-  color: #323232;
+  color: white;
 }
 
 .purple {
   background-color: #B0A5E8;
-}
-
-.purple ::-moz-selection {
-  background-color: #8B7ADD;
-}
-
-.purple ::selection {
-  background-color: #8B7ADD;
+  color: #323232;
 }
 
 #main-nav {
@@ -473,7 +526,7 @@ a.btn-grad:hover {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #FFFAF2;
+  background-color: #383a5c;
   z-index: 1;
 }
 
@@ -488,13 +541,14 @@ a.btn-grad:hover {
 }
 
 #main-nav a, #main-nav a:visited {
-  font: 72px 'Playfair Display', serif;
-  color: #F1E9CE;
+  font: 72px 'Rajdhani', sans-serif;
+  color: #42457a;
 }
 
 #main-nav a:hover {
-  -webkit-text-decoration: underline solid;
-          text-decoration: underline solid;
+  color: #af836a;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 #main-nav #bottom-line {
@@ -551,14 +605,16 @@ a.btn-grad:hover {
   max-width: 30%;
 }
 
-#welcome {
-  margin-bottom: 0;
-}
-
 #welcome .projects-btn {
   margin: 5% 0;
   width: 100%;
   text-align: center;
+}
+
+#welcome h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #about-me {
@@ -582,6 +638,11 @@ a.btn-grad:hover {
   max-width: 65%;
 }
 
+#tech-skills {
+  background: linear-gradient(45deg, #B0A5E8, #af836a);
+  margin: 5% 0;
+}
+
 #skills {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -602,7 +663,7 @@ a.btn-grad:hover {
 }
 
 .project {
-  padding: 10% 5%;
+  padding: 5%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -663,9 +724,6 @@ a.btn-grad:hover {
 @media only screen and (max-width: 768px) {
   section div, section h1 {
     padding: 50px;
-  }
-  h1 {
-    font-size: 64px;
   }
   #main-nav {
     -webkit-padding-start: 10%;

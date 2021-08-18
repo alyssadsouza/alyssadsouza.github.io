@@ -2,8 +2,8 @@
   <defs>
     <style>
       .cls-1, .cls-6 {
-        <!-- yellow -->
-        fill: #EFC33C;
+        <!-- purple -->
+        fill: #8B7ADD;
       }
 
       .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
@@ -11,8 +11,8 @@
       }
 
       .cls-2 {
-        <!-- purple -->
-        fill: #8B7ADD;
+        <!-- pink -->
+        fill: #af836a;
       }
 
       .cls-3 {
@@ -34,8 +34,8 @@
       }
 
       .cls-7 {
-        <!-- yellow -->
-        fill: #EFC33C;
+        <!-- purple -->
+        fill: #8B7ADD;
       }
 
       .cls-7, .cls-8, .cls-9 {
@@ -49,8 +49,8 @@
       }
 
       .cls-9 {
-        <!-- purple -->
-        fill: #8B7ADD;
+        <!-- pink -->
+        fill: #af836a;
       }
     </style>
   </defs>
