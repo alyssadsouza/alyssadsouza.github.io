@@ -167,10 +167,10 @@ function slideIn(clickedSection) {
         setTimeout(() => {
             clickedSection.classList.remove("slide-in");
             clickedSection.classList.remove("hide");
-            clickedSection.firstElementChild.classList.add("type");
+            clickedSection.firstElementChild.firstElementChild.classList.add("type");
 
             setTimeout(() => {
-                clickedSection.firstElementChild.classList.remove("type");
+                clickedSection.firstElementChild.firstElementChild.classList.remove("type");
             }, 3000)
 
         }, 1000)

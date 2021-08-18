@@ -377,7 +377,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-  font: 80px 'Rajdhani', sans-serif;
+  font: 5em 'Rajdhani', sans-serif;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -426,13 +426,17 @@ section {
   margin-bottom: 20%;
 }
 
-section h1, section div {
+section div {
   padding: 2.5% 5%;
+}
+
+section .first-header {
+  padding: 50px;
 }
 
 section h1 {
   margin: 0;
-  padding: 50px;
+  padding: 0;
   padding-right: 1px;
 }
 
@@ -723,11 +727,8 @@ a.btn-grad:hover {
 }
 
 @media only screen and (max-width: 768px) {
-  section div, section h1 {
+  section div {
     padding: 50px;
-  }
-  section h1 {
-    padding-right: 1px;
   }
   #main-nav {
     -webkit-padding-start: 10%;

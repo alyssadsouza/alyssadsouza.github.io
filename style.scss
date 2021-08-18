@@ -167,7 +167,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 h1 {
-    font: 80px 'Rajdhani', sans-serif;
+    font: 5em 'Rajdhani', sans-serif;
     width: fit-content;
     border-right: 4px solid $accent2;
     animation: blink-caret .75s step-end infinite;
@@ -213,13 +213,17 @@ nav {
 section {
     margin-bottom: 20%;
 
-    h1, div {
+    div {
         padding: 2.5% 5%;
+    }
+
+    .first-header {
+        padding: 50px;
     }
 
     h1 {
         margin:0;
-        padding: 50px;
+        padding: 0;
         padding-right: 1px;
     }
 
@@ -505,11 +509,8 @@ a.btn-grad:hover {
 @media only screen and (max-width: 768px) {
 
     section {
-        div, h1 {
+        div {
             padding:50px;
-        }
-        h1 {
-            padding-right: 1px;
         }
     }
 
