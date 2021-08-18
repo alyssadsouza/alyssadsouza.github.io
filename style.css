@@ -345,7 +345,7 @@ section.slide-in h1 {
 }
 
 body {
-  background-color: #383a5c;
+  background-color: #2c2d42;
   color: white;
   font-family: 'Lato', sans-serif;
   font-weight: 200;
@@ -359,11 +359,11 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: #1b1c2c;
+  background: #0d0e14;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #2e304c;
+  background-color: #222333;
   border-radius: 20px;
   border: none;
 }
@@ -510,7 +510,7 @@ section.slide-in {
 }
 
 a.btn-grad, a:visited.btn-grad {
-  color: #383a5c;
+  color: #2c2d42;
 }
 
 a.btn-grad:hover {
@@ -527,7 +527,7 @@ a.btn-grad:hover {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #383a5c;
+  background-color: #2c2d42;
   z-index: 1;
 }
 
@@ -543,7 +543,7 @@ a.btn-grad:hover {
 
 #main-nav a, #main-nav a:visited {
   font: 72px 'Rajdhani', sans-serif;
-  color: #42457a;
+  color: #3c3e63;
 }
 
 #main-nav a:hover {
