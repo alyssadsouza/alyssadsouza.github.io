@@ -211,7 +211,6 @@ nav {
 }
 
 section {
-    margin-bottom: 20%;
 
     div {
         padding: 2.5% 5%;
@@ -650,6 +649,19 @@ a.btn-grad:hover {
 
     }
 
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 20vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .type {
+        animation: type 1s steps(10, end), blink-caret .75s step-end infinite;
+        overflow-x: hidden;
+    }
 }
 
 @media only screen and (max-width: 300px) {

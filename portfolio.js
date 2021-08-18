@@ -2,22 +2,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     openNavAnimation();
 
-    // var currentPos = document.documentElement.scrollTop;
-    // var about = true;
-    // var projects = true;
-    // var aboutScroll = document.getElementById("about").scrollHeight - document.documentElement.scrollHeight*0.15;
-    // var projectScroll = document.getElementById("projects").scrollHeight - document.documentElement.scrollHeight*0.1;
-
     document.getElementById("menu-btn").addEventListener("click", () => {
 
-        if (document.querySelector(".rotate-menu") != null) {
+        if (document.querySelector(".rotate-menu") == null) {
 
-            closeMenu();
-            window.scrollTo(0, currentPos);
-
-        } else {
-
-            currentPos = document.documentElement.scrollTop;
             openMenu();
 
         }
@@ -33,44 +21,14 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     })
 
-    // setInterval(() => {
+    document.querySelector(".projects-btn").addEventListener("click", () => {
 
-    //     if (document.documentElement.scrollTop >= aboutScroll && about) {
-    //         about = false;
-    //         setTimeout(() => {
-
-    //             openMenu(true);
-
-    //             setTimeout(() => {
-    //                 closeMenu("middle");
-    //                 window.scrollTo(0, aboutScroll + document.documentElement.scrollHeight*0.08);
-    //             }, 2000);
-
-    //         }, 100);
-            
-    //     }
-
-    // }, 100)
-
-    // setInterval(() => {
-
-    //     if (document.documentElement.scrollTop >= projectScroll && projects) {
-    //         projects = false;
-    //         setTimeout(() => {
-
-    //             openMenu(true);
-
-    //             setTimeout(() => {
-    //                 closeMenu("middle");
-    //                 window.scrollTo(0, projectScroll + document.documentElement.scrollHeight*0.15);
-    //             }, 2000);
-
-    //         }, 100);
-            
-    //     }
-
-    // }, 100)
-
+        openMenu();
+        setTimeout(() => {
+            closeMenu("bottom")
+        }, 2000);
+    
+    })
 
 
 })
@@ -113,10 +71,8 @@ function closeMenu(id) {
 
     // Hide clicked section for animation
 
-    if (id != null) {
-        var clickedSection = document.getElementById(document.getElementById(id).firstElementChild.dataset.section);
-        clickedSection.classList.add("hide");
-    }
+    var clickedSection = document.getElementById(document.getElementById(id).firstElementChild.dataset.section);
+    clickedSection.classList.add("hide");
 
     // Animation for link to slide in to top position and move link contents
 
@@ -130,9 +86,7 @@ function closeMenu(id) {
 
     // Re-add section content
 
-    document.querySelectorAll(".section").forEach(section => {
-        section.classList.remove("hidden");
-    })
+    clickedSection.classList.remove("hidden");
 
     // Rotate menu btn
     
@@ -149,9 +103,8 @@ function closeMenu(id) {
 
         // Animation for section content to slide in
 
-        if (id != null) {
-            slideIn(clickedSection);
-        }
+        slideIn(clickedSection);
+        
 
     }, 1750)
 }
