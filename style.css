@@ -619,18 +619,186 @@ a.btn-grad:hover {
   padding: 0;
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   #welcome #welcome-text {
     max-width: 40%;
+  }
+  #welcome.slide-in #welcome-img {
+    -webkit-animation: img-slide-in 1s;
+            animation: img-slide-in 1s;
+  }
+  @-webkit-keyframes img-slide-in {
+    from {
+      opacity: 0;
+      -webkit-transform: translate(0, 100px);
+              transform: translate(0, 100px);
+      position: absolute;
+    }
+    to {
+      opacity: 100%;
+      -webkit-transform: translate(0, 10%);
+              transform: translate(0, 10%);
+      position: absolute;
+    }
+  }
+  @keyframes img-slide-in {
+    from {
+      opacity: 0;
+      -webkit-transform: translate(0, 100px);
+              transform: translate(0, 100px);
+      position: absolute;
+    }
+    to {
+      opacity: 100%;
+      -webkit-transform: translate(0, 10%);
+              transform: translate(0, 10%);
+      position: absolute;
+    }
   }
   #about-me #about-text {
     margin-left: 0;
   }
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (max-width: 768px) {
   section div, section h1 {
     padding: 50px;
+  }
+  h1 {
+    font-size: 64px;
+  }
+  #main-nav {
+    -webkit-padding-start: 10%;
+            padding-inline-start: 10%;
+    top: 30px;
+  }
+  #main-nav a {
+    font-size: 56px;
+  }
+  #main-nav #contact-links {
+    margin: 10px;
+    top: auto;
+    bottom: 0;
+    right: 0;
+  }
+  #main-nav #contact-links ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #main-nav #contact-links.hidden {
+    display: none;
+  }
+  #top {
+    background-color: #8B7ADD;
+  }
+  #middle {
+    -webkit-transform: none;
+            transform: none;
+  }
+  #bottom {
+    -webkit-transform: none;
+            transform: none;
+  }
+  .openNav #middle {
+    -webkit-animation: middle-slide 1s;
+            animation: middle-slide 1s;
+  }
+  .openNav #bottom {
+    -webkit-animation: bottom-slide 1s;
+            animation: bottom-slide 1s;
+  }
+  @-webkit-keyframes middle {
+    from {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    to {
+      -webkit-transform: translate(0%, -75%);
+              transform: translate(0%, -75%);
+      background-color: #8B7ADD;
+    }
+  }
+  @keyframes middle {
+    from {
+      -webkit-transform: translate(0, 0);
+              transform: translate(0, 0);
+    }
+    to {
+      -webkit-transform: translate(0%, -75%);
+              transform: translate(0%, -75%);
+      background-color: #8B7ADD;
+    }
+  }
+  @-webkit-keyframes bottom {
+    from {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    to {
+      -webkit-transform: translate(0%, -150%);
+              transform: translate(0%, -150%);
+      background-color: #8B7ADD;
+    }
+  }
+  @keyframes bottom {
+    from {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    to {
+      -webkit-transform: translate(0%, -150%);
+              transform: translate(0%, -150%);
+      background-color: #8B7ADD;
+    }
+  }
+  @-webkit-keyframes middle-slide {
+    from {
+      -webkit-transform: translate(0, -75%);
+              transform: translate(0, -75%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: none;
+              transform: none;
+      opacity: 100%;
+    }
+  }
+  @keyframes middle-slide {
+    from {
+      -webkit-transform: translate(0, -75%);
+              transform: translate(0, -75%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: none;
+              transform: none;
+      opacity: 100%;
+    }
+  }
+  @-webkit-keyframes bottom-slide {
+    from {
+      -webkit-transform: translate(0, -150%);
+              transform: translate(0, -150%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: none;
+              transform: none;
+      opacity: 100%;
+    }
+  }
+  @keyframes bottom-slide {
+    from {
+      -webkit-transform: translate(0, -150%);
+              transform: translate(0, -150%);
+      opacity: 0;
+    }
+    to {
+      -webkit-transform: none;
+              transform: none;
+      opacity: 100%;
+    }
   }
   #welcome #welcome-img {
     top: 15%;
@@ -643,6 +811,30 @@ a.btn-grad:hover {
   }
   #welcome #welcome-text .projects-btn {
     padding: 0;
+  }
+  #welcome.slide-in #welcome-img {
+    -webkit-animation: img-slide-in 1s;
+            animation: img-slide-in 1s;
+  }
+  @-webkit-keyframes img-slide-in {
+    from {
+      opacity: 0;
+      top: 30%;
+    }
+    to {
+      opacity: 100%;
+      top: 15%;
+    }
+  }
+  @keyframes img-slide-in {
+    from {
+      opacity: 0;
+      top: 30%;
+    }
+    to {
+      opacity: 100%;
+      top: 15%;
+    }
   }
   #about #about-text {
     margin-left: 0;
@@ -657,6 +849,42 @@ a.btn-grad:hover {
   }
   #projects .project .project-text {
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #main-nav a {
+    font-size: 50px;
+  }
+  #menu-btn {
+    width: 35px;
+  }
+  #welcome #welcome-img {
+    top: 25%;
+  }
+  #welcome.slide-in #welcome-img {
+    -webkit-animation: img-slide-in 1s;
+            animation: img-slide-in 1s;
+  }
+  @-webkit-keyframes img-slide-in {
+    from {
+      opacity: 0;
+      top: 30%;
+    }
+    to {
+      opacity: 100%;
+      top: 17%;
+    }
+  }
+  @keyframes img-slide-in {
+    from {
+      opacity: 0;
+      top: 30%;
+    }
+    to {
+      opacity: 100%;
+      top: 17%;
+    }
   }
 }
 /*# sourceMappingURL=style.css.map */

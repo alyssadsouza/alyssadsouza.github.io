@@ -438,7 +438,7 @@ a.btn-grad:hover {
 
 // responsive design:
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     #welcome {
 
@@ -446,6 +446,17 @@ a.btn-grad:hover {
             max-width: 40%;
         }
 
+    }
+
+    #welcome.slide-in {
+        #welcome-img {
+            animation: img-slide-in 1s;
+        }
+    }
+
+    @keyframes img-slide-in {
+        from {opacity:0; transform: translate(0,100px); position: absolute}
+        to {opacity: 100%; transform: translate(0, 10%); position: absolute}
     }
 
     #about-me {
@@ -458,11 +469,94 @@ a.btn-grad:hover {
 
 }
 
-@media only screen and (max-device-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     section {
         div, h1 {
             padding:50px;
+        }
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    #main-nav {
+        padding-inline-start: 10%;
+        top: 30px;
+
+        a {
+            font-size: 56px;
+        }
+
+        #contact-links {
+            margin:10px;
+            top:auto;
+            bottom: 0;
+            right:0;
+            
+            ul {
+                display: flex;
+            }
+        }
+
+        #contact-links.hidden {
+            display: none;
+        }
+    }
+
+
+    #top {
+        background-color: $accent1;
+    }
+    
+    #middle {
+        transform: none;
+    }
+    
+    #bottom {
+        transform: none;
+    }   
+    
+    .openNav {
+        #middle {
+            animation: middle-slide 1s;
+        }
+        #bottom {
+            animation: bottom-slide 1s;
+        }
+    }
+
+
+    @keyframes middle {
+        from {transform:translate(0,0);} 
+        to {transform: translate(0%,-75%);background-color: $accent1;}
+    }
+    
+    @keyframes bottom {
+        from {transform: translate(0);} 
+        to {transform: translate(0%,-150%);background-color: $accent1;}
+    }
+
+    @keyframes middle-slide {
+        from {
+            transform: translate(0,-75%); 
+            opacity:0;
+        } 
+        to {
+            transform: none;
+            opacity:100%;
+        }
+    }
+
+    @keyframes bottom-slide {
+        from {
+            transform: translate(0,-150%); 
+            opacity:0;
+        } 
+        to {
+            transform: none;
+            opacity:100%;
         }
     }
 
@@ -485,6 +579,17 @@ a.btn-grad:hover {
 
     }
 
+    #welcome.slide-in {
+        #welcome-img {
+            animation: img-slide-in 1s;
+        }
+    }
+
+    @keyframes img-slide-in {
+        from {opacity:0; top:30%}
+        to {opacity: 100%; top:15%}
+    }
+
     #about {
 
         #about-text {
@@ -503,13 +608,45 @@ a.btn-grad:hover {
             .project-img {
                 max-width: 100%;
             }
-            
+
             .project-text {
                 max-width: 100%;
             }
 
         }
 
+    }
+
+}
+
+@media only screen and (max-width: 300px) {
+
+    #main-nav {
+        a {
+            font-size: 50px;
+        }
+    }
+
+    #menu-btn {
+        width: 35px;
+    }
+    
+    #welcome {
+        #welcome-img {
+            top: 25%;
+        }
+    }
+
+    #welcome.slide-in {
+        #welcome-img {
+            animation: img-slide-in 1s;
+        }
+    }
+
+    @keyframes img-slide-in {
+        from {opacity:0; top:30%}
+        to {opacity: 100%; top:17%}
+    
     }
 
 }
