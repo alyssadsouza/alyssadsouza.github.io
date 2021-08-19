@@ -401,6 +401,10 @@ a, a:visited {
   color: #8B7ADD;
 }
 
+a:hover {
+  color: #af836a;
+}
+
 .hidden {
   display: none;
 }
@@ -702,7 +706,11 @@ a.btn-grad:hover {
 .project .project-img {
   padding: 0;
   min-width: 600px;
-  background-color: #8B7ADD;
+}
+
+.project .project-img #video {
+  width: -webkit-fill-available;
+  height: 350px;
 }
 
 .project .project-text {

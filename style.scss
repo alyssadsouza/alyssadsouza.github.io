@@ -188,6 +188,10 @@ a, a:visited {
     color: $accent1;
 }
 
+a:hover {
+    color: $accent2;
+}
+
 .hidden {
     display: none;
 }
@@ -489,7 +493,11 @@ a.btn-grad:hover {
     .project-img {
         padding: 0;
         min-width:600px;
-        background-color: $accent1;
+
+        #video {
+            width: -webkit-fill-available;
+            height:350px;
+        }
 
     }
 
