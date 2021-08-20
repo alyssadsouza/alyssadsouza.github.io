@@ -711,6 +711,7 @@ a.btn-grad:hover {
 .project .project-img #video {
   width: -webkit-fill-available;
   height: 350px;
+  border: none;
 }
 
 .project .project-text {
@@ -959,6 +960,9 @@ a.btn-grad:hover {
     -webkit-animation: type 1s steps(10, end), blink-caret 0.75s step-end infinite;
             animation: type 1s steps(10, end), blink-caret 0.75s step-end infinite;
     overflow-x: hidden;
+  }
+  .project .project-img {
+    min-width: 0;
   }
 }
 

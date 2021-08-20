@@ -497,6 +497,7 @@ a.btn-grad:hover {
         #video {
             width: -webkit-fill-available;
             height:350px;
+            border:none;
         }
 
     }
@@ -700,6 +701,10 @@ a.btn-grad:hover {
     .type {
         animation: type 1s steps(10, end), blink-caret .75s step-end infinite;
         overflow-x: hidden;
+    }
+
+    .project .project-img {
+        min-width: 0;
     }
 }
 
