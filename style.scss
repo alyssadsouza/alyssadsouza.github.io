@@ -734,7 +734,7 @@ code {
     .project {
         
         .project-img {
-            min-width: auto;
+            min-width: -webkit-fill-available;
     
             img {
                 max-width: -webkit-fill-available;
