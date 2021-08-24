@@ -990,7 +990,7 @@ code {
     overflow-x: hidden;
   }
   .project .project-img {
-    min-width: -webkit-fill-available;
+    min-width: auto;
   }
   .project .project-img img {
     max-width: -webkit-fill-available;
