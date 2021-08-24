@@ -107,6 +107,11 @@ $accent2: #af836a;
     animation: appear 0.5s;
 }
 
+.hidden.appear {
+    display: block;
+    opacity: 0;
+}
+
 .slide-in {
     animation: slide-in 1s;
 }
@@ -300,6 +305,13 @@ a.btn-grad:hover {
 .purple {
     background-color: $accent1a;
     color: $dark-text;
+}
+
+code {
+    background-color: $accent1;
+    border-radius: 5px;
+    padding: 2px;
+    font-weight: 200;
 }
 
 // -------------------------------------------------------
@@ -500,6 +512,11 @@ a.btn-grad:hover {
             border:none;
         }
 
+        img {
+            max-width: 600px;
+            height: auto;
+        }
+
     }
 
     .project-text {
@@ -513,6 +530,16 @@ a.btn-grad:hover {
 // -------------------------------------------------------
 
 // responsive design:
+
+@media only screen and (max-width: 1200px) {
+    .project {
+        justify-content: center;
+     
+        .project-text {
+            max-width: -webkit-fill-available;
+        }
+    }
+}
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
@@ -679,6 +706,7 @@ a.btn-grad:hover {
 
             .project-img {
                 max-width: 100%;
+
             }
 
             .project-text {
@@ -703,8 +731,15 @@ a.btn-grad:hover {
         overflow-x: hidden;
     }
 
-    .project .project-img {
-        min-width: 0;
+    .project {
+        
+        .project-img {
+            min-width: 0;
+    
+            img {
+                max-width: -webkit-fill-available;
+            }
+        }
     }
 }
 

@@ -314,6 +314,11 @@
           animation: appear 0.5s;
 }
 
+.hidden.appear {
+  display: block;
+  opacity: 0;
+}
+
 .slide-in {
   -webkit-animation: slide-in 1s;
           animation: slide-in 1s;
@@ -526,6 +531,13 @@ a.btn-grad:hover {
   color: #323232;
 }
 
+code {
+  background-color: #8B7ADD;
+  border-radius: 5px;
+  padding: 2px;
+  font-weight: 200;
+}
+
 #main-nav {
   position: fixed;
   top: 0;
@@ -714,9 +726,25 @@ a.btn-grad:hover {
   border: none;
 }
 
+.project .project-img img {
+  max-width: 600px;
+  height: auto;
+}
+
 .project .project-text {
   max-width: 50%;
   padding: 0;
+}
+
+@media only screen and (max-width: 1200px) {
+  .project {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .project .project-text {
+    max-width: -webkit-fill-available;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -963,6 +991,9 @@ a.btn-grad:hover {
   }
   .project .project-img {
     min-width: 0;
+  }
+  .project .project-img img {
+    max-width: -webkit-fill-available;
   }
 }
 

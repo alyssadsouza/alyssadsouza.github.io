@@ -30,8 +30,42 @@ document.addEventListener("DOMContentLoaded", function() {
     
     })
 
+    setInterval(() => {
+        slideshow();
+    }, 5000)
+
 
 })
+
+var img = 1;
+
+function slideshow() {
+
+    document.getElementById(`discord-${img}`).classList.add("disappear");
+
+    setTimeout(() => {
+        document.getElementById(`discord-${img}`).classList.add("hidden");
+        document.getElementById(`discord-${img}`).classList.remove("disappear");
+
+        img++;
+    
+        if (img > 3) {
+            img = 1;
+        }
+
+        document.getElementById(`discord-${img}`).classList.add("appear");
+
+
+        setTimeout(() => {
+            document.getElementById(`discord-${img}`).classList.remove("hidden");
+            document.getElementById(`discord-${img}`).classList.remove("appear");    
+
+        }, 500)
+        
+        
+    }, 500)
+
+}
 
 function moveContent(elem1, elem2) {
     document.querySelector(elem2).innerHTML = document.querySelector(elem1).innerHTML;
