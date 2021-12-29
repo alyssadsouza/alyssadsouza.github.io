@@ -8,124 +8,171 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open Sans:ital,wght@0,400;0,700;1,400;1,700&family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="portfolio.js"></script>
-    <title>Portfolio | Alyssa D'Souza</title>
+    <title>Alyssa D'Souza | Developer Portfolio</title>
 </head>
 <body>
-    <img src="images/menu.svg" id="menu-btn" class="rotate-menu">
-
-    <div id="main-nav">
-        <hr id="bottom-line">
-        <nav id="site-links">
-            <ul>
-                <li id="top" class="nav-link"><a href="#welcome" data-section="welcome">Welcome</a></li>
-                <li id="middle" class="nav-link"><a href="#about" data-section="about">About</a></li>
-                <li id="bottom" class="nav-link"><a href="#projects" data-section="projects">Projects</a></li>
-            </ul>
-        </nav>
-        <nav id="contact-links">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank"><img src="images/linkedin.svg"></a></li>
-                <li><a href="https://github.com/alyssadsouza" target="_blank"><img src="images/github.svg"></a></li>
-                <li><a href="https://devpost.com/alyssadsouza" target="_blank"><img src="images/devpost.svg"></a></li>
-            </ul>
-        </nav>
+    <nav id="contact-links">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank"><img src="images/linkedin.svg"></a></li>
+            <li><a href="https://github.com/alyssadsouza" target="_blank"><img src="images/github.svg"></a></li>
+            <li><a href="https://devpost.com/alyssadsouza" target="_blank"><img src="images/devpost.svg"></a></li>
+        </ul>
+    </nav>
+    <div id="head">
+        <div id="nav">
+            <div id="img"><img src="images/menu.svg" id="menu-btn" class="rotate-menu"></div>
+    
+            <div id="main-nav">
+                <nav id="site-links">
+                    <ul>
+                        <li id="top" class="nav-link"><a href="#" data-section="welcome">Welcome</a></li>
+                        <li id="middle" class="nav-link"><a href="#" data-section="about">About</a></li>
+                        <li id="bottom" class="nav-link"><a href="#" data-section="projects">Projects</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="desc-container">
+            <div id="welcome-desc" class="desc hidden">
+                <p>I'm Alyssa D'Souza and I'm a software engineering undergrad at the University of Waterloo.
+                    This is my portfolio where you can learn more about some of the projects I've worked on.</p>
+                <p class="grey-text">Click the arrow to navigate.</p>
+            </div>
+            <div id="about-desc" class="desc hidden">
+                <p>Learn more about my experience and the languages, frameworks, and tools that I'm familiar with.</p>
+                <p class="grey-text">Click the arrow to navigate or scroll to continue.</p>
+            </div>
+            <div id="projects-desc" class="desc hidden">
+                <p>All of the projects I've worked on can be found on <a href="https://github.com/alyssadsouza" target="_blank">GitHub</a>, but below are a few spotlighted.</p>
+                <p class="grey-text">Click the arrow to navigate or scroll to continue.</p>
+            </div>
+        </div>
     </div>
 
+    <!-- -------------------------------------------------WELCOME-------------------------------------------------------- -->
+
     <section id="welcome" class="section hidden">
-        <div class="first-header"><h1>Hello!</h1></div>
-        <img src="images/welcome-img.svg" id="welcome-img">
-        <div class="flex" id="welcome-text">
-            <h2>My name is <strong>Alyssa D'Souza</strong>.</h2>
-            <p>I'm a Software Engineering undergraduate at the University of Waterloo. This is my personal portfolio where you can learn more about who I am and some of the projects I've worked on.</p>
-            <div class="projects-btn"><a href="#projects" class="btn-grad">See Projects</a></div>
-        </div>
     </section>
+
+    <!-- -------------------------------------------------ABOUT-------------------------------------------------------- -->
 
     <section id="about" class="section hidden">
-        <div class="first-header"><h1>About Me</h1></div>
-        <div class="flex" id="about-me">
-            <div id="about-img">
+        <div class="flex" id="techskills">
+            <div id="languages" class="skill-section">
+                <h2>Languages</h2>
+                <div class="break"></div>
+                <div id="language-icons" class="flex icons">
+                    <img src="images/python-mono.svg" alt="Python">
+                    <img src="images/java-mono.svg" alt="Java">
+                    <img src="images/c.svg" alt="HTML5">
+                    <img src="images/sql.svg" alt="CSS3">
+                </div>
             </div>
-            <div id="about-text">
-                <p>My name is Alyssa and I'm a first-year at the University of Waterloo. I decided to pursue a tech career because of its prevalence in our day to day lives and, as a result, its capability for social good. Seeing my potential to succeed in the field because of my skillset, I chose Software Engineering at the University of Waterloo to have a diverse background of relevant work and learning experiences when I graduate, and to be alongside individuals that push me to do my best.</p>
-                <p>Outside of school, I like spending my time with the arts, creating. I love playing the guitar and piano, painting, and making digital art when I have the time.</p>
+            <div id="tools" class="skill-section">
+                <h2>Developer tools</h2>
+                <div class="break"></div>
+                <div id="tool-icons" class="flex icons">
+                    <img src="images/git-mono.svg" alt="Git">
+                    <div class="break"></div>
+                    <img src="images/vs.svg" alt="VS Code">
+                </div>
+            </div>
+            <div id="frameworks" class="skill-section">
+                <h2>Frameworks</h2>
+                <div class="break"></div>
+                <div id="framework-icons" class="flex icons">
+                    <img src="images/django-mono.svg" alt="Django">
+                </div>
             </div>
         </div>
-        
-        <div id="tech-skills">
-            <h2>Technical Skills</h2>
-            <div id="skills" class="flex">
-                <div class='skill'>
-                    <img src="images/python-mono.svg" alt="Python">
-                    <img class="hide hidden-skill" src="images/python.svg" alt="Python">
+        <div id="education" class="flex">
+            <div class="first-header"><h1>Education</h1></div>
+            <div class="break"></div>
+            <div class="flex">
+                <div>
+                    <h3>Online courses</h3>
+                    <div class="break"></div>
+                    <p>Though I'm studying an undergraduate degree program in software engineering, as I'm still in my first year the majority of my technical knowledge has come from various online courses. Below, these are listed and, if still available, linked to.</p>
+                    <div class="break"></div>
+                    <ul>
+                        <li>Introduction to Computer Science and Programming Using Python by MITx — <b>edX</b></li>
+                        <li>HTML5 and CSS3 Fundamentals — <a href="https://www.udemy.com/course/html5-fundamentals-for-beginners/" target="_blank">Udemy</a></li>
+                        <li>CS50 Web Programming — <a href="https://cs50.harvard.edu/web/2020/" target="_blank">CS50x</a></li>
+                        <li>Java Programming I and II - MOOC — <a href="https://java-programming.mooc.fi" target="_blank">University of Helsinki</a></li>
+                    </ul>
                 </div>
-                <div class='skill'>
-                    <img src="images/java-mono.svg" alt="Java">
-                    <img class="hide hidden-skill" src="images/java.svg" alt="Java">
-                </div>
-                <div class='skill'>
-                    <img src="images/django-mono.svg" alt="Django">
-                    <img class="hide hidden-skill" src="images/django.svg" alt="Django">
-                </div>
-                <div class='skill'>
-                    <img src="images/html5-mono.svg" alt="HTML5">
-                    <img class="hide hidden-skill" src="images/html5.svg" alt="HTML5">
-                </div>
-                <div class='skill'>
-                    <img src="images/css3-mono.svg" alt="CSS3">
-                    <img class="hide hidden-skill" src="images/css3.svg" alt="CSS3">
-                </div>
-                <div class='skill'>
-                    <img src="images/javascript-mono.svg" alt="JavaScript">
-                    <img class="hide hidden-skill" src="images/javascript.svg" alt="JavaScript">
-                </div>
-                <div class='skill'>
-                    <img src="images/git-mono.svg" alt="Git">
-                    <img class="hide hidden-skill" src="images/git.svg" alt="Git">
+                <div>
+                    <h3>Program courses</h3>
+                    <div class="break"></div>
+                    <p>In my program I've had the opportunity to learn about the following concepts so far:</p>
+                    <div class="break"></div>
+                    <ul>
+                        <li><b>CS 137: Programming Principles</b></li>
+                        <ul>
+                            <li>Topics include procedures and parameter passing, arrays and structures, recursion, sorting, pointers and simple dynamic structures, space and time analysis of designs, and design methodologies. The course is taught using the C programming language.</li>
+                        </ul>
+                        <li><b>SE 101: Introduction to Methods of Software Engineering</b></li>
+                        <ul>
+                            <li>Course objectives include:</li>
+                            <ol>
+                                <li>describing key software engineering activities, including requirements elicitation, design, and testing;</li>
+                                <li>writing code to control a small computer (e.g., Arduino or Raspberry Pi);</li>
+                                <li>using a source code version control system</li>
+                            </ol>
+                        </ul>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section hidden">
-        <div class="first-header"><h1>My Work</h1></div>
+    <!-- -------------------------------------------------PROJECTS-------------------------------------------------------- -->
 
-        <div class="intro">
-            <p>All of the projects I've worked on can be found on <a href="https://github.com/alyssadsouza" target="_blank">GitHub</a>, but below are a couple spotlighted.</p>
+    <section id="projects" class="section hidden flex">
+        <div class="project flex visible">
+            <a class="project-btn" data-id="1">◀︎</a>
+            <div class="project-box flex">
+                <div class="project-title flex">
+                    <h2>SPOT</h2>
+                </div>
+                <div class="break"></div>
+                <p><i>The side project organization tracker</i></p>
+                <div class="break"></div>
+                <div class="project-img">
+                    <iframe class="video" src="https://www.youtube.com/embed/IE0xMSTcOe8?controls=1" allowfullscreen></iframe>
+                </div>
+                <div class="break"></div>
+                <div class="project-text">
+                    <p>I designed and implemented this application solo during <i><a href="https://hackgirlsummertwo.devpost.com/" target="_blank">Hack Girl Summer 2.0</a></i>, a hackathon run by <a href="https://mlh.io/" target="_blank">Major League Hacking</a> for women and non-binary individuals. It placed third overall out of over 50 projects! See the Devpost <a href="https://devpost.com/software/spot-oc28w1" target="_blank">here</a> or the web app <a href="https://hackwithspot.herokuapp.com/" target="_blank">here</a>.</p>
+                </div>
+            </div>
+            <a class="project-btn" data-id="1">▶︎</a>
         </div>
 
-        <div class="project flex purple">
-            <div class="project-text">
-                <h2>SPOT</h2>
-                <p><a href="https://hackwithspot.herokuapp.com/" target="_blank">SPOT</a>, the Side Project Organization Tracker, is a project planner and management web app aimed towards new programmers that eases the daunting task of starting a new side project. This app is perfect for those starting out, but it is just as valuable to veteran hackers who struggle to finish projects before moving on to another. </p>
-                <p>I designed and implemented this application solo during <i><a href="https://hackgirlsummertwo.devpost.com/" target="_blank">Hack Girl Summer 2.0</a></i>, a hackathon run by <a href="https://mlh.io/" target="_blank">Major League Hacking</a> for women and non-binary individuals. It placed third overall out of over 50 projects! See the Devpost <a href="https://devpost.com/software/spot-oc28w1" target="_blank">here</a>.</p>
+        <div class="project flex hidden">
+            <a class="project-btn" data-id="0">◀︎</a>
+            <div class="project-box flex">
+                <div class="project-title flex">
+                    <h2>Leaf-It</h2>
+                </div>
+                <div class="break"></div>
+                <p><i>The plant-sitter you didn't know you needed</i></p>
+                <div class="break"></div>
+                <div class="project-img">
+                    <video class="video" controls poster="images/leaf-it.png">
+                        <source src="images/Leaf_It final Video.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+                <div class="break"></div>
+                <div class="project-text">
+                    <p>I co-developed the web server for this school group project. This involved researching, setting up and styling a flask server that can run remotely on a Raspberry Pi, creating an SQL database that integrates sensor and motor code, and receiving and storing uploaded files from users.  See the GitHub repository <a href="https://github.com/alyssadsouza/Leaf-It" target="_blank">here</a>.</p>
+                </div>
             </div>
-            <div class="project-img">
-                <iframe id="video" src="https://www.youtube.com/embed/IE0xMSTcOe8?controls=1" allowfullscreen></iframe>
-            </div>
+            <a class="project-btn" data-id="0">▶︎</a>
         </div>
 
-        <div class="project flex purple">
-            <div class="project-text">
-                <h2>Tater Bot</h2>
-                <p>Tater Bot is a discord bot I created for my personal server with my friends. A list of the current commands it responds to are below.</p>
-                <ul>
-                    <li><code>#hello</code> - returns a simple greeting chosen at random from a greetings list.</li>
-                    <li><code>#echo</code> - returns back what was said.</li>
-                    <li><code>#hi taterbot</code> - returns a greeting and mentions user. If other users are mentioned in the input, they are mentioned in the greeting as well.</li>
-                    <li><code>#math</code> - followed by a one-step calculation (addition <code>+</code> , subtraction <code>-</code> , multiplication <code>*</code> , division <code>/</code> , exponentiation <code>^</code> ) - returns the result as a float.</li>
-                    <li><code>#fact</code> or <code>#are you smart</code> - returns a fact chosen at random from a pre-written list.</li>
-                </ul>
-                <p>Add Tater Bot to your own server <a href="https://discord.com/api/oauth2/authorize?client_id=845672463148777513&permissions=133120&scope=bot" target="_blank">here</a>.</p>
-            </div>
-            <div class="project-img">
-                <img src="images/discord1.png" id="discord-1">
-                <img src="images/discord2.png" id="discord-2" class="hidden">
-                <img src="images/discord3.png" id="discord-3" class="hidden">
-            </div>
-        </div>
     </section>
     
 </body>

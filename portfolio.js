@@ -15,24 +15,42 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll(".nav-link").forEach(link => {
 
         link.addEventListener("click", () => {
-
+            
             closeMenu(link.id);
     
         })
     })
 
-    document.querySelector(".projects-btn").addEventListener("click", () => {
+    // document.querySelector(".projects-btn").addEventListener("click", () => {
 
-        openMenu();
-        setTimeout(() => {
-            closeMenu("bottom")
-        }, 2000);
+    //     openMenu();
+    //     setTimeout(() => {
+    //         closeMenu("bottom")
+    //     }, 2000);
     
-    })
+    // })
 
-    setInterval(() => {
-        slideshow();
-    }, 5000)
+    // setInterval(() => {
+    //     slideshow();
+    // }, 5000)
+
+    document.querySelectorAll(".project-btn").forEach((btn) => {
+        btn.addEventListener("click",  function(id) {
+            console.log("here");
+            // hide current project
+            var current = document.querySelector(".project.flex.visible");
+            current.classList.remove("visible");
+            current.classList.add("hidden");
+            // display next project
+            var divNum = Number(id.target.dataset.id);
+            console.log(divNum);
+            var projects = document.querySelectorAll(".project");
+            var next = projects[divNum];
+            console.log(next);
+            next.classList.remove("hidden");
+            next.classList.add("visible");
+        })
+    })
 
 
 })
@@ -89,9 +107,18 @@ function openMenu() {
         document.getElementById("menu-btn").classList.add("rotate-menu");
     
         setTimeout(function() {
-
+            document.getElementById("middle").classList.remove("hidden");
+            document.getElementById("bottom").classList.remove("hidden");
             document.getElementById("main-nav").classList.remove("hidden");
+            document.querySelector(".desc.visible").classList.add("disappear");
+            document.querySelector(".desc.visible").classList.add("hide");
+            document.querySelector(".desc.visible").classList.remove("disappear");
+            document.querySelector(".desc.visible").classList.add("hidden");
+            document.querySelector(".desc.visible").classList.remove("hide");
+            document.querySelector(".desc.visible").classList.remove("visible");
+            
             openNavAnimation();
+
             document.querySelectorAll(".section").forEach(section => {
                 section.classList.remove("disappear");
             })
@@ -110,12 +137,12 @@ function closeMenu(id) {
 
     // Animation for link to slide in to top position and move link contents
 
-        if (id == "middle") {
-        middle("middle");
+    if (id == "middle") {
+        middle("middle", clickedSection);
     } else if (id == "bottom") {
-        bottom("bottom");
+        bottom("bottom", clickedSection);
     } else {
-        topLink();
+        topLink(clickedSection);
     }
 
     // Re-add section content
@@ -130,13 +157,13 @@ function closeMenu(id) {
     // Hide nav
 
     setTimeout(function() {
-        document.getElementById("main-nav").classList.add("disappear");
-        document.getElementById("main-nav").classList.add("hidden");
-        document.getElementById("main-nav").classList.remove("disappear");
+        // document.getElementById("main-nav").classList.add("disappear");
+        // document.getElementById("main-nav").classList.add("hidden");
+        // document.getElementById("main-nav").classList.remove("disappear");
         document.getElementById("menu-btn").classList.remove("rerotate-menu");
 
         // Animation for section content to slide in
-
+        
         slideIn(clickedSection);
         
 
@@ -154,10 +181,15 @@ function slideIn(clickedSection) {
         setTimeout(() => {
             clickedSection.classList.remove("slide-in");
             clickedSection.classList.remove("hide");
-            clickedSection.firstElementChild.firstElementChild.classList.add("type");
+            document.querySelectorAll(".first-header").forEach((div) => {
+                console.log(div);
+                div.firstChild.classList.add("type");
+            });
 
             setTimeout(() => {
-                clickedSection.firstElementChild.firstElementChild.classList.remove("type");
+                document.querySelectorAll(".first-header").forEach((div) => {
+                    div.firstChild.classList.remove("type");
+                });
             }, 3000)
 
         }, 1000)
@@ -175,79 +207,92 @@ function openNavAnimation() {
 
 }
 
-function closeNavAnimation() {
+function closeNavAnimation(clickedSection) {
 
-    document.getElementById("top").classList.add("disappear");
+    //document.getElementById("top").classList.add("disappear");
     setTimeout(function() {
-        document.getElementById("main-nav").classList.add("hidden");
-        document.getElementById("middle").classList.remove("hidden");
-        document.getElementById("bottom").classList.remove("hidden");
-        document.getElementById("contact-links").classList.remove("hidden");
-        document.getElementById("top").classList.remove("disappear");
+        // document.getElementById("main-nav").classList.add("hidden");
+        // document.getElementById("middle").classList.remove("hidden");
+        // document.getElementById("bottom").classList.remove("hidden");
+        // document.getElementById("contact-links").classList.remove("hidden");
+        // document.getElementById("top").classList.remove("disappear");
+
+        // change descriptions
+
+        console.log(clickedSection.id);
+
+        // show next one
+
+        document.querySelector(`#${clickedSection.id}-desc`).classList.add("hide");
+        document.querySelector(`#${clickedSection.id}-desc`).classList.remove("hidden");
+        document.querySelector(`#${clickedSection.id}-desc`).classList.add("appear");
+        document.querySelector(`#${clickedSection.id}-desc`).classList.remove("hide");
+        document.querySelector(`#${clickedSection.id}-desc`).classList.add("visible");
+        document.querySelector(`#${clickedSection.id}-desc`).classList.remove("appear");
     }, 750)
 }
 
-function topLink() {
+function topLink(clickedSection) {
 
     // Position top link and fade out other two
 
     document.getElementById("middle").classList.add("disappear");
     document.getElementById("bottom").classList.add("disappear");
-    document.getElementById("contact-links").classList.add("disappear");
+    //document.getElementById("contact-links").classList.add("disappear");
 
     setTimeout(function() {
         
         document.getElementById("middle").classList.add("hide");
         document.getElementById("bottom").classList.add("hide");
-        document.getElementById("contact-links").classList.add("hide");
+        //document.getElementById("contact-links").classList.add("hide");
 
         document.getElementById("middle").classList.remove("disappear");
         document.getElementById("bottom").classList.remove("disappear");
-        document.getElementById("contact-links").classList.remove("disappear");
+        //document.getElementById("contact-links").classList.remove("disappear");
 
         setTimeout(() => {
 
             document.getElementById("middle").classList.remove("hide");
             document.getElementById("bottom").classList.remove("hide");
-            document.getElementById("contact-links").classList.remove("hide");
+            //document.getElementById("contact-links").classList.remove("hide");
 
             document.getElementById("middle").classList.add("hidden");
             document.getElementById("bottom").classList.add("hidden");
-            document.getElementById("contact-links").classList.add("hidden");
+            //document.getElementById("contact-links").classList.add("hidden");
 
             // Animation to close nav
             
-            closeNavAnimation();
+            closeNavAnimation(clickedSection);
 
         }, 750)
 
     }, 500); 
 }
 
-function middle(animation) {
+function middle(animation, clickedSection) {
 
     // Position middle link and fade out other two
 
     document.getElementById("top").classList.add("disappear");
     document.getElementById("bottom").classList.add("disappear");
-    document.getElementById("contact-links").classList.add("disappear");
+    //document.getElementById("contact-links").classList.add("disappear");
 
     setTimeout(function() {
         
         document.getElementById("top").classList.add("hide");
         document.getElementById("middle").classList.add(animation);
         document.getElementById("bottom").classList.add("hide");
-        document.getElementById("contact-links").classList.add("hide");
+        //document.getElementById("contact-links").classList.add("hide");
 
         document.getElementById("top").classList.remove("disappear");
         document.getElementById("bottom").classList.remove("disappear");
-        document.getElementById("contact-links").classList.remove("disappear");
+        //document.getElementById("contact-links").classList.remove("disappear");
 
         setTimeout(() => {
 
             document.getElementById("top").classList.remove("hide");
             document.getElementById("bottom").classList.remove("hide");
-            document.getElementById("contact-links").classList.remove("hide");
+            //document.getElementById("contact-links").classList.remove("hide");
 
             // Replace inner links
 
@@ -262,42 +307,42 @@ function middle(animation) {
 
             document.getElementById("middle").classList.add("hidden");
             document.getElementById("bottom").classList.add("hidden");
-            document.getElementById("contact-links").classList.add("hidden");
+            //document.getElementById("contact-links").classList.add("hidden");
 
             // Animation to close nav
             
-            closeNavAnimation();
+            closeNavAnimation(clickedSection);
 
         }, 750)
 
     }, 500); 
 }
 
-function bottom(animation) {
+function bottom(animation, clickedSection) {
     
     
     // Position bottom link and fade out other two
 
     document.getElementById("top").classList.add("disappear");
     document.getElementById("middle").classList.add("disappear");
-    document.getElementById("contact-links").classList.add("disappear");
+    //document.getElementById("contact-links").classList.add("disappear");
 
     setTimeout(() => {
 
         document.getElementById("top").classList.add("hide");
         document.getElementById("middle").classList.add("hide");
         document.getElementById("bottom").classList.add(animation);
-        document.getElementById("contact-links").classList.add("hide");
+        //document.getElementById("contact-links").classList.add("hide");
 
         document.getElementById("top").classList.remove("disappear");
         document.getElementById("middle").classList.remove("disappear");
-        document.getElementById("contact-links").classList.remove("disappear");
+        //document.getElementById("contact-links").classList.remove("disappear");
 
         setTimeout(function() {
 
             document.getElementById("middle").classList.remove("hide");
             document.getElementById("top").classList.remove("hide");
-            document.getElementById("contact-links").classList.remove("hide");
+            //document.getElementById("contact-links").classList.remove("hide");
 
             // Replace inner links
     
@@ -312,11 +357,11 @@ function bottom(animation) {
     
             document.getElementById("middle").classList.add("hidden");
             document.getElementById("bottom").classList.add("hidden");
-            document.getElementById("contact-links").classList.add("hidden");
+            //document.getElementById("contact-links").classList.add("hidden");
             
             // Animation to close nav
     
-            closeNavAnimation();
+            closeNavAnimation(clickedSection);
     
         }, 750);
 
