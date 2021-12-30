@@ -763,7 +763,7 @@ section {
 }
 
 #projects {
-  height: -webkit-fill-available;
+  height: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
