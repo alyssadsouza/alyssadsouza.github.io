@@ -21,7 +21,7 @@ export default function SkillTabs({ content }) {
   ));
 
   return (
-    <div className="flex flex-row w-screen justify-between items-center">
+    <div className="flex flex-row w-screen justify-between items-center flex-wrap">
       <div id="skill-tabs" className="flex flex-col w-1/2">
         <div id="tab-btns" className="flex flex-row">
           {content.map((tab) => (
@@ -36,7 +36,7 @@ export default function SkillTabs({ content }) {
         </div>
         <Tab key={tab.tab} tab={tab} />
       </div>
-      <div id="skill-icons" className="p-16 w-1/2 flex flex-row justify-between">
+      <div id="skill-icons" className="p-16 w-1/2 flex flex-row justify-evenly flex-wrap">
         {icons}
       </div>
     </div>
