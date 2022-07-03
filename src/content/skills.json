@@ -1,0 +1,81 @@
+{
+  "id": "skills",
+  "content": [
+    {
+      "tab": "Front-End",
+      "title": "Front-End",
+      "color": "orange",
+      "content": [
+        {
+          "heading": "React",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Tailwind, Bootstrap",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Jest",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        }
+      ]
+    },
+    {
+      "tab": "Back-End",
+      "title": "Back-End",
+      "color": "yellow",
+      "content": [
+        {
+          "heading": "React",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Tailwind, Bootstrap",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Jest",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        }
+      ]
+    },
+    {
+      "tab": "Full-Stack",
+      "title": "Full-Stack",
+      "color": "blue",
+      "content": [
+        {
+          "heading": "React",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Tailwind, Bootstrap",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Jest",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        }
+      ]
+    },
+    {
+      "tab": "Dev Tools",
+      "title": "Developer Tools",
+      "color": "pink",
+      "content": [
+        {
+          "heading": "React",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Tailwind, Bootstrap",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        },
+        {
+          "heading": "Jest",
+          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+        }
+      ]
+    }
+  ]
+}
