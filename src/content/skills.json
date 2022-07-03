@@ -5,6 +5,7 @@
       "tab": "Front-End",
       "title": "Front-End",
       "color": "orange",
+      "images": ["devpost", "github", "linkedin"],
       "content": [
         {
           "heading": "React",
@@ -24,6 +25,7 @@
       "tab": "Back-End",
       "title": "Back-End",
       "color": "yellow",
+      "images": ["devpost", "github"],
       "content": [
         {
           "heading": "React",
@@ -43,6 +45,7 @@
       "tab": "Full-Stack",
       "title": "Full-Stack",
       "color": "blue",
+      "images": [],
       "content": [
         {
           "heading": "React",
@@ -62,6 +65,7 @@
       "tab": "Dev Tools",
       "title": "Developer Tools",
       "color": "pink",
+      "images": [],
       "content": [
         {
           "heading": "React",

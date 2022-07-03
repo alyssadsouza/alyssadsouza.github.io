@@ -1,0 +1,59 @@
+.btn-orange {
+    background: rgba(244, 198, 138, 1);
+    border: 2px solid #F4C68A;
+}
+
+.btn-orange:hover {
+    transition: all 100ms ease-in;
+    background: rgba(244, 198, 138, 0);
+    color: #F4C68A;
+}
+
+.btn-yellow {
+    background: rgba(245, 213, 119, 1);
+    border: 2px solid #f5d577;
+}
+
+.btn-yellow:hover {
+    transition: all 100ms ease-in;
+    background: rgba(245, 213, 119, 0);
+    color: #F5D577;
+}
+
+.btn-pink {
+    background: rgba(244, 188, 188, 1);
+    border: 2px solid #F4BCBC;
+}
+
+.btn-pink:hover {
+    transition: all 100ms ease-in;
+    background: rgba(244, 188, 188, 0);
+    color: #F4BCBC;
+}
+
+.btn-blue {
+    background: rgba(177, 200, 234, 1);
+    border: 2px solid #B1C8EA;
+}
+
+.btn-blue:hover {
+    transition: all 100ms ease-in;
+    background: rgba(177, 200, 234, 0);
+    color: #B1C8EA;
+}
+
+.orange {
+    background: #F4C68A;
+}
+
+.yellow {
+    background: #F5D577;
+}
+
+.pink {
+    background: #F4BCBC;
+}
+
+.blue {
+    background: #B1C8EA;
+}

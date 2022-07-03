@@ -1,6 +1,6 @@
 export default function Tab({tab}) {
     return (
-        <div className={`flex flex-col bg-${tab.color} p-16 rounded-xl max-w-xl`}>
+        <div className={`flex flex-col ${tab.color} p-16 rounded-xl`}>
             <h2 className="text-2xl font-display">{tab?.title}</h2>
             {tab?.content.map(item => (
                 <div key={item.heading} className="py-4">
