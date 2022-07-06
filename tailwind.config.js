@@ -6,18 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blue: {
-          500: '#B1C8EA'
-        },
-        orange: {
-          500: '#F4C68A'
-        },
-        pink: {
-          500: '#F4BCBC'
-        },
-        yellow: {
-          500: '#F5D577'
-        }
+        primary: '#B1C8EA',
+        'primary-light': '#d1ddef',
+        secondary:'#F4BCBC',
+        'secondary-light':'#f0cdcd'
       }
     },
     fontFamily: {

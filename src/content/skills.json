@@ -4,80 +4,80 @@
     {
       "tab": "Front-End",
       "title": "Front-End",
-      "color": "orange",
+      "color": "primary-light",
       "images": ["devpost", "github", "linkedin"],
       "content": [
         {
           "heading": "React",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Tailwind, Bootstrap",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Jest",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
     },
     {
       "tab": "Back-End",
       "title": "Back-End",
-      "color": "yellow",
+      "color": "primary",
       "images": ["devpost", "github"],
       "content": [
         {
           "heading": "React",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Tailwind, Bootstrap",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Jest",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
     },
     {
       "tab": "Full-Stack",
       "title": "Full-Stack",
-      "color": "blue",
+      "color": "secondary",
       "images": [],
       "content": [
         {
           "heading": "React",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Tailwind, Bootstrap",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Jest",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
     },
     {
       "tab": "Dev Tools",
       "title": "Developer Tools",
-      "color": "pink",
+      "color": "primary-light",
       "images": [],
       "content": [
         {
           "heading": "React",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Tailwind, Bootstrap",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
           "heading": "Jest",
-          "description": "My name is Alyssa D'Souza and I'm a first-year at the University of Waterloo. "
+          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
     }

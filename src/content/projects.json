@@ -1,0 +1,38 @@
+{
+  "id": "projects",
+  "content": [
+    {
+      "project": "Front-End",
+      "title": "Front-End",
+      "color": "primary-light",
+      "images": ["devpost", "github", "linkedin"],
+      "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
+      "content": {
+        "DESCRIPTION": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships.",
+        "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
+      }
+    },
+    {
+        "project": "Back-End",
+        "title": "Back-End",
+        "color": "primary",
+        "images": ["devpost", "github", "linkedin"],
+        "video": "https://www.youtube.com/embed/dU56Zy7LcRY",
+        "content": {
+          "DESCRIPTION": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships.",
+          "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
+        }
+      },
+      {
+        "project": "Full-Stack",
+        "title": "Full-Stack",
+        "color": "secondary",
+        "images": ["devpost", "github", "linkedin"],
+        "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
+        "content": {
+          "DESCRIPTION": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships.",
+          "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on. "
+        }
+      }
+  ]
+}

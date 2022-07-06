@@ -1,63 +1,53 @@
-.btn-orange {
-    background: rgba(244, 198, 138, 1);
-    border: 2px solid #F4C68A;
+:root {
+    --primary: #B1C8EA;
+    --primary-light: #d1ddef;
+    --secondary: #F4BCBC;
 }
 
-.btn-orange:hover, .btn-orange-active {
+.btn-secondary {
+    background: var(--secondary);
+    border: 2px solid var(--secondary);
+}
+
+.btn-secondary:hover, .btn-secondary-active {
     transition: all 100ms ease-in;
-    background: rgba(244, 198, 138, 0);
-    border-color: #F4C68A;
-    color: #F4C68A;
+    background: transparent;
+    border-color: var(--secondary);
+    color: var(--secondary);
 }
 
-.btn-yellow {
-    background: rgba(245, 213, 119, 1);
-    border: 2px solid #f5d577;
+.btn-primary {
+    background: var(--primary);
+    border: 2px solid var(--primary);
 }
 
-.btn-yellow:hover, .btn-yellow-active {
+.btn-primary:hover, .btn-primary-active {
     transition: all 100ms ease-in;
-    background: rgba(245, 213, 119, 0);
-    border-color: #F5D577;;
-    color: #F5D577;
+    background: transparent;
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
-.btn-pink {
-    background: rgba(244, 188, 188, 1);
-    border: 2px solid #F4BCBC;
+.btn-primary-light {
+    background: var(--primary-light);
+    border: 2px solid var(--primary-light);
 }
 
-.btn-pink:hover, .btn-pink-active {
+.btn-primary-light:hover, .btn-primary-light-active {
     transition: all 100ms ease-in;
-    background: rgba(244, 188, 188, 0);
-    border-color: #F4BCBC;
-    color: #F4BCBC;
+    background: transparent;
+    border-color: var(--primary-light);
+    color: var(--primary-light);
 }
 
-.btn-blue {
-    background: rgba(177, 200, 234, 1);
-    border: 2px solid #B1C8EA;
+.secondary {
+    background: var(--secondary);
 }
 
-.btn-blue:hover, .btn-blue-active {
-    transition: all 100ms ease-in;
-    background: rgba(177, 200, 234, 0);
-    border-color: #B1C8EA;
-    color: #B1C8EA;
+.primary {
+    background: var(--primary);
 }
 
-.orange {
-    background: #F4C68A;
-}
-
-.yellow {
-    background: #F5D577;
-}
-
-.pink {
-    background: #F4BCBC;
-}
-
-.blue {
-    background: #B1C8EA;
+.primary-light {
+    background: var(--primary-light);
 }
