@@ -14,7 +14,6 @@ export default function ProjectView({ content }) {
   );
 
   useEffect(() => {
-    console.debug('here');
     setChosenProject(getProject(projectName, content));
   }, [projectName, content]);
 

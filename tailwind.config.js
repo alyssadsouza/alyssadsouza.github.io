@@ -10,6 +10,15 @@ module.exports = {
         'primary-light': '#d1ddef',
         secondary:'#F4BCBC',
         'secondary-light':'#f0cdcd'
+      },
+      keyframes: {
+        appear: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '100%' },
+        }
+      },
+      animation: {
+        appear: 'appear 300ms ease-in-out',
       }
     },
     fontFamily: {

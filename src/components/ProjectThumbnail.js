@@ -1,6 +1,6 @@
 export default function ProjectThumbnail({ project, onHover }) {
   const icons = project.images.map((image) => (
-    <div key={image} className="p-[0.5%] m-1 rounded-full border-black border transition-all w-8 h-8">
+    <div key={image} className="p-[0.5%] m-1 rounded-full transition-all w-8 h-8">
       <img src={require(`../images/${image}.svg`)} alt="Icon" className="w-full h-full"/>
     </div>
   ));

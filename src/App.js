@@ -19,7 +19,7 @@ function App() {
         </ul>
       </nav>
 
-      <section id="home" className="flex items-center justify-between p-[5%] flex-wrap">
+      <section id="home" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
         <div id="home-text" className="flex flex-col max-w-screen-sm">
           <h1 className="text-3xl font-display">I'm Alyssa.</h1>
             <h1 className="text-2xl font-display my-4">I'm a software engineering undergrad student.</h1>
@@ -32,25 +32,25 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="flex items-center justify-between p-[5%] flex-wrap">
+      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
         <h1 className="text-3xl font-display py-8">This is what I've worked with.</h1>
         <SkillTabs content={skillsContent} />
       </section>
 
-      <section id="projects" className="flex items-center justify-between p-[5%] flex-wrap bg-neutral-800 text-white">
+      <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-800 text-white">
       <h1 className="text-3xl font-display py-8">And this is what I can do.</h1>
         <ProjectView content={projects} />
       </section>
-
-      <footer className="p-16 flex flex-row justify-center">
+      {/* <hr className="border-t-[0.1px] border-neutral-500"/> */}
+      <footer className="p-16 flex flex-row justify-center bg-neutral-800">
         <div className="p-1 m-4 rounded-full border-black border transition-all w-8 h-8">
-          <img src={github} alt="Icon" className="w-full h-full"/>
+          <a href="https://github.com/alyssadsouza" target="_blank" rel="noreferrer"><img src={github} alt="Icon" className="w-full h-full"/></a>
         </div>
         <div className="p-1.5 m-4 rounded-full border-black border transition-all w-8 h-8">
-          <img src={linkedin} alt="Icon" className="w-full h-full"/>
+          <a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank" rel="noreferrer"><img src={linkedin} alt="Icon" className="w-full h-full"/></a>
         </div>
         <div className="p-1 m-4 rounded-full border-black border transition-all w-8 h-8">
-          <img src={devpost} alt="Icon" className="w-full h-full"/>
+          <a href="https://devpost.com/alyssadsouza" target="_blank" rel="noreferrer"><img src={devpost} alt="Icon" className="w-full h-full"/></a>
         </div>
       </footer>
     </div>

@@ -15,7 +15,7 @@ export default function SkillTabs({ content }) {
   }, [tabName, content]);
 
   const icons = tab.images.map(image => (
-    <div key={image} className="p-[5%] m-4 rounded-full border-black border transition-all w-32 h-32">
+    <div key={image} className="p-[5%] m-4 rounded-full border-black border transition-all w-32 h-32 animate-appear">
         <img src={require(`../images/${image}.svg`)} alt="Icon" className="w-full h-full"/>
     </div>
   ));
@@ -36,7 +36,7 @@ export default function SkillTabs({ content }) {
         </div>
         <Tab key={tab.tab} tab={tab} />
       </div>
-      <div id="skill-icons" className="p-[5%] w-1/2 h-full flex flex-col justify-between items-center flex-wrap">
+      <div id="skill-icons" className="p-[5%] w-1/2 h-full flex flex-col justify-between items-center flex-wrap animate-appear">
         {icons}
       </div>
     </div>
