@@ -5,7 +5,7 @@
       "tab": "Front-End",
       "title": "Front-End",
       "color": "primary-light",
-      "images": ["devpost", "github", "linkedin"],
+      "images": ["front-end"],
       "content": [
         {
           "heading": "React",
@@ -25,18 +25,14 @@
       "tab": "Back-End",
       "title": "Back-End",
       "color": "primary",
-      "images": ["devpost", "github"],
+      "images": ["back-end"],
       "content": [
         {
-          "heading": "React",
+          "heading": "Express",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
-          "heading": "Tailwind, Bootstrap",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
-        },
-        {
-          "heading": "Jest",
+          "heading": "PostgreSQL",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
@@ -45,18 +41,14 @@
       "tab": "Full-Stack",
       "title": "Full-Stack",
       "color": "secondary",
-      "images": [],
+      "images": ["full-stack"],
       "content": [
         {
-          "heading": "React",
+          "heading": "Django",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
-          "heading": "Tailwind, Bootstrap",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
-        },
-        {
-          "heading": "Jest",
+          "heading": "Flask",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]
@@ -65,18 +57,18 @@
       "tab": "Dev Tools",
       "title": "Developer Tools",
       "color": "primary-light",
-      "images": [],
+      "images": ["front-end"],
       "content": [
         {
-          "heading": "React",
+          "heading": "Git",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
-          "heading": "Tailwind, Bootstrap",
+          "heading": "VS Code",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         },
         {
-          "heading": "Jest",
+          "heading": "Figma",
           "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       ]

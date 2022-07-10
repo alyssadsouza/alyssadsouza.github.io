@@ -8,7 +8,7 @@ const getProject = (project, content) => {
 };
 
 export default function ProjectView({ content }) {
-  const [projectName, setProjectName] = useState("Front-End");
+  const [projectName, setProjectName] = useState("SPOT");
   const [chosenProject, setChosenProject] = useState(
     getProject(projectName, content)
   );

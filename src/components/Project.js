@@ -4,12 +4,12 @@ export default function Project({ project }) {
   const icons = project.images.map((image) => (
     <div
       key={image}
-      className="p-[0.5%] mr-4 my-4 rounded-full border-black border transition-all w-8 h-8"
+      className="p-[1.5%] mr-4 my-4 rounded-full bg-white transition-all w-8 h-8"
     >
       <img
         src={require(`../images/${image}.svg`)}
         alt="Icon"
-        className="w-full h-full"
+        className="w-full h-full project-img"
       />
     </div>
   ));
@@ -19,7 +19,7 @@ export default function Project({ project }) {
   return (
     <div className={`flex flex-row justify-between items-center my-4 p-[5%] rounded-xl w-full h-full bg-neutral-600 text-white ${mounted && 'animate-appear'}`}>
       <div className="flex flex-col w-1/2 pr-[10%] animate-appear">
-        <h2 className="text-2xl font-display">{project.title}</h2>
+        <h2 className="text-3xl font-display">{project.title}</h2>
         <div className="flex flex-row justify-start">{icons}</div>
         <h3 className="text-xl py-4 font-display font-bold">Description</h3>
         <p>{project.content.DESCRIPTION}</p>

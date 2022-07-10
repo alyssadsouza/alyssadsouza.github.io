@@ -2,35 +2,35 @@
   "id": "projects",
   "content": [
     {
-      "project": "Front-End",
-      "title": "Front-End",
-      "color": "primary-light",
-      "images": ["devpost", "github", "linkedin"],
-      "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
-      "content": {
-        "DESCRIPTION": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships.",
-        "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
-      }
-    },
-    {
-        "project": "Back-End",
-        "title": "Back-End",
-        "color": "primary",
-        "images": ["devpost", "github", "linkedin"],
-        "video": "https://www.youtube.com/embed/dU56Zy7LcRY",
+        "project": "copy",
+        "title": "eatco",
+        "color": "primary-light",
+        "images": ["react", "flask", "sql"],
+        "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
         "content": {
-          "DESCRIPTION": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships.",
+          "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
+          "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
+        }
+      },
+    {
+        "project": "eatco",
+        "title": "eatco",
+        "color": "primary",
+        "images": ["react", "flask", "sql"],
+        "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
+        "content": {
+          "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
           "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
         }
       },
       {
-        "project": "Full-Stack",
-        "title": "Full-Stack",
+        "project": "SPOT",
+        "title": "SPOT",
         "color": "secondary",
-        "images": ["devpost", "github", "linkedin"],
+        "images": ["django", "sql"],
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
         "content": {
-          "DESCRIPTION": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, odit commodi totam maiores beatae corrupti dicta eos nisi repudiandae veritatis vitae quia ea adipisci voluptatum minus dolor veniam non iure.",
+          "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
           "HOW_I_BUILT_IT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, odit commodi totam maiores beatae corrupti dicta eos nisi repudiandae veritatis vitae quia ea adipisci voluptatum minus dolor veniam non iure."
         }
       }

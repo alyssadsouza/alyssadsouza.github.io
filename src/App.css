@@ -3,7 +3,9 @@
     --primary-light: #d1ddef;
     --secondary: #F4BCBC;
 }
-
+/* -------------------------------------------------------------------------- */
+/*                                 Skills Tabs                                */
+/* -------------------------------------------------------------------------- */
 .btn-secondary {
     background: var(--secondary);
     border: 2px solid var(--secondary);
@@ -50,4 +52,25 @@
 
 .primary-light {
     background: var(--primary-light);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                               SVG Animations                               */
+/* -------------------------------------------------------------------------- */
+@keyframes text {
+    0%, 100% {transform: translateY(-1%);}
+    50% {transform: translateY(3%);}
+}
+
+@keyframes arm {
+    0%, 100% {transform: translateX(0.25%) rotate(0deg);}
+    50% {transform: translateX(-0.25%) rotate(0.25deg);}
+}
+
+#text {
+    animation: text infinite 10s ease-in-out;
+}
+
+#arm {
+    animation: arm infinite 2.5s ease-in;
 }

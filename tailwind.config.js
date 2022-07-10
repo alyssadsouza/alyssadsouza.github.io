@@ -19,6 +19,7 @@ module.exports = {
       },
       animation: {
         appear: 'appear 300ms ease-in-out',
+        'slow-appear': 'appear 1s ease-in-out',
       }
     },
     fontFamily: {
