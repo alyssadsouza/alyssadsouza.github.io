@@ -17,10 +17,11 @@ export default function Project({ project }) {
   useEffect(() => setMounted(true), []);
 
   return (
-    <div className={`flex flex-row justify-between items-center my-4 p-[5%] rounded-xl w-full h-full bg-neutral-600 text-white ${mounted && 'animate-appear'}`}>
+    <div className={`flex flex-row justify-between items-center my-4 p-[5%] w-full h-full bg-beige-400 ${mounted && 'animate-appear'}`}>
       <div className="flex flex-col w-1/2 pr-[10%] animate-appear">
         <h2 className="text-3xl font-display">{project.title}</h2>
         <div className="flex flex-row justify-start">{icons}</div>
+        <hr className="border-neutral-700" />
         <h3 className="text-xl py-4 font-display font-bold">Description</h3>
         <p>{project.content.DESCRIPTION}</p>
         <h3 className="text-xl py-4 font-display font-bold">How I Built It</h3>

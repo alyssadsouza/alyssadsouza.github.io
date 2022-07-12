@@ -21,7 +21,7 @@ export default function ProjectView({ content }) {
     <div className="flex flex-row justify-between items-stretch flex-wrap text-black w-full">
       <div id="project-btns" className="flex flex-col w-1/5">
         {content.map((project) => (
-          <div key={project.project} className={`pr-4 hover:border-r-2 transition-all duration-75 ${project === chosenProject && "border-r-2"}`}>
+          <div key={project.project} className={`pr-4 border-r-neutral-600 hover:border-r transition-all duration-75 ${project === chosenProject && "border-r"}`}>
             <ProjectThumbnail
               project={project}
               onHover={() => setProjectName(project.project)}

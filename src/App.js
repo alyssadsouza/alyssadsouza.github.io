@@ -10,12 +10,12 @@ const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {
   return (
-    <div className="App selection:bg-secondary-light animate-slow-appear">
-      <nav className="border-b-[0.1px] border-neutral-300 mb-16">
+    <div className="App selection:bg-secondary-light animate-slow-appear bg-beige">
+      <nav className="border-b-[0.1px] border-beige-600 mb-16">
         <ul id="site-links" className="flex flex-row px-[5%] py-[1%] justify-end font-display">
-            <li className="ml-8"><a href="/" className="hover:text-primary transition-all">Home</a></li>
-            <li className="ml-8"><a href="#about" className="hover:text-primary transition-all">About</a></li>
-            <li className="ml-8"><a href="#projects" className="hover:text-primary transition-all">Projects</a></li>
+            <li className="ml-8"><a href="/" className="hover:text-secondary-light transition-all">Home</a></li>
+            <li className="ml-8"><a href="#about" className="hover:text-secondary-light transition-all">About</a></li>
+            <li className="ml-8"><a href="#projects" className="hover:text-secondary-light transition-all">Projects</a></li>
         </ul>
       </nav>
       <section id="home" className="flex flex-row items-center justify-between px-[5%] py-24 flex-wrap">
@@ -23,7 +23,7 @@ function App() {
           <h1 className="text-3xl font-display">I'm Alyssa.</h1>
             <h2 className="text-2xl font-display my-4">I'm a software engineering undergrad student.</h2>
             <p className="">I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on.</p>
-            <div className="px-[1%] py-[1%] font-display bg-primary border-2 border-opacity-0 border-primary rounded-full w-fit my-8 self-center cursor-pointer hover:bg-opacity-0 hover:border-opacity-100 hover:text-primary transition-all">
+            <div className="px-[2%] py-[1%] font-display text-white bg-primary border-2 border-opacity-0 border-primary rounded-full w-fit my-8 self-center cursor-pointer hover:bg-opacity-0 hover:border-opacity-100 hover:text-primary transition-all">
               <a href="#projects">See my Projects</a>
             </div>
         </div>
@@ -81,16 +81,16 @@ function App() {
         <SkillTabs content={skillsContent} />
       </section>
 
-      <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-800 text-white">
+      <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
       <h1 className="text-3xl font-display py-8">And this is what I can do.</h1>
         <ProjectView content={projects} />
       </section>
-      <footer className="p-16 flex flex-row justify-center bg-neutral-800">
+      <footer className="p-16 flex flex-row justify-center bg-beige-400">
         <a href="https://github.com/alyssadsouza" target="_blank" rel="noreferrer" className="mx-1">
-          <GitHubIcon sx={{ color: "white", "&:hover": { color: "rgb(100,100,100)"} }} />
+          <GitHubIcon sx={{ color: "white", "&:hover": { color: "#DBA0B6"} }} />
         </a>
         <a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank" rel="noreferrer" className="mx-1">
-          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "rgb(100,100,100)", transition: "color" } }} />
+          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "#DBA0B6", transition: "color" } }} />
         </a>
       </footer>
     </div>

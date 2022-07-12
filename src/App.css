@@ -1,7 +1,7 @@
 :root {
-    --primary: #B1C8EA;
-    --primary-light: #d1ddef;
-    --secondary: #F4BCBC;
+    --primary: #608010;
+    --primary-light: #A2B079;
+    --secondary: #EDB9CD;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 Skills Tabs                                */
@@ -48,6 +48,7 @@
 
 .primary {
     background: var(--primary);
+    color: white;
 }
 
 .primary-light {

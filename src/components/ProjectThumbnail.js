@@ -6,7 +6,7 @@ export default function ProjectThumbnail({ project, onHover }) {
   ));
 
   return (
-    <div className={`flex flex-col justify-between my-4 ${project.color} p-4 rounded-xl w-full min-h-[12rem]`} onMouseOver={onHover}>
+    <div className={`flex flex-col justify-between my-4 ${project.color} ${project.text || ""} p-4 rounded-xl w-full min-h-[12rem]`} onMouseOver={onHover}>
       <div className="flex flex-row justify-end">
         {icons}
       </div>
