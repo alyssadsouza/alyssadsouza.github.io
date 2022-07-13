@@ -12,18 +12,24 @@ function App() {
   return (
     <div className="App selection:bg-secondary-light animate-slow-appear bg-beige">
       <nav className="border-b-[0.1px] border-beige-600 mb-16">
-        <ul id="site-links" className="flex flex-row px-[5%] py-[1%] justify-end font-display">
-            <li className="ml-8"><a href="/" className="hover:text-secondary-light transition-all">Home</a></li>
-            <li className="ml-8"><a href="#about" className="hover:text-secondary-light transition-all">About</a></li>
-            <li className="ml-8"><a href="#projects" className="hover:text-secondary-light transition-all">Projects</a></li>
+        <ul id="site-links" className="text-sm flex flex-row p-[1%] justify-end font-display">
+            <li className="ml-1"><a href="/" className="btn-primary px-3 py-1 w-full font-display border rounded-full">
+              Home
+            </a></li>
+            <li className="ml-1"><a href="#about" className="btn-primary-light px-3 py-1 w-full font-display border rounded-full">
+              About
+            </a></li>
+            <li className="ml-1"><a href="#projects" className="btn-secondary px-3 py-1 w-full font-display border rounded-full">
+              Projects
+            </a></li>
         </ul>
       </nav>
       <section id="home" className="flex flex-row items-center justify-between px-[5%] py-24 flex-wrap">
         <div id="home-text" className="flex flex-col w-2/5">
-          <h1 className="text-3xl font-display">I'm Alyssa.</h1>
+          <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
             <h2 className="text-2xl font-display my-4">I'm a software engineering undergrad student.</h2>
             <p className="">I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on.</p>
-            <div className="px-[2%] py-[1%] font-display text-white bg-primary border-2 border-opacity-0 border-primary rounded-full w-fit my-8 self-center cursor-pointer hover:bg-opacity-0 hover:border-opacity-100 hover:text-primary transition-all">
+            <div className="px-[2%] py-[1%] font-display btn-primary rounded-full w-fit my-8 self-center cursor-pointer">
               <a href="#projects">See my Projects</a>
             </div>
         </div>
@@ -72,25 +78,35 @@ function App() {
           <path id="Vector_36" fill-rule="evenodd" clip-rule="evenodd" d="M648.932 487.773C645.69 488.19 642.456 488.608 639.214 489.027C640.468 490.072 641.721 491.117 642.976 492.161C645.483 494.251 647.677 496.968 649.559 500.312C650.499 501.984 651.439 503.654 652.38 505.326C653.527 502.819 654.681 500.312 655.828 497.803C658.129 492.788 659.382 489.654 659.589 488.4C659.697 487.773 659.796 487.145 659.904 486.518C659.696 486.518 659.483 486.518 659.276 486.518C658.856 486.518 655.408 486.937 648.932 487.773Z" fill="white"/>
           </g>
         </svg>
-
         </div>
       </section>
 
       <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
-        <h1 className="text-3xl font-display py-8">This is what I've worked with.</h1>
+        <h1 className="text-3xl font-display py-8 font-bold">This is my skillset.</h1>
         <SkillTabs content={skillsContent} />
       </section>
 
+      <section id="projects" className="flex flex-col items-center justify-center px-[5%] py-24 flex-wrap bg-neutral-700 text-white">
+        <h2 className="text-2xl font-display py-2">What I've won because of these skills.</h2>
+        <p className="text-sm max-w-[40%] text-center">These are titles I've been awarded at hackathons for project submissions I've created and collaborated on.</p>
+        <div className="flex flex-row justify-center p-[5%] w-full h-fit">
+          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+        </div>
+      </section>
+
       <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
-      <h1 className="text-3xl font-display py-8">And this is what I can do.</h1>
+      <h1 className="text-3xl font-display py-8 font-bold">And this is what I can do.</h1>
         <ProjectView content={projects} />
       </section>
-      <footer className="p-16 flex flex-row justify-center bg-beige-400">
+
+      <footer className="p-16 flex flex-row justify-center bg-neutral-700">
         <a href="https://github.com/alyssadsouza" target="_blank" rel="noreferrer" className="mx-1">
-          <GitHubIcon sx={{ color: "white", "&:hover": { color: "#DBA0B6"} }} />
+          <GitHubIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B"} }} />
         </a>
         <a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank" rel="noreferrer" className="mx-1">
-          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "#DBA0B6", transition: "color" } }} />
+          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B", transition: "color" } }} />
         </a>
       </footer>
     </div>

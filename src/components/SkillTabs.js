@@ -27,7 +27,7 @@ export default function SkillTabs({ content }) {
           <button
             key={tab.tab}
             onClick={() => setTabName(tab.tab)}
-            className={`mr-4 my-4 px-[1%] py-[0.5%] w-full text-sm font-display border-2 rounded-full btn-${tabName === tab.tab ? tab.color +  '-active' : tab.color}`}
+            className={`mr-4 my-4 px-[1%] py-[0.5%] w-full text-sm font-display border rounded-full btn-${tabName === tab.tab ? tab.color +  '-active' : tab.color}`}
           >
             {tab.tab}
           </button>
