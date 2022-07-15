@@ -9,16 +9,16 @@ const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {
   return (
-    <div className="App selection:bg-secondary-light animate-slow-appear bg-beige">
-      <nav className="border-b-[0.1px] border-beige-600 mb-16">
-        <ul id="site-links" className="flex flex-row p-[1%] justify-end font-display">
-            <li className="ml-1"><a href="/" className="px-3 py-1 w-full hover:text-secondary">
+    <div className="App selection:bg-secondary-light animate-slow-appear">
+      <nav className="border-b-[0.1px] border-neutral-300 mb-16">
+        <ul id="site-links" className="flex flex-row p-[1%] justify-end font-display text-sm">
+            <li className="ml-1"><a href="/" className="px-3 py-1 w-full hover:text-secondary transition-all">
               Home
             </a></li>
-            <li className="ml-1"><a href="#about" className="px-3 py-1 w-full hover:text-secondary">
+            <li className="ml-1"><a href="#about" className="px-3 py-1 w-full hover:text-secondary transition-all">
               About
             </a></li>
-            <li className="ml-1"><a href="#projects" className="px-3 py-1 w-full hover:text-secondary">
+            <li className="ml-1"><a href="#projects" className="px-3 py-1 w-full hover:text-secondary transition-all">
               Projects
             </a></li>
         </ul>
@@ -80,19 +80,20 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-primary text-white">
+      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-700 text-white">
         <h1 className="text-3xl font-display py-8 font-bold">This is my skillset.</h1>
         <SkillTabs content={skillsContent} />
-        <div id="awards" className="flex flex-col items-center justify-center px-[5%] pt-24 flex-wrap w-full">
+      </section>
+
+      <section id="awards" className="flex flex-col items-center justify-center px-[5%] py-24 flex-wrap w-full">
           <h2 className="text-2xl font-display py-2">What I've won because of these skills.</h2>
           <p className="text-sm max-w-[40%] text-center">These are titles I've been awarded at hackathons for project submissions I've created and collaborated on.</p>
           <div className="flex flex-row justify-center p-[5%] w-full h-fit">
-            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
-            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
-            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white border w-[25%] aspect-square"></div>
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white border w-[25%] aspect-square"></div>
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white border w-[25%] aspect-square"></div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
       <h1 className="text-3xl font-display py-8 font-bold">And this is what I can do.</h1>

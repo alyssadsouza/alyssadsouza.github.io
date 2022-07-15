@@ -6,13 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#00755D',
-        'primary-light': '#9BC1AF',
+        primary: '#4675D6',
+        'primary-light': '#8da8de',
         secondary:'#E7AD8B',
-        'secondary-light':'#F1C2A6',
-        beige: '#FDF5E6',
-        'beige-400': '#EBDBB8',
-        'beige-600': '#DBC087'
+        'secondary-light':'#F1C2A6'
       },
       keyframes: {
         appear: {
@@ -26,8 +23,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      body: ['Open\\Sans', 'sans-serif'],
-      display: ['Karla', 'sans-serif']
+      body: ['Inter', 'sans-serif'],
+      display: ['Inter', 'sans-serif']
     },
   },
   plugins: [],
