@@ -24,7 +24,7 @@
     {
       "tab": "Back-End",
       "title": "Back-End",
-      "color": "primary",
+      "color": "secondary",
       "images": ["back-end"],
       "content": [
         {
@@ -40,7 +40,7 @@
     {
       "tab": "Full-Stack",
       "title": "Full-Stack",
-      "color": "secondary",
+      "color": "primary-light",
       "images": ["full-stack"],
       "content": [
         {
@@ -56,7 +56,7 @@
     {
       "tab": "Dev Tools",
       "title": "Developer Tools",
-      "color": "primary-light",
+      "color": "secondary",
       "images": ["front-end"],
       "content": [
         {

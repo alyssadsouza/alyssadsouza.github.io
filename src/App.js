@@ -2,7 +2,6 @@ import SkillTabs from './components/SkillTabs';
 import ProjectView from './components/ProjectView';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import girl from './images/girl.svg';
 import './App.css';
 
 const skillsContent = require('./content/skills.json')?.content ?? [];
@@ -12,14 +11,14 @@ function App() {
   return (
     <div className="App selection:bg-secondary-light animate-slow-appear bg-beige">
       <nav className="border-b-[0.1px] border-beige-600 mb-16">
-        <ul id="site-links" className="text-sm flex flex-row p-[1%] justify-end font-display">
-            <li className="ml-1"><a href="/" className="btn-primary px-3 py-1 w-full font-display border rounded-full">
+        <ul id="site-links" className="flex flex-row p-[1%] justify-end font-display">
+            <li className="ml-1"><a href="/" className="px-3 py-1 w-full hover:text-secondary">
               Home
             </a></li>
-            <li className="ml-1"><a href="#about" className="btn-primary-light px-3 py-1 w-full font-display border rounded-full">
+            <li className="ml-1"><a href="#about" className="px-3 py-1 w-full hover:text-secondary">
               About
             </a></li>
-            <li className="ml-1"><a href="#projects" className="btn-secondary px-3 py-1 w-full font-display border rounded-full">
+            <li className="ml-1"><a href="#projects" className="px-3 py-1 w-full hover:text-secondary">
               Projects
             </a></li>
         </ul>
@@ -81,18 +80,17 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
+      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-primary text-white">
         <h1 className="text-3xl font-display py-8 font-bold">This is my skillset.</h1>
         <SkillTabs content={skillsContent} />
-      </section>
-
-      <section id="projects" className="flex flex-col items-center justify-center px-[5%] py-24 flex-wrap bg-neutral-700 text-white">
-        <h2 className="text-2xl font-display py-2">What I've won because of these skills.</h2>
-        <p className="text-sm max-w-[40%] text-center">These are titles I've been awarded at hackathons for project submissions I've created and collaborated on.</p>
-        <div className="flex flex-row justify-center p-[5%] w-full h-fit">
-          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
-          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
-          <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+        <div id="awards" className="flex flex-col items-center justify-center px-[5%] pt-24 flex-wrap w-full">
+          <h2 className="text-2xl font-display py-2">What I've won because of these skills.</h2>
+          <p className="text-sm max-w-[40%] text-center">These are titles I've been awarded at hackathons for project submissions I've created and collaborated on.</p>
+          <div className="flex flex-row justify-center p-[5%] w-full h-fit">
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+            <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white w-[25%] aspect-square"></div>
+          </div>
         </div>
       </section>
 
@@ -106,7 +104,7 @@ function App() {
           <GitHubIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B"} }} />
         </a>
         <a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank" rel="noreferrer" className="mx-1">
-          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B", transition: "color" } }} />
+          <LinkedInIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B" } }} />
         </a>
       </footer>
     </div>

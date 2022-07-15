@@ -6,6 +6,7 @@
         "title": "eatco",
         "color": "primary-light",
         "images": ["react", "flask", "sql"],
+        "link": "https://github.com/Shivam-J-07/eatco",
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
@@ -17,6 +18,7 @@
         "title": "eatco",
         "color": "primary",
         "images": ["react", "flask", "sql"],
+        "link": "https://github.com/Shivam-J-07/eatco",
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
@@ -28,6 +30,7 @@
         "title": "SPOT",
         "color": "secondary",
         "images": ["django", "sql"],
+        "link": "https://github.com/alyssadsouza/SPOT",
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
         "content": {
           "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
