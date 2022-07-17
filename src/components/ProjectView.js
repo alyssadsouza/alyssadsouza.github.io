@@ -8,7 +8,7 @@ const getProject = (project, content) => {
 };
 
 export default function ProjectView({ content }) {
-  const [projectName, setProjectName] = useState("SPOT");
+  const [projectName, setProjectName] = useState('SPOT');
   const [chosenProject, setChosenProject] = useState(
     getProject(projectName, content)
   );
@@ -18,7 +18,7 @@ export default function ProjectView({ content }) {
   }, [projectName, content]);
 
   return (
-    <div className="flex flex-row justify-between items-stretch flex-wrap text-black w-full border rounded-xl p-[2.5%]">
+    <div className="flex flex-row justify-between items-stretch flex-wrap">
       <div id="project-btns" className="flex flex-col w-1/5">
         {content.map((project) => (
           <div key={project.project} className={`pr-4 border-r-neutral-600 hover:border-r transition-all duration-75 ${project === chosenProject && "border-r"}`}>

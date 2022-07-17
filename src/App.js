@@ -1,13 +1,56 @@
+import { useState } from 'react';
 import SkillTabs from './components/SkillTabs';
 import ProjectView from './components/ProjectView';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './App.css';
+import { useEffect } from 'react';
 
 const skillsContent = require('./content/skills.json')?.content ?? [];
 const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {
+
+  /* Typewriter effect */
+  const headers = ['I\'m a software engineering undergrad student.', 'I\'m a self-taught web developer.', 'I\'m a second-year undergrad.'];
+  const [header, setHeader] = useState('');
+  const [adding, setAdding] = useState(true);
+  const [headerText, setHeaderText] = useState(headers[0]);
+  const [index, setIndex] = useState(0);
+  const [headerIndex, setHeaderIndex] = useState(1);
+
+  useEffect(() => {
+    if (adding) {
+      if (index <= headerText.length) {
+        setHeader(headerText.slice(0, index));
+        setTimeout(() => setIndex(index + 1), 75);
+      }
+      if (index === headerText.length) {
+        setTimeout(() => {
+          setAdding(false);
+          setIndex(index - 1);
+        }, 5000); // hold on full header for 5 seconds
+      }
+    } // there's a period between adding still being true but index > text length where text holds for a few seconds
+    else {
+      if (index >= 6) { // start from 6 again which is where "I'm a " ends
+        setHeader(headerText.slice(0, index));
+        if (index === 6) {
+          setAdding(true);
+          setHeaderText(headers[headerIndex]);
+          if (headerIndex === headers.length - 1) {
+            setHeaderIndex(0);
+          } else {
+            setHeaderIndex(headerIndex + 1);
+          }
+          setTimeout(() => setIndex(index + 1), 75);
+        } else {
+          setTimeout(() => setIndex(index - 1), 75);
+        }
+      }
+    }
+  }, [index]);
+
   return (
     <div className="App selection:bg-secondary-light animate-slow-appear">
       <nav className="border-b-[0.1px] border-neutral-300 mb-16">
@@ -26,9 +69,9 @@ function App() {
       <section id="home" className="flex flex-row items-center justify-between px-[5%] py-24 flex-wrap">
         <div id="home-text" className="flex flex-col w-2/5">
           <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
-            <h2 className="text-2xl font-display my-4">I'm a software engineering undergrad student.</h2>
+            <h2 className="text-2xl font-display my-4">{header}<span className="caret"></span></h2>
             <p className="">I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on.</p>
-            <div className="px-[2%] py-[1%] font-display btn-primary rounded-full w-fit my-8 self-center cursor-pointer">
+            <div className="px-2 py-1 text-sm font-display btn-primary rounded-full w-fit my-8 self-center cursor-pointer">
               <a href="#projects">See my Projects</a>
             </div>
         </div>
@@ -80,13 +123,13 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-700 text-white">
+      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-800 text-white">
         <h1 className="text-3xl font-display py-8 font-bold">This is my skillset.</h1>
         <SkillTabs content={skillsContent} />
       </section>
 
-      <section id="awards" className="flex flex-col items-center justify-center px-[5%] py-24 flex-wrap w-full">
-          <h2 className="text-2xl font-display py-2">What I've won because of these skills.</h2>
+      <section id="awards" className="flex flex-col items-center justify-center px-[5%] pt-24 flex-wrap w-full">
+          <h2 className="text-2xl font-display py-2">What I've earned because of these skills.</h2>
           <p className="text-sm max-w-[40%] text-center">These are titles I've been awarded at hackathons for project submissions I've created and collaborated on.</p>
           <div className="flex flex-row justify-center p-[5%] w-full h-fit">
             <div className="flex flex-col items-center justify-center p-[5%] mx-[5%] rounded-xl bg-white border w-[25%] aspect-square"></div>
@@ -100,7 +143,7 @@ function App() {
         <ProjectView content={projects} />
       </section>
 
-      <footer className="p-16 flex flex-row justify-center bg-neutral-700">
+      <footer className="p-16 flex flex-row justify-center bg-neutral-800">
         <a href="https://github.com/alyssadsouza" target="_blank" rel="noreferrer" className="mx-1">
           <GitHubIcon sx={{ color: "white", "&:hover": { color: "#E7AD8B"} }} />
         </a>

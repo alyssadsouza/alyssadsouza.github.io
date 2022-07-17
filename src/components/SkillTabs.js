@@ -33,7 +33,7 @@ export default function SkillTabs({ content }) {
           </button>
         ))}
       </div>
-      <div className="flex flex-row flex-wrap items-stretch">
+      <div className="flex flex-row flex-wrap items-start">
         <Tab key={tab.tab} tab={tab} />
         {icons}
       </div>
