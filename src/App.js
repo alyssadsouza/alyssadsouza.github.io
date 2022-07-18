@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import SkillTabs from './components/SkillTabs';
-import ProjectView from './components/ProjectView';
+import SkillTabs from './components/skills/SkillTabs';
+import ProjectView from './components/projects/ProjectView';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import './App.css';
@@ -43,7 +43,7 @@ function App() {
           } else {
             setHeaderIndex(headerIndex + 1);
           }
-          setTimeout(() => setIndex(index + 1), 75);
+          setTimeout(() => setIndex(index + 1), 300);
         } else {
           setTimeout(() => setIndex(index - 1), 75);
         }
@@ -123,7 +123,7 @@ function App() {
         </div>
       </section>
 
-      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap bg-neutral-800 text-white">
+      <section id="about" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
         <h1 className="text-3xl font-display py-8 font-bold">This is my skillset.</h1>
         <SkillTabs content={skillsContent} />
       </section>
@@ -139,7 +139,8 @@ function App() {
         </section>
 
       <section id="projects" className="flex items-center justify-between px-[5%] py-24 flex-wrap">
-      <h1 className="text-3xl font-display py-8 font-bold">And this is what I can do.</h1>
+      <h1 className="text-3xl font-display font-bold pt-8 pb-4">And this is what I can do.</h1>
+      <p className="w-full pb-8">These are projects I've worked on in small teams over the span of a few days and submitted at hackathons.</p>
         <ProjectView content={projects} />
       </section>
 

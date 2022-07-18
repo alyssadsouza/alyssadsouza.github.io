@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Tab from "./Tab";
-import '../App.css';
+import '../../App.css';
 
 const getTab = (tab, content) => {
   return content.find((element) => element.tab === tab);
@@ -16,7 +16,7 @@ export default function SkillTabs({ content }) {
 
   const icons = tab.images.map(image => (
     <div key={image} className="p-[5%] animate-appear w-1/2">
-        <img src={require(`../images/${image}.svg`)} alt="Icon" className="w-full h-full"/>
+        <img src={require(`../../images/${image}.svg`)} alt="Icon" className="w-full h-full"/>
     </div>
   ));
 

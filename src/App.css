@@ -2,6 +2,7 @@
     --primary: #4675D6;
     --primary-light: #8da8de;
     --secondary: #E7AD8B;
+    --secondary-light: #F1C2A6;
     --bg: #FDF5E6;
     --bg-darker: #DBC087;
 }
@@ -46,16 +47,16 @@
 }
 
 .secondary {
-    background: var(--secondary);
+    background: linear-gradient(45deg, var(--secondary), var(--secondary-light));
 }
 
 .primary {
-    background: var(--primary);
+    background: linear-gradient(45deg, var(--primary), var(--primary-light));
     color: white;
 }
 
 .primary-light {
-    background: var(--primary-light);
+    background: linear-gradient(45deg, var(--primary-light), var(--primary));
 }
 
 /* -------------------------------------------------------------------------- */

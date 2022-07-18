@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ProjectThumbnail from "./ProjectThumbnail";
 import Project from "./Project";
-import "../App.css";
+import "../../App.css";
 
 const getProject = (project, content) => {
   return content.find((element) => element.project === project);
