@@ -6,10 +6,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#4675D6',
+        primary: '#3A8CE9',
         'primary-light': '#8da8de',
         secondary:'#E7AD8B',
-        'secondary-light':'#F1C2A6'
+        'secondary-light':'#F1C2A6',
+        'neutral-100': '#F3F5F5',
+        'neutral-200': '#E9EEEF',
+        'neutral-250': '#E2E8E9',
+        'neutral-300': '#DAE2E3'
       },
       keyframes: {
         appear: {

@@ -1,25 +1,12 @@
 :root {
-    --primary: #4675D6;
+    --primary: #3A8CE9;
     --primary-light: #8da8de;
     --secondary: #E7AD8B;
     --secondary-light: #F1C2A6;
-    --bg: #FDF5E6;
-    --bg-darker: #DBC087;
 }
 /* -------------------------------------------------------------------------- */
 /*                                 Skills Tabs                                */
 /* -------------------------------------------------------------------------- */
-.btn-secondary {
-    background: var(--secondary);
-    border: 1px solid var(--secondary);
-}
-
-.btn-secondary:hover, .btn-secondary-active {
-    transition: all 100ms ease-in;
-    background: transparent;
-    border-color: var(--secondary);
-    color: var(--secondary);
-}
 
 .btn-primary {
     background: var(--primary);
@@ -34,34 +21,10 @@
     color: var(--primary);
 }
 
-.btn-primary-light {
-    background: var(--primary-light);
-    border: 1px solid var(--primary-light);
-}
-
-.btn-primary-light:hover, .btn-primary-light-active {
-    transition: all 100ms ease-in;
-    background: transparent;
-    border-color: var(--primary-light);
-    color: var(--primary-light);
-}
-
-.secondary {
-    background: linear-gradient(45deg, var(--secondary), var(--secondary-light));
-}
-
-.primary {
-    background: linear-gradient(45deg, var(--primary), var(--primary-light));
-    color: white;
-}
-
-.primary-light {
-    background: linear-gradient(45deg, var(--primary-light), var(--primary));
-}
-
 /* -------------------------------------------------------------------------- */
 /*                               SVG Animations                               */
 /* -------------------------------------------------------------------------- */
+
 @keyframes text {
     0%, 100% {transform: translateY(-1%);}
     50% {transform: translateY(3%);}
