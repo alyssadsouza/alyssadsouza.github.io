@@ -28,10 +28,10 @@ function App() {
                 <Home setMenuItem={setMenuItem} />
             )}
             {menuItem === 'About' && (
-                <About />
+                <About setMenuItem={setMenuItem} />
             )}
             {menuItem === 'Projects' && (
-                <Projects chosenProject={project} setChosenProject={setProject}  />
+                <Projects chosenProject={project} setChosenProject={setProject} />
             )}
         </div>
 

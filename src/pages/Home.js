@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import NavArrow from '../components/NavArrow';
 
 function Home({setMenuItem}) {
   /* Typewriter effect */
@@ -63,6 +64,7 @@ function Home({setMenuItem}) {
           See my Projects
         </button>
       </div>
+      <NavArrow next="About" setMenuItem={setMenuItem} />
     </section>
   );
 }
