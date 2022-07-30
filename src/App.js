@@ -4,8 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Nav from './components/Nav';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -13,8 +12,18 @@ function App() {
   const [project, setProject] = useState({});
 
   return (
-    <div className="App selection:bg-secondary-light animate-slow-appear h-screen w-screen flex flex-row">
-        <div id="sidebar" className="bg-neutral-100 w-[45%] h-full overflow-scroll">
+    <div className="App selection:bg-secondary-light animate-slow-appear min-h-screen w-screen flex flex-col justify-between lg:flex-row bg-neutral-100 lg:bg-opacity-0">
+
+        <div className='lg:hidden mx-[10%] my-[5%] flex flex-row justify-center'>
+            <Nav
+                menuItem={menuItem}
+                setMenuItem={setMenuItem}
+                items={["Home", "About", "Projects"]}
+                classes="bg-neutral-200 w-fit"
+            />
+        </div>
+
+        <div id="sidebar" className="bg-neutral-100 w-full lg:w-[45%]">
             {menuItem === 'Home' && (
                 <Home setMenuItem={setMenuItem} />
             )}
@@ -24,22 +33,23 @@ function App() {
             {menuItem === 'Projects' && (
                 <Projects chosenProject={project} setChosenProject={setProject}  />
             )}
-            <footer className="flex flex-row justify-center w-[45%] bottom-[5%] fixed">
-              <a href="https://github.com/alyssadsouza" target="_blank" rel="noreferrer" className="mx-1">
-                <GitHubIcon sx={{ color: "#DAE2E3", "&:hover": { color: "#3A8CE9"} }} />
-              </a>
-              <a href="https://www.linkedin.com/in/alyssa-dsouza" target="_blank" rel="noreferrer" className="mx-1">
-                <LinkedInIcon sx={{ color: "#DAE2E3", "&:hover": { color: "#3A8CE9" } }} />
-              </a>
-            </footer>
         </div>
-        <div id="main-stage" className="w-[55%] h-full overflow-scroll flex flex-col items-end justify-between">
-          <Nav
-            menuItem={menuItem}
-            setMenuItem={setMenuItem}
-            items={["Home", "About", "Projects"]}
-          />
-          <div id="main-stage-image" className="h-screen w-full">
+
+        <div className='hidden lg:block lg:w-[45%] lg:bottom-0 lg:h-[10%] lg:fixed'>
+          <Footer />
+        </div>
+
+        <div id="main-stage" className="lg:w-[55%] p-[10%] lg:p-0 w-full h-auto flex flex-col items-end justify-between bg-white">
+
+          <div className='hidden lg:block mx-[10%] my-[5%]'>
+            <Nav
+                menuItem={menuItem}
+                setMenuItem={setMenuItem}
+                items={["Home", "About", "Projects"]}
+            />
+          </div>
+
+          <div id="main-stage-image" className="h-full w-full flex flex-col justify-center">
             {menuItem === 'Home' && (
               <svg viewBox="0 0 1127 640" className="h-full w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="girl">
@@ -135,14 +145,20 @@ function App() {
             {menuItem === 'Projects' && (
               <iframe
                 title={`project-video-${project?.project}`}
-                className="w-full h-full p-[10%] rounded-xl"
+                className="w-full lg:p-[10%] h-[65vh] rounded-xl"
                 frameBorder={0}
                 src={project?.video}
                 allowFullScreen>
               </iframe>
             )}
           </div>
+
+          <div className='lg:hidden w-full flex flex-row items-center'>
+            <Footer classes="mt-[10%]" />
+          </div>
+
         </div>
+    
     </div>
   );
 }

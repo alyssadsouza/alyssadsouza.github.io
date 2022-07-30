@@ -2,7 +2,7 @@ export default function Project({ project }) {
   const icons = project?.images?.map((image) => (
     <div
       key={image}
-      className="p-[5%] ml-4 my-4 rounded-full bg-neutral-300 transition-all w-8 h-8"
+      className="p-[5%] ml-4 my-4 rounded-full bg-primary bg-opacity-20 transition-all w-8 h-8"
     >
       <img
         src={require(`../../images/${image}.svg`)}
@@ -13,7 +13,7 @@ export default function Project({ project }) {
   ));
 
   return (
-    <div className='flex flex-col justify-center items-start my-4 p-[5%] bg-neutral-200 rounded-xl w-full h-full animate-appear'>
+    <div className='flex flex-col justify-center items-start my-4 p-[5%] bg-primary bg-opacity-10 rounded-xl w-full h-auto animate-appear'>
       <div className="flex flex-row justify-between w-full">
         <div>
           <h2 className="text-3xl font-display">{project?.title}</h2>

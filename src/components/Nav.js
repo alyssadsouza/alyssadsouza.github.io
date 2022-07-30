@@ -1,11 +1,10 @@
 import React from "react";
 
 const Nav = (props) => {
-  const { menuItem, setMenuItem, items, style } = props;
+  const { menuItem, setMenuItem, items, classes } = props;
   return (
     <nav
-      className="flex flex-row mx-[10%] my-[5%] py-1 px-0 rounded-full h-fit bg-neutral-100"
-      style={style}
+      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit bg-neutral-100 ${classes}`}
     >
       {items.map((item) => (
         <button
@@ -14,10 +13,10 @@ const Nav = (props) => {
           className={`
                 ${
                   menuItem === item
-                    ? "bg-primary text-white"
+                    ? "bg-gradient-to-r from-primary via-primary-light to-secondary text-white"
                     : "hover:bg-neutral-250"
                 }
-                mx-2 rounded-full px-2 transition-all
+                mx-2 rounded-full px-3 py-1 transition-all text-sm
               `}
         >
           {item}

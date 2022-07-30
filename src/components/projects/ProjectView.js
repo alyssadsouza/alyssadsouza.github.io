@@ -16,7 +16,7 @@ export default function ProjectView({ content, chosenProject, setChosenProject }
   }, [projectName, content]);
 
   return (
-    <div className="flex flex-col justify-start items-stretch">
+    <div className="flex flex-col justify-start items-end">
       <Dropdown
         menuItem={projectName}
         setMenuItem={setProjectName}
