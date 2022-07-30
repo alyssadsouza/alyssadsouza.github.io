@@ -64,7 +64,7 @@ function Home({setMenuItem}) {
           See my Projects
         </button>
       </div>
-      <NavArrow next="About" setMenuItem={setMenuItem} />
+      <NavArrow next="About" setMenuItem={setMenuItem} classes="mt-[-10%]" />
     </section>
   );
 }
