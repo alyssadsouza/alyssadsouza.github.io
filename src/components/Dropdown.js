@@ -9,7 +9,7 @@ const Dropdown = (props) => {
         <button
           onClick={() => setMenuItem(menuItem)}
           key={menuItem}
-          className="bg-gradient-to-r from-primary via-primary-light to-secondary text-white ml-2 rounded-xl w-full h-fit px-2 py-1 transition-all"
+          className="bg-gradient-to-r from-primary via-primary-light to-secondary text-white ml-2 rounded-xl w-full h-fit px-2 py-1 transition-all cursor-auto"
         >
           {menuItem}
         </button>

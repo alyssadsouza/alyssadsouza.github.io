@@ -13,7 +13,7 @@ const Nav = (props) => {
           className={`
                 ${
                   menuItem === item
-                    ? "bg-gradient-to-r from-primary via-primary-light to-secondary text-white"
+                    ? "bg-gradient-to-r from-primary via-primary-light to-secondary text-white cursor-auto"
                     : "hover:bg-neutral-250"
                 }
                 mx-2 rounded-full px-3 py-1 transition-all text-sm
