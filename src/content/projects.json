@@ -4,6 +4,7 @@
     {
         "project": "copy",
         "title": "eatco",
+        "index": 0,
         "color": "primary-light",
         "images": ["react", "flask", "sql"],
         "link": "https://github.com/Shivam-J-07/eatco",
@@ -11,12 +12,13 @@
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
-          "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
+          "HOW_I_BUILT_IT": ["I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."]
         }
       },
     {
         "project": "eatco",
         "title": "eatco",
+        "index": 1,
         "color": "primary",
         "images": ["react", "flask", "sql"],
         "link": "https://github.com/Shivam-J-07/eatco",
@@ -24,12 +26,13 @@
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
-          "HOW_I_BUILT_IT": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."
+          "HOW_I_BUILT_IT": ["I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships. This portfolio showcases my skills and some of the projects I’ve worked on."]
         }
       },
       {
         "project": "SPOT",
         "title": "SPOT",
+        "index": 2,
         "color": "secondary",
         "images": ["django", "sql"],
         "link": "https://github.com/alyssadsouza/SPOT",
@@ -37,7 +40,7 @@
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
         "content": {
           "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
-          "HOW_I_BUILT_IT": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, odit commodi totam maiores beatae corrupti dicta eos nisi repudiandae veritatis vitae quia ea adipisci voluptatum minus dolor veniam non iure."
+          "HOW_I_BUILT_IT": ["Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, odit commodi totam maiores beatae corrupti dicta eos nisi repudiandae veritatis vitae quia ea adipisci voluptatum minus dolor veniam non iure.", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, odit commodi totam maiores beatae corrupti dicta eos nisi repudiandae veritatis vitae quia ea adipisci voluptatum minus dolor veniam non iure."]
         }
       }
   ]

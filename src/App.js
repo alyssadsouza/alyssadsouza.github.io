@@ -5,6 +5,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import ProjectPagination from './components/projects/ProjectPagination';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
   const [project, setProject] = useState({});
 
   return (
-    <div className="App selection:bg-secondary-light animate-slow-appear min-h-screen w-screen flex flex-col justify-between lg:flex-row bg-neutral-100 lg:bg-opacity-0">
+    <div className="App selection:bg-secondary-light animate-slow-appear h-screen w-screen flex flex-col justify-between lg:flex-row bg-neutral-100 lg:bg-opacity-0">
 
         <div className='lg:hidden mx-[10%] my-[5%] flex flex-row justify-center'>
             <Nav
@@ -23,7 +24,7 @@ function App() {
             />
         </div>
 
-        <div id="sidebar" className="bg-neutral-100 w-full lg:w-[45%]">
+        <div id="sidebar" className="bg-neutral-100 w-full lg:w-[40%]">
             {menuItem === 'Home' && (
                 <Home setMenuItem={setMenuItem} />
             )}
@@ -35,11 +36,11 @@ function App() {
             )}
         </div>
 
-        <div className='hidden lg:block lg:w-[45%] lg:bottom-0 lg:h-[10%] lg:fixed'>
+        <div className='hidden lg:block lg:w-[40%] lg:bottom-0 lg:h-[10%] lg:fixed'>
           <Footer />
         </div>
 
-        <div id="main-stage" className="lg:w-[55%] p-[10%] lg:p-0 w-full h-auto flex flex-col items-end justify-between bg-white">
+        <div id="main-stage" className="lg:w-[60%] p-[10%] lg:p-0 w-full h-auto flex flex-col items-end justify-between bg-white">
 
           <div className='hidden lg:block mx-[10%] my-[5%]'>
             <Nav
@@ -143,7 +144,7 @@ function App() {
               </svg>
             )}
             {menuItem === 'Projects' && (
-              <div className="lg:py-4">
+              <div className="lg:py-4 flex flex-col">
                 <h3 className="text-xl py-0 lg:px-[10%] font-bold">Demo</h3>
                 <p className="pb-4 lg:py-0 lg:px-[10%] text-sm">
                   This was my team's submission video demoing the application we built. You can see the full submission on devpost <a href={project.devpostLink} target="_blank" rel="noreferrer" className="text-primary underline-offset-1 hover:underline">here</a>.
@@ -155,6 +156,7 @@ function App() {
                     src={project?.video}
                     allowFullScreen>
                 </iframe>
+                <ProjectPagination project={project} setProject={setProject} />
               </div>
             )}
           </div>

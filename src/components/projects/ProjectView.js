@@ -9,7 +9,11 @@ const getProject = (project, content) => {
 };
 
 export default function ProjectView({ content, chosenProject, setChosenProject }) {
-  const [projectName, setProjectName] = useState('SPOT');
+  const [projectName, setProjectName] = useState(chosenProject.project || 'SPOT');
+
+  useEffect(() => {
+    setProjectName(chosenProject.project || 'SPOT');
+  }, [chosenProject]);
 
   useEffect(() => {
     setChosenProject(getProject(projectName, content));

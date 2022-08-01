@@ -29,7 +29,12 @@ export default function Project({ project }) {
       <h3 className="text-xl py-4 font-display font-bold">Description</h3>
       <p>{project?.content?.DESCRIPTION}</p>
       <h3 className="text-xl py-4 font-display font-bold">How I Built It</h3>
-      <p>{project?.content?.HOW_I_BUILT_IT}</p>
+      {project?.content?.HOW_I_BUILT_IT?.map(paragraph =>
+        <>
+        <p>{paragraph}</p>
+        <br />
+        </>
+      )}
     </div>
   );
 }
