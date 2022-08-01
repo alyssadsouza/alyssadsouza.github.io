@@ -10,8 +10,8 @@ const NavArrow = ({next, setMenuItem, classes}) => {
           strokeWidth={2}
           onClick={() => setMenuItem(next)}
         >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" className="hidden sm:block" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" className="sm:hidden" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" className="hidden sm:block" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" className="sm:hidden" />
         </svg>
       </div>
     );

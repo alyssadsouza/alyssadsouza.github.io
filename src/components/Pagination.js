@@ -4,10 +4,11 @@ const Pagination = (props) => {
   const { index, setIndex, total, classes } = props;
   return (
     <nav
-      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit ${classes}`}
+      className={`flex flex-row justify-center py-4 px-0 rounded-full h-fit ${classes}`}
     >
       {[...Array(total).keys()].map(i => (
         <button
+          key={`pagination-btn-${i}`}
           className={`
           ${i === index ? 'bg-neutral-300 cursor-auto' 
           : 'cursor-pointer bg-neutral-200 hover:bg-neutral-300 transition-all'}
