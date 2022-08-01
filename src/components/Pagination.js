@@ -4,7 +4,7 @@ const Pagination = (props) => {
   const { index, setIndex, total, classes } = props;
   return (
     <nav
-      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit${classes}`}
+      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit ${classes}`}
     >
       {[...Array(total).keys()].map(i => (
         <button
