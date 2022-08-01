@@ -24,7 +24,7 @@ section::-webkit-scrollbar-thumb {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                 Buttons                                    */
+/*                                 Skills Tabs                                */
 /* -------------------------------------------------------------------------- */
 
 .btn-primary {
@@ -83,18 +83,4 @@ section::-webkit-scrollbar-thumb {
 
 .slide-down {
     animation: slide-down 1s ease-in-out;
-}
-.section-enter {
-    opacity: 0;
-}
-.section-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
-}
-.section-exit {
-    opacity: 1;
-}
-.section-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
 }
