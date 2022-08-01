@@ -5,7 +5,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import ProjectPagination from './components/projects/ProjectPagination';
+import ProjectStage from './components/projects/ProjectStage';
 
 function App() {
 
@@ -144,20 +144,7 @@ function App() {
               </svg>
             )}
             {menuItem === 'Projects' && (
-              <div className="lg:py-4 flex flex-col">
-                <h3 className="text-xl py-0 lg:px-[10%] font-bold">Demo</h3>
-                <p className="pb-4 lg:py-0 lg:px-[10%] text-sm">
-                  This was my team's submission video demoing the application we built. You can see the full submission on Devpost <a href={project.devpostLink} target="_blank" rel="noreferrer" className="text-primary-light underline-offset-1 hover:underline">here</a>.
-                </p>
-                <iframe
-                    title={`project-video-${project?.project}`}
-                    className="w-full lg:p-[10%] lg:py-4 h-[65vh] rounded-xl"
-                    frameBorder={0}
-                    src={project?.video}
-                    allowFullScreen>
-                </iframe>
-                <ProjectPagination project={project} setProject={setProject} />
-              </div>
+              <ProjectStage project={project} setProject={setProject} />
             )}
           </div>
 
