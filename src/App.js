@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import './App.css';
+import { CSSTransition } from 'react-transition-group';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ProjectStage from './components/projects/ProjectStage';
+import './App.css';
 
 function App() {
 
@@ -25,15 +26,32 @@ function App() {
         </div>
 
         <div id="sidebar" className="bg-neutral-100 w-full lg:w-[40%]">
-            {menuItem === 'Home' && (
-                <Home setMenuItem={setMenuItem} />
-            )}
-            {menuItem === 'About' && (
-                <About setMenuItem={setMenuItem} />
-            )}
-            {menuItem === 'Projects' && (
-                <Projects chosenProject={project} setChosenProject={setProject} />
-            )}
+            <CSSTransition
+              in={menuItem === 'Home'}
+              timeout={300}
+              classNames="section"
+              unmountOnExit
+            >
+              <Home setMenuItem={setMenuItem} />
+            </CSSTransition>
+
+            <CSSTransition
+              in={menuItem === 'About'}
+              timeout={300}
+              classNames="section"
+              unmountOnExit
+            >
+              <About setMenuItem={setMenuItem} />
+            </CSSTransition>
+
+            <CSSTransition
+              in={menuItem === 'Projects'}
+              timeout={300}
+              classNames="section"
+              unmountOnExit
+            >
+              <Projects chosenProject={project} setChosenProject={setProject} />
+            </CSSTransition>
         </div>
 
         <div className='hidden lg:block lg:w-[40%] lg:bottom-0 lg:h-[10%] lg:fixed'>
