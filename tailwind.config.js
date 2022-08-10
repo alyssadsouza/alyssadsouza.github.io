@@ -6,14 +6,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#77CEC3',
-        'primary-light': '#92BCDC',
-        secondary:'#F2A798',
-        'secondary-light':'#F3BDB2',
-        'neutral-100': '#F3F5F5',
-        'neutral-200': '#E9EEEF',
-        'neutral-250': '#E2E8E9',
-        'neutral-300': '#DAE2E3'
+        primary: '#274287',
+        'primary-100': '#2E4599',
+        'primary-150': '#3B4D8D',
+        'primary-200': '#4A6BBF',
+        'primary-300': '#3E61DB',
+        secondary:'#D4A685',
+        'secondary-50':'#FCF8F7',
+        'secondary-light':'#E8BA99',
+        'secondary-dark': '#A66D39',
+        'neutral-50': '#ECEEF5',
+        'neutral-100': '#DADCEA',
+        'neutral-150': '#CCCEE4',
+        'neutral-200': '#5860A4',
+        'light-text': '#F1E5DE'
       },
       keyframes: {
         appear: {
@@ -27,8 +33,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      body: ['Inter', 'sans-serif'],
-      display: ['Inter', 'sans-serif']
+      body: ['Source Code Pro', 'monospace'],
+      display: ['Source Code Pro', 'monospace']
     },
   },
   plugins: [],

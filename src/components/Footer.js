@@ -3,11 +3,11 @@ import { IconContext } from "react-icons";
 
 const Footer = ({classes}) => {
   return (
-    <footer className={`flex flex-row justify-center items-center w-full h-full lg:border-t lg:bg-neutral-100 ${classes}`}>
+    <footer className={`flex flex-row justify-center items-center w-full h-full lg:border-t border-primary-150 bg-primary ${classes}`}>
       <IconContext.Provider
         value={{
           className:
-            "text-neutral-300 hover:text-primary-light transition-all w-5 h-5",
+            "text-primary-200 hover:text-secondary transition-all w-5 h-5",
         }}
       >
         <a
@@ -22,11 +22,11 @@ const Footer = ({classes}) => {
       <IconContext.Provider
         value={{
           className:
-            "text-neutral-300 hover:text-primary-light transition-all w-5 h-5",
+            "text-primary-200 hover:text-secondary transition-all w-5 h-5",
         }}
       >
         <a
-          href="https://github.com/alyssadsouza"
+          href="https://www.linkedin.com/in/alyssa-dsouza"
           target="_blank"
           rel="noreferrer"
           className="mx-1"

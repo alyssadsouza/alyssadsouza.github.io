@@ -3,7 +3,7 @@ const NavArrow = ({next, setMenuItem, classes}) => {
         <div className={`w-full flex flex-row justify-center mb-[5%] ${classes}`}>
         <svg 
           xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8 text-neutral-400 cursor-pointer hover:text-neutral-500 transition-all"
+          className="h-8 w-8 text-neutral-100 cursor-pointer hover:text-neutral-200 transition-all"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

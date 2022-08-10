@@ -5,9 +5,9 @@ const projects = require('../content/projects.json')?.content ?? [];
 function Projects({chosenProject, setChosenProject}) {
 
   return (
-      <section id="projects" className="flex flex-col items-stretch justify-between px-[10%] py-[5%] w-full  lg:h-[90%] lg:overflow-y-auto">
-        <h1 className="text-3xl font-display font-bold pt-8 pb-4">And this is what I can do.</h1>
-        <p className="w-full pb-8">These are projects I've worked on in small teams over the span of a few days and submitted at hackathons.</p>
+      <section id="projects" className="flex flex-col items-stretch justify-between px-[10%] py-[5%] w-full text-neutral-800 lg:h-[90%] lg:overflow-y-auto">
+        <h1 className="text-3xl font-display font-bold pt-8 pb-4 text-light-text">And this is what I can do.</h1>
+        <p className="w-full pb-8 text-light-text">These are projects I've worked on in small teams over the span of a few days and submitted at hackathons.</p>
         <ProjectView content={projects} chosenProject={chosenProject} setChosenProject={setChosenProject} />
       </section>
   );

@@ -4,72 +4,57 @@
     {
       "tab": "Front-End",
       "title": "Front-End",
-      "color": "primary-light",
       "images": ["front-end"],
       "content": [
         {
           "heading": "React",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I've developed almost exclusively with React for my projects (including this site!). In my first co-op I worked with React, resolving bugs and creating components for the application."
         },
         {
           "heading": "Tailwind, Material-UI",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
-        },
-        {
-          "heading": "Jest",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I enjoy using Tailwind CSS for my projects to save time, and will use Material-UI for quick projects that use many basic UI components."
         }
       ]
     },
     {
-      "tab": "Back-End",
-      "title": "Back-End",
-      "color": "secondary",
+      "tab": "Back-End + Full-Stack",
+      "title": "Back-End + Full-Stack",
       "images": ["back-end"],
       "content": [
         {
           "heading": "Express",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
-        },
-        {
-          "heading": "PostgreSQL",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
-        }
-      ]
-    },
-    {
-      "tab": "Full-Stack",
-      "title": "Full-Stack",
-      "color": "primary-light",
-      "images": ["full-stack"],
-      "content": [
-        {
-          "heading": "Django",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I was introduced to ExpressJS at my first co-op. Since then I've worked on a few small projects to get familiar with it."
         },
         {
           "heading": "Flask",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I mainly use Flask for hackathons because it's easy to set up and most team members are familiar with Python."
+        },
+        {
+          "heading": "PostgreSQL",
+          "description": "I was introduced to Postgres at my first co-op as well. I've used it in a few projects to get familiar with it."
+        },
+        {
+          "heading": "Django",
+          "description": "The first web apps I built were with Django because it's a full stack framework. Now I'll use it for faster setups, like at hackathons."
         }
       ]
     },
     {
       "tab": "Dev Tools",
       "title": "Developer Tools",
-      "color": "secondary",
       "images": ["front-end"],
       "content": [
         {
           "heading": "Git",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I use git for work and hackathons where I'm working in a team on different aspects of the codebase."
         },
         {
           "heading": "VS Code",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "VS Code is my IDE of choice for any and every project."
         },
         {
           "heading": "Figma",
-          "description": "I'm a second-year at the University of Waterloo and as a co-op student I’m actively looking for web development internships."
+          "description": "I use Figma for my projects (including this site!) to mockup designs and make smarter UI/UX decisions."
         }
       ]
     }

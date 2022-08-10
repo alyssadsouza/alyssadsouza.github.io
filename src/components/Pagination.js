@@ -10,8 +10,8 @@ const Pagination = (props) => {
         <button
           key={`pagination-btn-${i}`}
           className={`
-          ${i === index ? 'bg-neutral-300 cursor-auto' 
-          : 'cursor-pointer bg-neutral-200 hover:bg-neutral-300 transition-all'}
+          ${i === index ? 'bg-neutral-200 cursor-auto' 
+          : 'cursor-pointer bg-neutral-100 hover:bg-neutral-150 transition-all'}
           rounded-full w-2 h-2 mx-1
           `}
           onClick={() => setIndex(i)}

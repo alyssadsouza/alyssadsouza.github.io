@@ -23,6 +23,7 @@ export default function SkillTabs({ content }) {
           setMenuItem={setTabName}
           items={content.map(tab => tab.tab)}
           classes="bg-neutral-200 m-0"
+          buttonClasses="hover:bg-primary-150"
         />
       </div>
       <div className="sm:hidden w-full">

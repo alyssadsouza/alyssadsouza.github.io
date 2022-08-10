@@ -25,6 +25,7 @@ export default function ProjectView({ content, chosenProject, setChosenProject }
         menuItem={projectName}
         setMenuItem={setProjectName}
         items={content.map(item => item.project)}
+        classes="bg-neutral-50"
       />
       <Project project={chosenProject} />
     </div>

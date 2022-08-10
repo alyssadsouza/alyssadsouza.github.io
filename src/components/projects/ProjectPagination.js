@@ -8,6 +8,8 @@ const ProjectPagination = (props) => {
 
   const [index, setIndex] = useState(project.index);
 
+  useEffect(() => setIndex(project.index), [project]);
+
   useEffect(() => {
     const newProject = projects.find(proj => proj.index === index);
     if (newProject !== undefined) {
@@ -16,7 +18,7 @@ const ProjectPagination = (props) => {
   }, [index]);
   
   return (
-    <Pagination index={index} setIndex={setIndex} total={projects.length} />
+    <Pagination index={index} setIndex={setIndex} total={projects.length} classes={classes} />
   );
 };
 

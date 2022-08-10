@@ -4,18 +4,18 @@ const Dropdown = (props) => {
   const { menuItem, setMenuItem, items, style } = props;
   const [open, setOpen] = useState(false);
   return (
-    <div className="py-1 bg-neutral-200 w-full rounded-xl">
+    <div className="py-1 bg-secondary w-full rounded-xl ">
       <div className="flex flex-row justify-between items-center">
         <button
           onClick={() => setMenuItem(menuItem)}
           key={menuItem}
-          className="bg-gradient-to-r from-primary via-primary-light to-secondary text-white ml-2 rounded-xl w-full h-fit px-2 py-1 transition-all cursor-auto"
+          className="bg-secondary-dark text-neutral-100 ml-2 rounded-xl w-full h-fit px-2 py-1 transition-all cursor-auto"
         >
           {menuItem}
         </button>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 m-2 cursor-pointer stroke-current text-neutral-400 hover:text-neutral-600 transition-all"
+          className="h-6 w-6 m-2 cursor-pointer stroke-current text-neutral-100 hover:text-primary-100 transition-all"
           onClick={() => setOpen(!open)}
           fill="none"
           viewBox="0 0 24 24"
@@ -44,7 +44,7 @@ const Dropdown = (props) => {
                     setOpen(false);
                   }}
                   key={item}
-                  className="hover:bg-neutral-300 bg-neutral-250 mx-2 my-[0.1rem] rounded-xl px-2 py-1 transition-all"
+                  className="bg-secondary-dark bg-opacity-30 hover:bg-opacity-50 mx-2 my-[0.1rem] rounded-xl px-2 py-1 transition-all"
                 >
                   {item}
                 </button>

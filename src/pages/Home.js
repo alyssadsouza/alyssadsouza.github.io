@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import NavArrow from '../components/NavArrow';
 import Typewriter from '../components/Typewriter';
 
@@ -21,10 +20,10 @@ function Home({setMenuItem}) {
         <p>
           I'm a second-year at the University of Waterloo and as a co-op student
           I’m actively looking for web development internships. This portfolio
-          showcases my skills and some of the projects I’ve worked on.
+          showcases my skills (including vector illustration and animation) and some of the projects I’ve worked on.
         </p>
         <button
-          className="px-2 py-1 text-sm font-display btn-primary rounded-full w-fit mt-8 self-center cursor-pointer"
+          className="px-4 py-1 text-sm font-display bg-secondary text-primary hover:text-light-text rounded-full w-fit mt-8 self-center cursor-pointer transition-all"
           onClick={() => setMenuItem("Projects")}
         >
           See my Projects
