@@ -3,7 +3,7 @@ import { IconContext } from "react-icons";
 
 const Footer = ({classes}) => {
   return (
-    <footer className={`flex flex-row justify-center items-center w-full h-full lg:border-t border-primary-150 bg-primary ${classes}`}>
+    <footer className={`flex flex-row justify-center items-center w-full h-full lg:border-t border-primary-150 lg:bg-primary ${classes}`}>
       <IconContext.Provider
         value={{
           className:
