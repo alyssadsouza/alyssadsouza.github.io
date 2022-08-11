@@ -26,7 +26,7 @@
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
         "content": {
           "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
-          "HOW_I_BUILT_IT": ["I built this solo at a hackathon after first learning about web programming in Python and JavaScript. I used Django because it was the only framework I knew at the time.", "It set up the SQLite3 database for me, and I accessed and updated it through the back-end to create users for the app and store their account data, namely projects and tasks. I designed the app and styled it with Sass and plain HTML."]
+          "HOW_I_BUILT_IT": ["I built this solo at a hackathon after first learning about web programming in Python and JavaScript. I used Django because it was the only framework I knew at the time.", "It set up the SQLite database for me, and I accessed and updated it through the back-end to create users for the app and store their account data, namely projects and tasks. I designed the app and styled it with Sass and plain HTML."]
         }
       }
   ]
