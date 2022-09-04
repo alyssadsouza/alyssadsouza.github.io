@@ -4,11 +4,10 @@
     {
       "tab": "Front-End",
       "title": "Front-End",
-      "images": ["front-end"],
       "content": [
         {
-          "heading": "React",
-          "description": "I've developed almost exclusively with React for my projects (including this site!). In my first co-op I worked with React, resolving bugs and creating components for the application."
+          "heading": "React + TypeScript",
+          "description": "I've developed almost exclusively with React for my projects (including this site!). In my first co-op I worked with React, resolving bugs and creating components for the application. I've been getting familiar with using TypeScript with my projects as well."
         },
         {
           "heading": "Tailwind, Material-UI",
@@ -17,9 +16,8 @@
       ]
     },
     {
-      "tab": "Back-End + Full-Stack",
-      "title": "Back-End + Full-Stack",
-      "images": ["back-end"],
+      "tab": "Back-End",
+      "title": "Back-End",
       "content": [
         {
           "heading": "Express",
@@ -34,15 +32,14 @@
           "description": "I was introduced to Postgres at my first co-op as well. I've used it in a few projects to get familiar with it."
         },
         {
-          "heading": "Django",
-          "description": "The first web apps I built were with Django because it's a full stack framework. Now I'll use it for faster setups, like at hackathons."
+          "heading": "MongoDB",
+          "description": "I've used Mongo for hackathons mainly and I prefer it for smaller projects because of how easy it is to set up."
         }
       ]
     },
     {
       "tab": "Dev Tools",
       "title": "Developer Tools",
-      "images": ["front-end"],
       "content": [
         {
           "heading": "Git",
