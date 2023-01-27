@@ -2,11 +2,12 @@ import { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import Projects from './pages/Projects';
-import Nav from './components/Nav';
+import ProjectSidebar from './components/projects/ProjectSidebar';
+import Nav from './components/navigation/Nav';
+import ProjectView from './pages/ProjectView';
 import Footer from './components/Footer';
-import Project from './components/projects/Project';
 import { ReactComponent as HomeImage } from './images/home-image.svg';
+const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {
 
@@ -14,56 +15,56 @@ function App() {
   const [project, setProject] = useState({});
 
   return (
-    <div className={`App selection:bg-primary-300 selection:text-light-text animate-slow-appear h-screen w-screen flex flex-col justify-between lg:flex-row lg:bg-opacity-0 bg-primary`}>
+    <div className={`App selection:bg-primary-300 selection:text-light-text animate-slow-appear h-screen w-screen flex flex-col justify-between md:flex-row md:bg-opacity-0 bg-primary`}>
 
-        <div className='lg:hidden mx-[10%] my-[5%] flex flex-row justify-center'>
+        <div className='md:hidden mx-[10%] my-[5%] flex flex-row justify-center'>
             <Nav
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
-                classes="bg-secondary w-fit"
-                buttonClasses="hover:bg-primary-150"
+                classes={menuItem === "About" ? "md:text-white" : ""}
             />
         </div>
 
-        <div id="sidebar" className={`bg-primary text-light-text transition-all duration-[1s] w-full ${menuItem === 'Home' ? "lg:w-[40vw]" : ""} ${menuItem === 'Projects' ? "lg:w-[25vw]" : ""}`}>
+        <div id="sidebar" className={`bg-primary text-light-text transition-all duration-[1s] w-full ${menuItem === 'Home' ? "md:w-[40vw]" : ""} ${menuItem === 'Projects' ? "md:w-[25vw]" : ""}`}>
             {menuItem === 'Home' && (
-              <div className='w-full lg:w-[40vw] lg:h-screen animate-delay-appear'>
+              <div className='w-full md:w-[40vw] md:h-screen animate-delay-appear'>
                 <Home setMenuItem={setMenuItem} />
               </div>
             )}
             {menuItem === 'About' && (
-              <div className='flex flex-col lg:flex-row'>
-                <div className='w-full lg:w-[40vw] lg:min-w-[40vw] lg:h-screen animate-delay-appear'>
+              <div className='flex flex-col md:flex-row'>
+                <div className='w-full md:w-[40vw] md:min-w-[40vw] md:h-screen animate-delay-appear'>
                   <About setMenuItem={setMenuItem} />
                 </div>
-                <div className={`w-full lg:w-[60vw] animate-delay-appear`}>
+                <div className={`w-full md:w-[60vw] animate-delay-appear`}>
                   <HomeImage />
                 </div>
               </div>
             )}
             {menuItem === 'Projects' && (
-                <div className='w-full lg:w-[25vw] lg:h-screen animate-delay-appear'>
-                  <Projects chosenProject={project} setChosenProject={setProject} />
+                <div className='w-full md:w-[25vw] md:h-screen animate-delay-appear'>
+                  <ProjectSidebar menuItem={project} setMenuItem={setProject} items={projects} />
                 </div>
             )}
         </div>
 
-        <div className={`hidden w-full transition-all duration-[1s] lg:block lg:bottom-0 lg:h-[10vh] lg:fixed ${menuItem === 'Home' ? "lg:w-[40vw]" : ""} ${menuItem === 'Projects' ? "lg:w-[25vw]" : ""}`}>
+        <div className={`hidden w-full transition-all duration-[1s] md:block md:bottom-0 md:h-[10vh] md:fixed ${menuItem === 'Home' ? "md:w-[40vw]" : ""} ${menuItem === 'Projects' ? "md:w-[25vw]" : ""}`}>
           <Footer />
         </div>
 
-        <div id="main-stage" className={`lg:w-[60vw] p-[10%] lg:p-0 transition-all duration-[1s] w-full h-auto flex flex-col items-end justify-between bg-neutral-50 ${menuItem === 'About' ? "lg:w-0" : ""} ${menuItem === 'Projects' ? "lg:w-[75vw]" : ""}`}>
+        <div id="main-stage" className={`md:w-[60vw] p-[10%] md:p-0 transition-all duration-[1s] w-full h-auto flex flex-col items-end justify-between bg-neutral-50 ${menuItem === 'About' ? "md:w-0" : ""} ${menuItem === 'Projects' ? "md:w-[75vw]" : ""}`}>
 
-          <div className='hidden lg:block mx-[3vw] my-[3vh]'>
+          <div className='hidden md:block mx-[3vw] my-[3vh]'>
             <Nav
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
+                classes={menuItem === "About" ? "md:text-white animate-delay" : ""}
             />
           </div>
 
-          <div id="main-stage-image" className={`h-full w-full flex flex-col justify-center ${menuItem === "Projects" ? "overflow-scroll" : "overflow-hidden"}`}>
+          <div id="main-stage-image" className={`h-full w-full flex flex-col ${menuItem === "Projects" ? "overflow-scroll justify-start" : "overflow-hidden justify-center"}`}>
             {menuItem === 'Home' && (
               <div className='animate-delay-appear'>
                 <HomeImage />
@@ -71,12 +72,12 @@ function App() {
             )}
             {menuItem === 'Projects' && (
               <div className='animate-delay-appear'>
-                <Project project={project} />
+                <ProjectView content={projects} chosenProject={project} setChosenProject={setProject} />
               </div>
             )}
           </div>
 
-          <div className='lg:hidden w-full flex flex-row items-center'>
+          <div className='md:hidden w-full flex flex-row items-center'>
             <Footer menuItem={menuItem} />
           </div>
 

@@ -1,10 +1,8 @@
-import ProjectPagination from "./ProjectPagination";
-
-const ProjectStage = ({ project, setProject }) => {
+const ProjectStage = ({ project }) => {
   return (
-    <div className="lg:py-4 flex flex-col text-left">
-      <h3 className="text-xl py-0 lg:px-[10%] font-bold font-display">Demo</h3>
-      <p className="pb-4 lg:py-0 lg:px-[10%] text-sm">
+    <div className="flex flex-col text-left">
+      <h3 className="text-xl font-bold font-display text-neutral-200 py-4">Demo</h3>
+      <p className="pb-4 md:py-0 my-2">
         This was my team's submission video demoing the application we built.
         You can see the full submission on Devpost{" "}
         <a
@@ -19,12 +17,10 @@ const ProjectStage = ({ project, setProject }) => {
       </p>
       <iframe
         title={`project-video-${project?.project}`}
-        className="w-full lg:p-[10%] lg:py-4 h-[65vh] rounded-xl"
-        frameBorder={0}
+        className="w-full md:py-4 h-[50vh] rounded-xl"
         src={project?.video}
         allowFullScreen
       ></iframe>
-      <ProjectPagination project={project} setProject={setProject} />
     </div>
   );
 };

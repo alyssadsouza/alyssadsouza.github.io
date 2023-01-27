@@ -1,10 +1,10 @@
-import NavArrow from '../components/NavArrow';
+import NavArrow from '../components/navigation/NavArrow';
 import Typewriter from '../components/Typewriter';
 
 function Home({setMenuItem}) {
 
   return (
-    <section id="home" className="flex flex-col justify-center lg:h-[90%] lg:overflow-y-auto w-full">
+    <section id="home" className="flex flex-col justify-center md:h-[90%] md:overflow-y-auto w-full">
       <div id="home-text" className="flex flex-col w-full px-[10%] py-[5%] my-[15%]">
         <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
         <h2 className="text-2xl font-display my-4">
