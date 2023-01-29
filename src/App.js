@@ -7,7 +7,7 @@ import Nav from './components/navigation/Nav';
 import ProjectView from './pages/ProjectView';
 import Footer from './components/Footer';
 import { ReactComponent as HomeImage } from './assets/home-image.svg';
-import { ReactComponent as AboutImage } from './assets/about-image.svg';
+import AboutImage from './assets/about-image';
 const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
                 <div className='w-full md:w-[40vw] md:min-w-[40vw] md:h-screen animate-delay-appear'>
                   <About setMenuItem={setMenuItem} />
                 </div>
-                <div className="flex w-full md:w-[60vw] animate-delay-appear px-[2.5%]">
+                <div className="flex w-full md:w-[60vw] animate-delay-appear p-[5%]">
                   <AboutImage />
                 </div>
               </div>

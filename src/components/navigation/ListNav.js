@@ -3,7 +3,7 @@ const ListNav = (props) => {
     return (
       <div className="py-1 w-full rounded-xl flex flex-col">
         <nav
-          className="flex flex-col mt-1 rounded-xl h-fit w-full slide-down text-neutral-100"
+          className="flex flex-col mt-1 rounded-xl h-fit w-full text-neutral-100"
           style={style}
         >
           {items?.map(item => (

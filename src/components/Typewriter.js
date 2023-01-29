@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-const Typewriter = ({headers, restartingIndex = 0}) => {
+const Typewriter = ({ headers, restartingIndex = 0 }) => {
   /* Typewriter effect */
   const [header, setHeader] = useState("");
   const [adding, setAdding] = useState(true);
@@ -42,7 +42,8 @@ const Typewriter = ({headers, restartingIndex = 0}) => {
 
   return (
     <>
-      {header}
+      {/* {header} */}
+      {<span dangerouslySetInnerHTML={{ __html: header }} />}
       <span className="caret"></span>
     </>
   );
