@@ -6,8 +6,8 @@ import ProjectSidebar from './components/projects/ProjectSidebar';
 import Nav from './components/navigation/Nav';
 import ProjectView from './pages/ProjectView';
 import Footer from './components/Footer';
-import { ReactComponent as HomeImage } from './images/home-image.svg';
-import { ReactComponent as AboutImage } from './images/about-image.svg';
+import { ReactComponent as HomeImage } from './assets/home-image.svg';
+import { ReactComponent as AboutImage } from './assets/about-image.svg';
 const projects = require('./content/projects.json')?.content ?? [];
 
 function App() {

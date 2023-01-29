@@ -7,7 +7,7 @@ export default function Project({ project }) {
       className="p-[5%] mx-1 my-4 rounded-full bg-neutral-200 bg-opacity-20 transition-all w-8 h-8"
     >
       <img
-        src={require(`../../images/${image}.svg`)}
+        src={require(`../../assets/icons/${image}.svg`)}
         alt="Icon"
         className="w-full h-full project-img"
       />
