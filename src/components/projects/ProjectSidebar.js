@@ -1,4 +1,5 @@
 import Dropdown from "../navigation/Dropdown";
+import ListNav from "../navigation/ListNav";
 export default function ProjectSidebar({menuItem, setMenuItem, items}) {
 
   return (
@@ -6,7 +7,12 @@ export default function ProjectSidebar({menuItem, setMenuItem, items}) {
         <h1 className="text-3xl font-display font-bold pt-8 pb-4 text-light-text">And this is what I can do.</h1>
         <p className="w-full pb-8 text-light-text">These are projects I've worked on in small teams over the span of a few days and submitted at hackathons.</p>
         <h3 className="uppercase text-primary-200 font-display tracking-[0.2rem]">Projects</h3>
-        <Dropdown menuItem={menuItem} setMenuItem={setMenuItem} items={items} />
+        <div className="hidden sm:block">
+          <ListNav menuItem={menuItem} setMenuItem={setMenuItem} items={items} />
+        </div>
+        <div className="block sm:hidden">
+          <Dropdown menuItem={menuItem} setMenuItem={setMenuItem} items={items}  />
+        </div>
       </section>
   );
 }

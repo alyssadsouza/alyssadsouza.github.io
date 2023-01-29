@@ -4,7 +4,7 @@ const NavToggle = (props) => {
   const { menuItem, setMenuItem, items, classes, buttonClasses, activeClasses = "" } = props;
   return (
     <nav
-      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit bg-primary-150 text-sm ${classes}`}
+      className={`flex flex-row justify-center py-1 px-0 rounded-full h-fit bg-neutral-200 bg-opacity-30 text-sm ${classes}`}
     >
       {items.map((item) => (
         <button

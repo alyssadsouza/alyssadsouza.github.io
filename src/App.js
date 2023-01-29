@@ -22,7 +22,7 @@ function App() {
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
-                classes={menuItem === "About" ? "md:text-white" : ""}
+                classes={menuItem === "About" ? "md:text-white" : "md:text-black"}
             />
         </div>
 
@@ -60,7 +60,7 @@ function App() {
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
-                classes={menuItem === "About" ? "md:text-white animate-delay" : ""}
+                classes={menuItem === "About" ? "md:text-white" : "md:text-black"}
             />
           </div>
 

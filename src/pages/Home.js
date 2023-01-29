@@ -1,4 +1,4 @@
-import NavArrow from '../components/navigation/NavArrow';
+// import NavArrow from '../components/navigation/NavArrow';
 import Typewriter from '../components/Typewriter';
 
 function Home({setMenuItem}) {
@@ -29,7 +29,7 @@ function Home({setMenuItem}) {
           See my Projects
         </button>
       </div>
-      <NavArrow next="About" setMenuItem={setMenuItem} classes="mt-[-10%]" />
+      {/* <NavArrow next="About" setMenuItem={setMenuItem} classes="mt-[-10%]" /> */}
     </section>
   );
 }

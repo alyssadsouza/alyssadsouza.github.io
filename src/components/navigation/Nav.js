@@ -4,7 +4,7 @@ const Nav = (props) => {
   const { menuItem, setMenuItem, items, classes } = props;
   return (
     <nav
-      className={`flex flex-row justify-center py-1 px-0 font-display md:text-black text-white ${classes}`}
+      className={`flex flex-row justify-center py-1 px-0 font-display text-white ${classes}`}
     >
       {items.map((item) => (
         <button
