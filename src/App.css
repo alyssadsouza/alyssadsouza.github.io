@@ -10,23 +10,6 @@
     --neutral-250: #5860A4;
 }
 
-
-/* -------------------------------------------------------------------------- */
-/*                                 Skills Tabs                                */
-/* -------------------------------------------------------------------------- */
-
-.btn-primary {
-    background: linear-gradient(to right, var(--primary), var(--primary-200), var(--secondary));
-    background-size: 200% auto;
-    color: white;
-    padding: 0.25rem 0.75rem;
-    transition: all 100ms ease-in;
-}
-
-.btn-primary:hover {
-    background-position: right center;
-}
-
 /* -------------------------------------------------------------------------- */
 /*                               SVG Animations                               */
 /* -------------------------------------------------------------------------- */
@@ -45,9 +28,9 @@
     }
 }
 
-@keyframes bounce {
-    0%, 100% {transform: translate(0);} 
-    50% {transform: translateY(1%);}
+@keyframes pulse {
+    0%, 100% {opacity: 0.5;} 
+    50% {opacity: 1;}
 }
 
 #left-steam {
@@ -58,8 +41,8 @@
     animation: steam infinite 3s ease-in-out;
 }
 
-#react, #html, #sql {
-    animation: bounce infinite 4s ease-in-out;
+.animate-pulse {
+    animation: pulse 3s infinite;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -80,8 +63,4 @@
     animation: blink-caret .75s step-end infinite;
     width: 0;
     border-right: 2px solid var(--primary-300);
-}
-
-.slide-down {
-    animation: slide-down 1s ease-in-out;
 }
