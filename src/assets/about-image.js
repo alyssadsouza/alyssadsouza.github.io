@@ -142,7 +142,7 @@ export default function AboutImage() {
                 <Typewriter
                   headers={[
                     "<span style='color: #BABFEC'>function HelloWorld() {<br><br><span style='text-indent: 40px; display: inline-block;'>return 'Hello, World!';</span><br><br>}</span>",
-                    "<span style='color: #BABFEC'>const app = express();<br><br>app.get('/', async (req, res) => {<br><span style='text-indent: 40px; display: inline-block;'>return 'Hello, World!';</span><br>});</span>"
+                    "<span style='color: #BABFEC'>const app = express();<br><br>app.get('/', async (req, res) => {<br><span style='text-indent: 40px; display: inline-block;'>res.send('Hello, World!');</span><br>});</span>"
                   ]}
                 />
               </div>
