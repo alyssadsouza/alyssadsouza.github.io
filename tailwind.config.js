@@ -25,11 +25,17 @@ module.exports = {
         appear: {
           '0%': { opacity: '0' },
           '100%': { opacity: '100%' },
+        },
+        'delay-appear': {
+          '0%': { opacity: '0' },
+          '50%': { opacity: '0' },
+          '60%': { opacity: '100%' },
         }
       },
       animation: {
         appear: 'appear 300ms ease-in-out',
         'slow-appear': 'appear 1s ease-in-out',
+        'delay-appear': 'delay-appear 2s'
       }
     },
     fontFamily: {
