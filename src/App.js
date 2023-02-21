@@ -65,7 +65,7 @@ function App() {
             />
           </div>
 
-          <div id="main-stage-image" className={`h-full w-full flex flex-col ${menuItem === "Projects" ? "overflow-scroll justify-start" : "overflow-hidden justify-center"}`}>
+          <div id="main-stage-image" className={`h-full w-full flex flex-col ${menuItem === "Projects" ? "overflow-y-auto justify-start" : "overflow-hidden justify-center"}`}>
             {menuItem === 'Home' && (
               <div className='animate-delay-appear'>
                 <HomeImage />
