@@ -2,9 +2,9 @@ import { useState } from 'react';
 import './App.css';
 import Home from './pages/Home';
 import About from './pages/About';
-import ProjectSidebar from './components/projects/ProjectSidebar';
-import Nav from './components/navigation/Nav';
-import ProjectView from './pages/ProjectView';
+import ProjectSidebar from './components/Projects/ProjectSidebar';
+import Nav from './components/Navigation/Nav';
+import Projects from './pages/Projects';
 import Footer from './components/Footer';
 import { ReactComponent as HomeImage } from './assets/home-image.svg';
 import AboutImage from './assets/about-image';
@@ -36,7 +36,7 @@ function App() {
             {menuItem === 'About' && (
               <div className='flex flex-col md:flex-row'>
                 <div className='w-full md:w-[40vw] md:min-w-[40vw] md:h-screen animate-delay-appear'>
-                  <About setMenuItem={setMenuItem} />
+                  <About />
                 </div>
                 <div className="flex w-full md:w-[60vw] animate-delay-appear p-[5%]">
                   <AboutImage />
@@ -73,7 +73,7 @@ function App() {
             )}
             {menuItem === 'Projects' && (
               <div className='animate-delay-appear'>
-                <ProjectView content={projects} chosenProject={project} setChosenProject={setProject} />
+                <Projects content={projects} chosenProject={project} setChosenProject={setProject} />
               </div>
             )}
           </div>

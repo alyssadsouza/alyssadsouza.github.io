@@ -39,8 +39,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      body: ['Source Code Pro', 'monospace'],
-      display: ['Source Code Pro', 'monospace']
+      body: ['Inter', 'sans-serif'],
+      display: ['Inter', 'sans-serif']
     },
   },
   plugins: [],

@@ -13,8 +13,8 @@ const Nav = (props) => {
           className={`
                 ${
                   menuItem === item
-                    ? "text-secondary font-bold"
-                    : "hover:text-secondary"
+                    ? "text-secondary-dark"
+                    : "hover:text-secondary-dark"
                 }
                 mx-2 transition-all
               `}

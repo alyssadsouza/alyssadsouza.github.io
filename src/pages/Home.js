@@ -1,4 +1,3 @@
-// import NavArrow from '../components/navigation/NavArrow';
 import Typewriter from '../components/Typewriter';
 
 function Home({setMenuItem}) {
@@ -7,7 +6,7 @@ function Home({setMenuItem}) {
     <section id="home" className="flex flex-col justify-center md:h-[90%] md:overflow-y-auto w-full">
       <div id="home-text" className="flex flex-col w-full px-[10%] py-[5%] my-[15%]">
         <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
-        <h2 className="text-2xl font-display my-4">
+        <h2 className="text-2xl font-display my-8">
           <Typewriter
             headers={[
               "I'm a software engineering undergrad student.",
@@ -29,7 +28,6 @@ function Home({setMenuItem}) {
           See my Projects
         </button>
       </div>
-      {/* <NavArrow next="About" setMenuItem={setMenuItem} classes="mt-[-10%]" /> */}
     </section>
   );
 }

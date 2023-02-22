@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import Project from "../components/projects/Project";
-import "../App.css";
+import Project from "../components/Projects/Project";
 
 const getProject = (project, content) => {
   return content.find((element) => element.project === project);
 };
 
-export default function ProjectView({ content, chosenProject, setChosenProject }) {
+export default function Projects({ content, chosenProject, setChosenProject }) {
   const [projectName, setProjectName] = useState(chosenProject.project || 'SPOT');
 
   useEffect(() => {

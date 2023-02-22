@@ -1,5 +1,5 @@
-import Dropdown from "../navigation/Dropdown";
-import ListNav from "../navigation/ListNav";
+import Dropdown from "../Navigation/Dropdown";
+import ListNav from "../Navigation/ListNav";
 export default function ProjectSidebar({menuItem, setMenuItem, items}) {
 
   return (

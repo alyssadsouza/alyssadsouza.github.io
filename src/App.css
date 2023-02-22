@@ -12,16 +12,29 @@
 
 *::-webkit-scrollbar {
     width: 7px;
-  }
-  
-  *::-webkit-scrollbar-track {
+}
+
+*::-webkit-scrollbar-track {
     background: var(--neutral-200);
-  }
-  
-  *::-webkit-scrollbar-thumb {
+}
+
+*::-webkit-scrollbar-thumb {
     background-color: #b8bddd;
     border-radius: 20px;
-  }
+}
+
+.dark-scrollbar::-webkit-scrollbar {
+    width: 7px;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+    background: var(--primary-100);
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--primary-200);
+    border-radius: 20px;
+}
 
 /* -------------------------------------------------------------------------- */
 /*                               SVG Animations                               */
