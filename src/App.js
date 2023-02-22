@@ -38,7 +38,7 @@ function App() {
                 <div className='w-full md:w-[40vw] md:min-w-[40vw] md:h-screen animate-delay-appear'>
                   <About />
                 </div>
-                <div className="flex w-full md:w-[60vw] animate-delay-appear p-[5%]">
+                <div className="flex w-full md:w-[60vw] animate-delay-appear p-8">
                   <AboutImage />
                 </div>
               </div>

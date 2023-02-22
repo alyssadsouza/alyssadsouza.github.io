@@ -1,6 +1,3 @@
-// import { useEffect } from "react";
-// const Prism = require('prismjs');
-
 export default function Project({ project }) {
   const icons = project?.images?.map((image) => (
     <div
@@ -14,13 +11,6 @@ export default function Project({ project }) {
       />
     </div>
   ));
-
-//   const code = `var data = 1;`;
-//   // const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');
-
-// useEffect(() => {
-//   Prism.highlightAll();
-// });
 
   return (
     <div className="flex flex-col justify-center items-start my-4 md:py-[10vh] md:px-[15vw] rounded-xl w-full h-auto">
@@ -50,14 +40,6 @@ export default function Project({ project }) {
         </a>
       </div>
       <div className="flex flex-row justify-end">{icons}</div>
-      {/* <pre
-        class="language-css"
-        dangerouslySetInnerHTML={{
-          __html: html,
-        }}
-      ></pre>
-       */}
-      {/* <pre><code className="language-js">{code}</code></pre> */}
       <h3 className="text-xl py-4 font-display font-bold">Description</h3>
       <p className="my-2">{project?.content?.DESCRIPTION}</p>
       <h3 className="text-xl py-4 font-display font-bold">How I Built It</h3>

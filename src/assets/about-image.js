@@ -1,4 +1,4 @@
-import Typewriter from "../components/Typewriter";
+import CodeTypewriter from "../components/CodeTypewriter";
 
 export default function AboutImage() {
   return (
@@ -130,20 +130,18 @@ export default function AboutImage() {
             <path
               id="path923"
               d="M456.395 224.971L875.478 56.0165L875.628 353.453L456.381 522.787L456.395 224.971Z"
-              fill="#1F202C"
+              fill="rgb(40, 44, 52)"
             />
             <path
               id="path925"
               d="M456.744 225.264L443.809 220.577L864.669 51.7582L875.949 55.8743L456.744 225.264Z"
               fill="#1A2449"
             />
-            <foreignObject x="36.5%" y="57%" width="30%" height="50%" style={{rotate: "-22deg", transform: "skew(-22deg)"}}>
+            <foreignObject x="36%" y="54%" width="30%" height="50%" style={{rotate: "-22deg", transform: "skew(-22deg)"}}>
               <div className="screen-text">
-                <Typewriter
-                  headers={[
-                    "<span style='color: #BABFEC'>function HelloWorld() {<br><br><span style='text-indent: 40px; display: inline-block;'>return 'Hello, World!';</span><br><br>}</span>",
-                    "<span style='color: #BABFEC'>const app = express();<br><br>app.get('/', async (req, res) => {<br><span style='text-indent: 40px; display: inline-block;'>res.send('Hello, World!');</span><br>});</span>"
-                  ]}
+                <CodeTypewriter headers={[
+                      `function HelloWorld() {\n\tconsole.log("Hello!");\n}`,
+                    ]}
                 />
               </div>
             </foreignObject>
