@@ -1,36 +1,36 @@
 import { useState, useEffect } from "react";
 
-const Typewriter = ({ headers, restartingIndex = 0 }) => {
+const Typewriter = ({ phrases, restartingIndex = 0 }) => {
   /* Typewriter effect */
-  const [header, setHeader] = useState("");
+  const [phrase, setPhrase] = useState("");
   const [adding, setAdding] = useState(true);
-  const [headerText, setHeaderText] = useState(headers[0]);
+  const [selectedPhrase, setSelectedPhrase] = useState(phrases[0]);
   const [index, setIndex] = useState(0);
-  const [headerIndex, setHeaderIndex] = useState(headers.length === 1 ? 0 : 1);
+  const [phraseIndex, setPhraseIndex] = useState(phrases.length === 1 ? 0 : 1);
 
   useEffect(() => {
     if (adding) {
-      if (index <= headerText.length) {
-        setHeader(headerText.slice(0, index));
+      if (index <= selectedPhrase.length) {
+        setPhrase(selectedPhrase.slice(0, index));
         setTimeout(() => setIndex(index + 1), 75);
       }
-      if (index === headerText.length) {
+      if (index === selectedPhrase.length) {
         setTimeout(() => {
           setAdding(false);
           setIndex(index - 1);
-        }, 7500); // hold on full header for 7.5 seconds
+        }, 7500); // hold on full phrase for 7.5 seconds
       }
     } // there's a period between adding still being true but index > text length where text holds for a few seconds
     else {
       if (index >= restartingIndex) {
-        setHeader(headerText.slice(0, index));
+        setPhrase(selectedPhrase.slice(0, index));
         if (index === restartingIndex) {
           setAdding(true);
-          setHeaderText(headers[headerIndex]);
-          if (headers.length === 1 || headerIndex === headers.length - 1) {
-            setHeaderIndex(0);
+          setSelectedPhrase(phrases[phraseIndex]);
+          if (phrases.length === 1 || phraseIndex === phrases.length - 1) {
+            setPhraseIndex(0);
           } else {
-            setHeaderIndex(headerIndex + 1);
+            setPhraseIndex(phraseIndex + 1);
           }
           setTimeout(() => setIndex(index + 1), 300);
         } else {
@@ -42,7 +42,7 @@ const Typewriter = ({ headers, restartingIndex = 0 }) => {
 
   return (
     <>
-      {header}
+      {phrase}
       <span className="caret"></span>
     </>
   );

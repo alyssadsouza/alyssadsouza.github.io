@@ -8,7 +8,7 @@ function Home({setMenuItem}) {
         <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
         <h2 className="text-2xl font-display my-8">
           <Typewriter
-            headers={[
+            phrases={[
               "I'm a software engineering undergrad student.",
               "I'm a self-taught web developer.",
               "I'm a second-year undergrad.",
