@@ -5,7 +5,7 @@ import { ReactComponent as HomeImage } from "../assets/home-image.svg";
 function Home() {
   return (
     <div className="animate-slow-appear w-full flex flex-col md:flex-row">
-      <div className="bg-primary text-light-text duration-[1s] w-full md:w-[40vw] md:h-screen animate-delay-appear">
+      <div className="bg-primary text-light-text duration-[1s] w-full md:w-[40vw] md:h-screen animate-slow-appear">
           <section className="flex flex-col justify-center md:h-[90%] md:overflow-y-auto w-full">
             <div className="flex flex-col w-full px-[10%] py-[5%] my-[15%]">
               <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
@@ -35,7 +35,7 @@ function Home() {
             </div>
           </section>
       </div>
-      <div className="md:w-[60vw] p-[10%] md:p-0 transition-all duration-[1s] w-full h-screen flex flex-col items-end justify-between bg-neutral-50">
+      <div className="md:w-[60vw] p-[10%] md:p-0 transition-all duration-[1s] w-full md:h-screen flex flex-col items-end justify-between bg-neutral-50">
         <HomeImage />
       </div>
     </div>

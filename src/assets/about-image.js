@@ -60,13 +60,13 @@ export default function AboutImage() {
             id="right-steam"
             d="M1035.79 533.403C1024.01 520.164 1007.69 492.12 1015.05 461.224C1022.4 430.326 1064.19 437.944 1064.19 437.944C1064.19 437.944 1024.46 464.614 1048.01 492.568C1071.56 520.521 1091.01 535.517 1046.85 575.24C997.674 638.258 1056.32 560.583 1035.79 533.403Z"
             fill="#908ED5"
-            fill-opacity="0.194539"
+            fillOpacity="0.194539"
           />
           <path
             id="left-steam"
             d="M1007.8 604.025C1007.8 604.025 979.512 567.928 988.16 551.593C996.45 535.936 999.669 542.478 1007.03 511.583C1028.66 564.479 1018.13 551.938 1007.89 562.441C994.682 575.564 1007.8 604.025 1007.8 604.025Z"
             fill="#908ED5"
-            fill-opacity="0.194539"
+            fillOpacity="0.194539"
           />
         </g>
         <g id="plant">
@@ -152,31 +152,31 @@ export default function AboutImage() {
             id="Vector 13"
             d="M651.919 115C599.419 277.495 625.639 497.239 624.919 495.995"
             stroke="#3E5CAA"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Vector 17"
             d="M664 112C644.862 277.054 654.42 500.258 654.158 498.995"
             stroke="#3E5CAA"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Vector 15"
             d="M675 111C698.923 273.068 686.975 492.236 687.303 490.995"
             stroke="#3E5CAA"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Vector 16"
             d="M680 105C740.358 270.2 694.209 486.764 695.221 485.579"
             stroke="#3E5CAA"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="Vector 14"
             d="M642 115C567.043 274.936 604.478 491.219 603.45 489.995"
             stroke="#3E5CAA"
-            stroke-width="2"
+            strokeWidth="2"
           />
           <path
             id="path6882"

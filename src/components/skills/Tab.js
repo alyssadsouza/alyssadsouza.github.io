@@ -12,16 +12,16 @@ export default function Tab({ tab, defaultOpenState }) {
     <div className="animate-appear">
       <div
         className={`${
-          isOpen ? "max-h-[1000px]" : "max-h-[9vh]"
-        } transition-all duration-700 overflow-hidden px-6 py-[3vh] bg-primary-200 text-light-text bg-opacity-20 w-full rounded-xl`}
+          isOpen ? "max-h-[1000px]" : "max-h-[5.5rem]"
+        } transition-all duration-700 overflow-hidden p-8 bg-primary-200 text-light-text bg-opacity-20 w-full rounded-xl`}
       >
         <div className="inline-flex justify-between items-center w-full">
-          <h3 className="text-[2.5vh] font-display">{tab.tab}</h3>
+          <h3 className="text-light-text/80 font-light tracking-[0.2em] uppercase font-display">{tab.tab}</h3>
           <ArrowIcon onClick={() => setIsOpen(!isOpen)} className={`w-5 hover:text-primary-200 cursor-pointer transition-all ${isOpen ? "" : "rotate-180"}`} />
         </div>
-        <ul className="my-[2vh] list-disc pl-8">
+        <ul className={`my-[2vh] list-disc pl-8 ${!isOpen && "invisible"} transition-all`}>
           {tab?.content.map((item) => (
-            <li className="my-4">{item}</li>
+            <li className="my-4 px-4" key={item}>{item}</li>
           ))}
         </ul>
       </div>
