@@ -17,7 +17,7 @@ function Router() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<ProjectsView />}>
               <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/:project" element={<Project />} />
+              <Route path="/projects/:project" element={<Project key={location.pathname} />} />
             </Route>
             <Route path="*" element={<Navigate replace to="/" />} />
           </Route>

@@ -3,41 +3,25 @@ import { Link } from "react-router-dom";
 import Chip from "./Chip";
 import useProject from "../../hooks/useProject";
 import { ReactComponent as LinkIcon } from "../../assets/icons/link.svg";
-import { ReactComponent as Spinner } from "../../assets/icons/spinner.svg";
-import { useState } from "react";
-import { useEffect } from "react";
 
 export default function Project() {
   const navigate = useNavigate();
   const project = useProject();
-  const [error, setError] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (!project) {
-        setError(true);
-      }
-    }, 3000);
-  }, [project]);
 
   return (
-    <>
+    <div className="animate-appear">
       {!project ? (
         <div className="flex flex-col items-center justify-center w-full h-screen">
-          {error ? (
-            <div className="flex flex-col items-center gap-4 animate-appear">
-              <h1 className="text-4xl font-bold">Oops!</h1>
-              <p>It looks like that project doesn't exist.</p>
-              <Link
-                to="/projects"
-                className="transition-all px-4 py-2 bg-secondary-dark/80 text-light-text rounded-full text-sm hover:bg-secondary-dark/100"
-              >
-                Go back to projects
-              </Link>
-            </div>
-          ) : (
-            <Spinner className="w-16 h-16 text-neutral-150 animate-spin" />
-          )}
+          <div className="flex flex-col items-center gap-4 animate-appear">
+            <h1 className="text-4xl font-bold">Oops!</h1>
+            <p>It looks like that project doesn't exist.</p>
+            <Link
+              to="/projects"
+              className="transition-all px-4 py-2 bg-secondary-dark/80 text-light-text rounded-full text-sm hover:bg-secondary-dark/100"
+            >
+              Go back to projects
+            </Link>
+          </div>
         </div>
       ) : (
         <div className="flex flex-col justify-center items-start my-4 md:py-[10vh] md:px-[15vw] rounded-xl w-full h-auto">
@@ -102,6 +86,6 @@ export default function Project() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
