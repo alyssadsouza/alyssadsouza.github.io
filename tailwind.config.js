@@ -19,7 +19,8 @@ module.exports = {
         'neutral-100': '#DADCEA',
         'neutral-150': '#CCCEE4',
         'neutral-200': '#5860A4',
-        'light-text': '#F1E5DE'
+        'light-text': '#FFFFFF',
+        'dark-text': '#1E1E1E'
       },
       keyframes: {
         appear: {
@@ -34,8 +35,8 @@ module.exports = {
       },
       animation: {
         appear: 'appear 300ms ease-in-out',
-        'slow-appear': 'appear 1s ease-in-out',
-        'delay-appear': 'delay-appear 2s'
+        'slow-appear': 'appear 700ms ease-in-out',
+        'delay-appear': 'delay-appear 700ms'
       }
     },
     fontFamily: {

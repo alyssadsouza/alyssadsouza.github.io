@@ -5,7 +5,7 @@ import About from './pages/About';
 import ProjectSidebar from './components/Projects/ProjectSidebar';
 import Nav from './components/Navigation/Nav';
 import Projects from './pages/Projects';
-import Footer from './components/Footer';
+import Footer from './components/Layout/Footer';
 import { ReactComponent as HomeImage } from './assets/home-image.svg';
 import AboutImage from './assets/about-image';
 const projects = require('./content/projects.json')?.content ?? [];
@@ -23,11 +23,11 @@ function App() {
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
-                classes={menuItem === "About" ? "md:text-white" : "md:text-black"}
+                classes={menuItem === "About" ? "md:text-white" : "md:text-dark-text"}
             />
         </div>
 
-        <div id="sidebar" className={`bg-primary text-light-text transition-all duration-[1s] w-full ${menuItem === 'Home' ? "md:w-[40vw]" : ""} ${menuItem === 'Projects' ? "md:w-[25vw]" : ""}`}>
+        <div id="sidebar" className={`bg-primary text-light-text transition-all duration-[1s]`}>
             {menuItem === 'Home' && (
               <div className='w-full md:w-[40vw] md:h-screen animate-delay-appear'>
                 <Home setMenuItem={setMenuItem} />
@@ -54,14 +54,14 @@ function App() {
           <Footer />
         </div>
 
-        <div id="main-stage" className={`md:w-[60vw] p-[10%] md:p-0 transition-all duration-[1s] w-full h-auto flex flex-col items-end justify-between bg-neutral-50 ${menuItem === 'About' ? "md:w-0" : ""} ${menuItem === 'Projects' ? "md:w-[75vw]" : ""}`}>
+        <div id="main-stage" className={`md:w-[60vw] p-[10%] md:p-0 transition-all duration-[1s] w-full h-auto flex flex-col items-end justify-between bg-neutral-50`}>
 
           <div className='hidden md:block mx-[3vw] my-[3vh]'>
             <Nav
                 menuItem={menuItem}
                 setMenuItem={setMenuItem}
                 items={["Home", "About", "Projects"]}
-                classes={menuItem === "About" ? "md:text-white" : "md:text-black"}
+                classes={menuItem === "About" ? "md:text-white" : "md:text-dark-text"}
             />
           </div>
 
