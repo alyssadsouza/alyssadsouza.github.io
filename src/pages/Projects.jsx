@@ -8,6 +8,8 @@ export default function Projects() {
   const navigate = useNavigate();
   const { search } = useLocation();
   const [projects, setProjects] = useState(projectData.content);
+  const [sortAscending, setSortAscending] = useState(true);
+  const [sortParam, setSortParam] = useState("");
   const [frameworks, setFrameworks] = useState([]);
 
   const uniqueFrameworks = useMemo(() => {
@@ -32,13 +34,42 @@ export default function Projects() {
     }
   }, [frameworks]);
 
+  const sortTableByProject = () => {
+    setSortParam("Project");
+    if (sortAscending) {
+      setProjects(
+        projects.sort((a, b) =>
+          a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
+        )
+      );
+      setSortAscending(false);
+    } else {
+      setProjects(
+        projects.sort((a, b) =>
+          a.title.toLowerCase() < b.title.toLowerCase() ? 1 : -1
+        )
+      );
+      setSortAscending(true);
+    }
+  };
+  const sortTableByDate = () => {
+    setSortParam("Date");
+    if (sortAscending) {
+      setProjects(projects.sort((a, b) => a.creation_date - b.creation_date));
+      setSortAscending(false);
+    } else {
+      setProjects(projects.sort((a, b) => b.creation_date - a.creation_date));
+      setSortAscending(true);
+    }
+  };
+
   const updateFrameworks = (item) => {
     if (frameworks.includes(item)) {
-      setFrameworks(frameworks.filter(el => el !== item));
+      setFrameworks(frameworks.filter((el) => el !== item));
     } else {
       setFrameworks([...frameworks, item]);
     }
-  }
+  };
 
   return (
     <div
@@ -49,13 +80,34 @@ export default function Projects() {
         <h1 className="text-2xl font-bold">Projects</h1>
         <div>
           <button className="peer inline-flex gap-1 justify-between items-center self-end p-1 px-2 text-xs border-neutral-200/30 border rounded-full w-fit text-neutral-200/80 transition-all hover:bg-neutral-200/10">
-            <p>{frameworks.length > 1 ? `${frameworks.length} filters` : frameworks.length > 0 ? `1 filter` : "All Projects"}</p>
+            <p>
+              {frameworks.length > 1
+                ? `${frameworks.length} filters`
+                : frameworks.length > 0
+                ? `1 filter`
+                : "All Projects"}
+            </p>
             <DownArrow className="w-3 h-3" />
           </button>
           <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
-            <li onClick={() => setFrameworks([])} className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${!frameworks.length && "text-primary-300"}`}>{!frameworks.length && <span>✓ </span>}All Projects</li>
+            <li
+              onClick={() => setFrameworks([])}
+              className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${
+                !frameworks.length && "text-primary-300"
+              }`}
+            >
+              {!frameworks.length && <span>✓ </span>}All Projects
+            </li>
             {uniqueFrameworks.map((item) => (
-              <li onClick={() => updateFrameworks(item)} className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${frameworks.includes(item) && "text-primary-300"}`}>{frameworks.includes(item) && <span>✓ </span>}{item}</li>
+              <li
+                onClick={() => updateFrameworks(item)}
+                className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${
+                  frameworks.includes(item) && "text-primary-300"
+                }`}
+              >
+                {frameworks.includes(item) && <span>✓ </span>}
+                {item}
+              </li>
             ))}
           </ul>
         </div>
@@ -63,16 +115,26 @@ export default function Projects() {
       <table className="text-sm border-separate border-spacing-x-0 border-spacing-y-2">
         <thead className="text-neutral-200/80">
           <th
+            onClick={sortTableByProject}
             align="left"
             className="font-normal pl-2 border-b border-neutral-200/30"
           >
+            {sortParam === "Project" && (
+              <span>{!sortAscending ? "↑ " : "↓ "}</span>
+            )}
             Project
           </th>
           <th className="font-normal border-b border-neutral-200/30"></th>
           <th className="font-normal border-b border-neutral-200/30">
             Frameworks
           </th>
-          <th className="font-normal border-b border-neutral-200/30">
+          <th
+            onClick={sortTableByDate}
+            className="font-normal border-b border-neutral-200/30"
+          >
+            {sortParam === "Date" && (
+              <span>{!sortAscending ? "↑ " : "↓ "}</span>
+            )}
             Created On
           </th>
         </thead>
