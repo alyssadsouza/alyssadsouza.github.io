@@ -4,11 +4,12 @@
     {
         "project": "eatco",
         "title": "eatco",
-        "index": 1,
+        "creation_date": "July 1, 2022",
         "tech": ["react", "flask", "sql"],
         "link": "https://github.com/Shivam-J-07/eatco",
         "devpostLink": "https://devpost.com/software/eatco",
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
+        "thumbnail": "https://img.youtube.com/vi/E1fSFT5oQjs/mqdefault.jpg",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
           "HOW_I_BUILT_IT": [
@@ -20,11 +21,12 @@
       {
         "project": "SPOT",
         "title": "SPOT",
-        "index": 0,
+        "creation_date": "July 1, 2022",
         "tech": ["django", "sql"],
         "link": "https://github.com/alyssadsouza/SPOT",
         "devpostLink": "https://devpost.com/software/spot-oc28w1",
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
+        "thumbnail": "https://img.youtube.com/vi/IE0xMSTcOe8/mqdefault.jpg",
         "content": {
           "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
           "HOW_I_BUILT_IT": [
@@ -36,12 +38,13 @@
       {
         "project": "Terms and Procrastination",
         "title": "Terms and Procrastination",
-        "index": 2,
+        "creation_date": "July 1, 2022",
         "color": "secondary",
         "tech": ["react", "flask", "mongodb", "pytorch"],
         "link": "https://github.com/alyssadsouza/ht6-2022",
         "devpostLink": "https://devpost.com/software/terms-and-procrastination",
         "video": "https://www.youtube.com/embed/DQGtgrXZQDM",
+        "thumbnail": "https://img.youtube.com/vi/DQGtgrXZQDM/mqdefault.jpg",
         "content": {
           "DESCRIPTION": "A chrome extension that keeps you informed of your privacy by parsing webpages you visit for their terms and privacy policy and provides a simplified summary of them.",
           "HOW_I_BUILT_IT": [

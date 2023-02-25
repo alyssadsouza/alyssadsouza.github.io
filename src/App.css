@@ -27,6 +27,14 @@
     width: 7px;
 }
 
+.scroll-x::-webkit-scrollbar {
+    height: 3px;
+}
+
+.scroll-thin-y::-webkit-scrollbar {
+    width: 3px;
+}
+
 .scrollbar-dark::-webkit-scrollbar-track {
     background: var(--primary-100);
 }

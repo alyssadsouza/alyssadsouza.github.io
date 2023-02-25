@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import Chip from "./Chip";
 import useProject from "../../hooks/useProject";
-import { ReactComponent as LinkIcon } from "../../assets/icons/link.svg";
+import { ReactComponent as CodeIcon } from "../../assets/icons/code.svg";
 
 export default function Project() {
   const navigate = useNavigate();
@@ -31,26 +31,32 @@ export default function Project() {
           >
             ← Back to Projects
           </Link>
-          <h2 className="text-3xl my-4 font-display font-bold">
+          <h2 className="text-3xl mt-2 mb-1 font-display font-bold">
             {project?.title}
           </h2>
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noreferrer"
-            className="text-sm text-primary-200 my-2 flex flex-row justify-start items-center w-fit underline-offset-1 hover:underline"
-          >
-            See the code
-            <LinkIcon />
-          </a>
-          <div className="flex flex-row gap-2 my-4">
-            {project.tech.map((item) => (
-              <Chip
-                key={item}
-                item={item}
-                onClick={() => navigate(`/projects?frameworks=${item}`)}
-              />
-            ))}
+          <div className="flex flex-row justify-between items-center w-full">
+            <div className="flex flex-row gap-2 my-4">
+              {project.tech.map((item) => (
+                <Chip
+                  key={item}
+                  item={item}
+                  onClick={() => navigate(`/projects?frameworks=${item}`)}
+                />
+              ))}
+            </div>
+            <div className="h-full flex justify-center items-center">
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noreferrer"
+                className="peer"
+              >
+                <CodeIcon className="text-[#8a8a8a] w-7 h-7 p-1 rounded-full bg-neutral-150/50 hover:bg-neutral-150/100 transition-all" />
+              </a>
+              <p className="peer-hover:opacity-100 peer-hover:visible invisible opacity-0 transition-all px-2 bg-black/80 text-white rounded-lg text-[0.6rem] absolute translate-y-8">
+                See the code
+              </p>
+            </div>
           </div>
           <h3 className="text-xl py-4 font-display font-bold">Description</h3>
           <p className="my-2">{project?.content?.DESCRIPTION}</p>
