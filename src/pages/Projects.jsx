@@ -52,7 +52,7 @@ export default function Projects() {
             <p>{frameworks.length > 1 ? `${frameworks.length} filters` : frameworks.length > 0 ? `1 filter` : "All Projects"}</p>
             <DownArrow className="w-3 h-3" />
           </button>
-          <ul className="peer-focus:visible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
+          <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
             <li onClick={() => setFrameworks([])} className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${!frameworks.length && "text-primary-300"}`}>{!frameworks.length && <span>✓ </span>}All Projects</li>
             {uniqueFrameworks.map((item) => (
               <li onClick={() => updateFrameworks(item)} className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${frameworks.includes(item) && "text-primary-300"}`}>{frameworks.includes(item) && <span>✓ </span>}{item}</li>
