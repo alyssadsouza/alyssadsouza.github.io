@@ -6,15 +6,13 @@ import { ReactComponent as ArrowIcon } from "../../assets/icons/arrow.svg";
 const Dropdown = ({ items }) => {
   const [open, setOpen] = useState(false);
   const project = useProject();
-  
+
   useEffect(() => setOpen(false), [project]);
 
   return (
     <div className="py-1 my-4 bg-neutral-200 bg-opacity-30 w-full rounded-3xl">
       <div className="flex flex-row justify-between items-center">
-        <p
-          className="bg-secondary-dark text-neutral-100 text-left ml-2 rounded-3xl w-full h-fit px-2 py-1 transition-all"
-        >
+        <p className="bg-secondary-dark text-neutral-100 text-left ml-2 rounded-3xl w-full h-fit px-2 py-1 transition-all">
           {project?.title ?? "Select project..."}
         </p>
         <ArrowIcon
@@ -29,20 +27,24 @@ const Dropdown = ({ items }) => {
           open ? "max-h-64 overflow-y-auto" : "max-h-0"
         }`}
       >
-        {items.map((item) => {
-          if (item !== project) {
-            return (
-              <Link
-                to={`/projects/${item.project}`}
-                key={item.project}
-                className="text-left text-white mx-2 my-[0.1rem] px-2 py-1 transition-all"
-              >
-                {item.title}
-              </Link>
-            );
-          }
-          return <div key={item}></div>;
-        })}
+        {items
+          .sort((a, b) =>
+            a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
+          )
+          .map((item) => {
+            if (item !== project) {
+              return (
+                <Link
+                  to={`/projects/${item.project}`}
+                  key={item.project}
+                  className="text-left text-white mx-2 my-[0.1rem] px-2 py-1 transition-all"
+                >
+                  {item.title}
+                </Link>
+              );
+            }
+            return <div key={item}></div>;
+          })}
       </nav>
     </div>
   );
