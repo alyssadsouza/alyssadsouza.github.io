@@ -7,9 +7,13 @@ import { ReactComponent as DownArrow } from "../assets/icons/caret-down.svg";
 export default function Projects() {
   const navigate = useNavigate();
   const { search } = useLocation();
-  const [projects, setProjects] = useState(projectData.content);
-  const [sortAscending, setSortAscending] = useState(true);
-  const [sortParam, setSortParam] = useState("");
+  const [projects, setProjects] = useState(
+    projectData.content.sort((a, b) =>
+      a.title.toLowerCase() < b.title.toLowerCase() ? -1 : 1
+    )
+  );
+  const [sortAscending, setSortAscending] = useState(false);
+  const [sortParam, setSortParam] = useState("Project");
   const [frameworks, setFrameworks] = useState([]);
 
   const uniqueFrameworks = useMemo(() => {
@@ -117,7 +121,7 @@ export default function Projects() {
           <th
             onClick={sortTableByProject}
             align="left"
-            className="font-normal pl-2 border-b border-neutral-200/30"
+            className="cursor-pointer font-normal pl-2 border-b border-neutral-200/30"
           >
             {sortParam === "Project" && (
               <span>{!sortAscending ? "↑ " : "↓ "}</span>
@@ -125,12 +129,12 @@ export default function Projects() {
             Project
           </th>
           <th className="font-normal border-b border-neutral-200/30"></th>
-          <th className="font-normal border-b border-neutral-200/30">
+          <th className="cursor-pointer font-normal border-b border-neutral-200/30">
             Frameworks
           </th>
           <th
             onClick={sortTableByDate}
-            className="font-normal border-b border-neutral-200/30"
+            className="cursor-pointer font-normal border-b border-neutral-200/30"
           >
             {sortParam === "Date" && (
               <span>{!sortAscending ? "↑ " : "↓ "}</span>
