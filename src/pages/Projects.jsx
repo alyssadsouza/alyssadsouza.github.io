@@ -59,10 +59,18 @@ export default function Projects() {
   const sortTableByDate = () => {
     setSortParam("Date");
     if (sortAscending) {
-      setProjects(projects.sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date)));
+      setProjects(
+        projects.sort(
+          (a, b) => new Date(b.creation_date) - new Date(a.creation_date)
+        )
+      );
       setSortAscending(false);
     } else {
-      setProjects(projects.sort((a, b) => new Date(a.creation_date) - new Date(b.creation_date)));
+      setProjects(
+        projects.sort(
+          (a, b) => new Date(a.creation_date) - new Date(b.creation_date)
+        )
+      );
       setSortAscending(true);
     }
   };
@@ -117,44 +125,47 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-      <table key={sortAscending + frameworks} className="animate-appear text-sm border-separate border-spacing-x-0 border-spacing-y-2">
+      <table
+        key={sortAscending + frameworks}
+        className="animate-appear text-sm border-separate border-spacing-x-0 border-spacing-y-2"
+      >
         <thead className="text-neutral-200/80">
-          <th
-            onClick={sortTableByProject}
-            align="left"
-            className="cursor-pointer font-normal pl-2 border-b border-neutral-200/30"
-          >
-            {sortParam === "Project" && (
-              <span>{!sortAscending ? "↑ " : "↓ "}</span>
-            )}
-            Project
-          </th>
-          <th className="font-normal border-b border-neutral-200/30"></th>
-          <th className="font-normal border-b border-neutral-200/30">
-            Frameworks
-          </th>
-          <th
-            onClick={sortTableByDate}
-            className="cursor-pointer font-normal border-b border-neutral-200/30"
-          >
-            {sortParam === "Date" && (
-              <span>{!sortAscending ? "↑ " : "↓ "}</span>
-            )}
-            Created On
-          </th>
+          <tr>
+            <th
+              onClick={sortTableByProject}
+              align="left"
+              className="cursor-pointer font-normal pl-2 border-b border-neutral-200/30"
+            >
+              {sortParam === "Project" && (
+                <span>{!sortAscending ? "↑ " : "↓ "}</span>
+              )}
+              Project
+            </th>
+            <th className="font-normal border-b border-neutral-200/30"></th>
+            <th className="font-normal border-b border-neutral-200/30">
+              Frameworks
+            </th>
+            <th
+              onClick={sortTableByDate}
+              className="cursor-pointer font-normal border-b border-neutral-200/30"
+            >
+              {sortParam === "Date" && (
+                <span>{!sortAscending ? "↑ " : "↓ "}</span>
+              )}
+              Created On
+            </th>
+          </tr>
         </thead>
         <tbody>
           {projects.map((project) => (
             <tr
+              key={project.project}
               onClick={() => navigate(`/projects/${project.project}`)}
               className="h-12 hover:bg-neutral-100/50 transition-all cursor-pointer"
             >
               <td className="border-y border-l rounded-tl-lg rounded-bl-lg p-2 border-neutral-100">
                 <div className="flex items-center w-32 h-20 rounded-md overflow-hidden border">
-                  <img
-                    src={project.thumbnail}
-                    alt={project.title}
-                  />
+                  <img src={project.thumbnail} alt={project.title} />
                 </div>
               </td>
               <td className="border-y p-4 border-neutral-100">
@@ -164,6 +175,7 @@ export default function Projects() {
                 <div className="flex flex-row justify-center items-center flex-wrap gap-1">
                   {project.tech.map((tech) => (
                     <Chip
+                      key={tech}
                       item={tech}
                       classes="text-[0.65rem] px-[0.75rem] py-[0.1rem] hover:bg-primary-300/10"
                       onClick={() => navigate(`/projects?frameworks=${tech}`)}
