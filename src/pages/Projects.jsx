@@ -86,12 +86,15 @@ export default function Projects() {
   return (
     <div
       key={search}
-      className="flex flex-col h-full md:p-12 md:pt-32 gap-8 animate-appear overflow-x-auto scrollbar-light scroll-x"
+      className="flex flex-col h-full md:p-12 md:pt-32 gap-8 animate-appear"
     >
       <div className="flex flex-row justify-between items-center">
         <h1 className="text-2xl font-bold">Projects</h1>
         <div>
-          <button className="peer inline-flex gap-1 justify-between items-center self-end p-1 px-2 text-xs border-neutral-200/30 border rounded-full w-fit text-neutral-200/80 transition-all hover:bg-neutral-200/10">
+          <button
+            onClick={(e) => e.currentTarget.focus()}
+            className="peer inline-flex gap-1 justify-between items-center self-end p-1 px-2 text-xs border-neutral-200/30 border rounded-full w-fit text-neutral-200/80 transition-all hover:bg-neutral-200/10"
+          >
             <p>
               {frameworks.length > 1
                 ? `${frameworks.length} filters`
@@ -101,7 +104,7 @@ export default function Projects() {
             </p>
             <DownArrow className="w-3 h-3" />
           </button>
-          <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 md:overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
+          <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
             <li
               onClick={() => setFrameworks([])}
               className={`hover:bg-neutral-100 border-b p-1 cursor-pointer ${
@@ -125,74 +128,76 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-      <table
-        key={sortAscending + frameworks}
-        className="animate-appear text-sm border-separate border-spacing-x-0 border-spacing-y-2"
-      >
-        <thead className="text-neutral-200/80">
-          <tr>
-            <th
-              onClick={sortTableByProject}
-              align="left"
-              className="cursor-pointer font-normal pl-2 border-b border-neutral-200/30"
-            >
-              {sortParam === "Project" && (
-                <span>{!sortAscending ? "↑ " : "↓ "}</span>
-              )}
-              Project
-            </th>
-            <th className="font-normal border-b border-neutral-200/30"></th>
-            <th className="font-normal border-b border-neutral-200/30">
-              Frameworks
-            </th>
-            <th
-              onClick={sortTableByDate}
-              className="cursor-pointer font-normal border-b border-neutral-200/30"
-            >
-              {sortParam === "Date" && (
-                <span>{!sortAscending ? "↑ " : "↓ "}</span>
-              )}
-              Created On
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          {projects.map((project) => (
-            <tr
-              key={project.project}
-              onClick={() => navigate(`/projects/${project.project}`)}
-              className="h-12 hover:bg-neutral-100/50 transition-all cursor-pointer"
-            >
-              <td className="border-y border-l rounded-tl-lg rounded-bl-lg p-2 border-neutral-100">
-                <div className="flex items-center w-32 h-20 rounded-md overflow-hidden border">
-                  <img src={project.thumbnail} alt={project.title} />
-                </div>
-              </td>
-              <td className="border-y p-4 border-neutral-100">
-                {project.title}
-              </td>
-              <td className="border-y pl-4 border-neutral-100 max-w-[20vw]">
-                <div className="flex flex-row justify-center items-center flex-wrap gap-1">
-                  {project.tech.map((tech) => (
-                    <Chip
-                      key={tech}
-                      item={tech}
-                      classes="text-[0.65rem] px-[0.75rem] py-[0.1rem] hover:bg-primary-300/10"
-                      onClick={() => navigate(`/projects?frameworks=${tech}`)}
-                    />
-                  ))}
-                </div>
-              </td>
-              <td
-                align="center"
-                className="border-y border-r rounded-tr-lg rounded-br-lg p-4 border-neutral-100"
+      <div className="overflow-x-auto scrollbar-light scroll-x">
+        <table
+          key={sortAscending + frameworks}
+          className="animate-appear text-sm border-separate border-spacing-x-0 border-spacing-y-2 w-full"
+        >
+          <thead className="text-neutral-200/80">
+            <tr>
+              <th
+                onClick={sortTableByProject}
+                align="left"
+                className="cursor-pointer font-normal pl-2 border-b border-neutral-200/30"
               >
-                {project.creation_date}
-              </td>
+                {sortParam === "Project" && (
+                  <span>{!sortAscending ? "↑ " : "↓ "}</span>
+                )}
+                Project
+              </th>
+              <th className="font-normal border-b border-neutral-200/30"></th>
+              <th className="font-normal border-b border-neutral-200/30">
+                Frameworks
+              </th>
+              <th
+                onClick={sortTableByDate}
+                className="cursor-pointer font-normal border-b border-neutral-200/30"
+              >
+                {sortParam === "Date" && (
+                  <span>{!sortAscending ? "↑ " : "↓ "}</span>
+                )}
+                Created On
+              </th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {projects.map((project) => (
+              <tr
+                key={project.project}
+                onClick={() => navigate(`/projects/${project.project}`)}
+                className="h-12 hover:bg-neutral-100/50 transition-all cursor-pointer"
+              >
+                <td className="border-y border-l rounded-tl-lg rounded-bl-lg p-2 border-neutral-100">
+                  <div className="flex items-center w-32 h-20 rounded-md overflow-hidden border">
+                    <img src={project.thumbnail} alt={project.title} />
+                  </div>
+                </td>
+                <td className="border-y p-4 border-neutral-100">
+                  {project.title}
+                </td>
+                <td className="border-y pl-4 border-neutral-100 max-w-[20vw]">
+                  <div className="flex flex-row justify-center items-center flex-wrap gap-1">
+                    {project.tech.map((tech) => (
+                      <Chip
+                        key={tech}
+                        item={tech}
+                        classes="text-[0.65rem] px-[0.75rem] py-[0.1rem] hover:bg-primary-300/10"
+                        onClick={() => navigate(`/projects?frameworks=${tech}`)}
+                      />
+                    ))}
+                  </div>
+                </td>
+                <td
+                  align="center"
+                  className="border-y border-r rounded-tr-lg rounded-br-lg p-4 border-neutral-100"
+                >
+                  {project.creation_date}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
