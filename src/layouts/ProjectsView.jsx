@@ -15,7 +15,7 @@ export default function Projects() {
       <div className="md:w-[70vw] p-[10%] md:p-0 transition-all duration-[1s] w-full h-auto flex flex-col items-end justify-between bg-neutral-50">
         <div
           id="main-stage-image"
-          className="h-full w-full flex flex-col overflow-y-auto overflow-x-hidden scrollbar-light justify-start"
+          className="h-full w-full flex flex-col md:overflow-y-auto overflow-x-hidden scrollbar-light justify-start"
         >
           <div className="animate-slow-appear">
             <Outlet />

@@ -101,7 +101,7 @@ export default function Projects() {
             </p>
             <DownArrow className="w-3 h-3" />
           </button>
-          <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
+          <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 md:overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
             <li
               onClick={() => setFrameworks([])}
               className={`hover:bg-neutral-100 border-b p-1 cursor-pointer ${
