@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Typewriter from "../components/Typewriter/Typewriter";
+import Typewriter from 'typewriter-effect';
 import { ReactComponent as HomeImage } from "../assets/home-image.svg";
 
 function Home() {
@@ -11,12 +11,18 @@ function Home() {
               <h1 className="text-3xl font-display font-bold">I'm Alyssa.</h1>
               <h2 className="text-2xl font-display my-8">
                 <Typewriter
-                  phrases={[
-                    "I'm a software engineering undergrad student.",
-                    "I'm a self-taught web developer.",
-                    "I'm a second-year undergrad.",
-                  ]}
-                  restartingIndex={6} // start from 6 again which is where "I'm a " ends
+                  options={{
+                    strings: [
+                      "I'm a software engineering undergrad student.",
+                      "I'm a self-taught web developer.",
+                      "I'm a second-year undergrad.",
+                    ],
+                    delay: 50,
+                    autoStart: true,
+                    loop: true,
+                    pauseFor: 5000,
+                    cursorClassName: "caret"
+                  }}
                 />
               </h2>
               <p>

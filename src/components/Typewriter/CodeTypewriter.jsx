@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeTypewriter = ({ headers, restartingIndex = 0 }) => {
@@ -14,7 +14,7 @@ const CodeTypewriter = ({ headers, restartingIndex = 0 }) => {
     if (adding) {
       if (index <= headerText.length) {
         setHeader(headerText.slice(0, index));
-        setTimeout(() => setIndex(index + 1), 75);
+        setTimeout(() => setIndex(index + 1), 100);
       }
       if (index === headerText.length) {
         setTimeout(() => {
@@ -36,18 +36,23 @@ const CodeTypewriter = ({ headers, restartingIndex = 0 }) => {
           }
           setTimeout(() => setIndex(index + 1), 300);
         } else {
-          setTimeout(() => setIndex(index - 1), 75);
+          setTimeout(() => setIndex(index - 1), 100);
         }
       }
     }
   }, [index, adding, headerIndex, headerText, headers, restartingIndex]);
 
   return (
-    <>
-      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers wrapLongLines wrapLines customStyle={{"padding": 0}}>
-        {header}
-      </SyntaxHighlighter>
-    </>
+    <SyntaxHighlighter
+      language="javascript"
+      style={oneDark}
+      showLineNumbers
+      wrapLongLines
+      wrapLines
+      customStyle={{ padding: 0 }}
+    >
+      {header}
+    </SyntaxHighlighter>
   );
 };
 

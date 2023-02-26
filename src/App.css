@@ -93,42 +93,16 @@
 /* -------------------------------------------------------------------------- */
 
 @keyframes blink-caret {
-    0% {
-        border-color: transparent;
+    0%, 100% {
+        opacity: 0;
     }
 
     50% {
-        border-color: var(--primary-300);
-    }
-
-    100% {
-        border-color: transparent;
+        opacity: 100%;
     }
 }
 
 .caret {
     animation: blink-caret .75s step-end infinite;
-    width: 0;
-    border-right: 2px solid var(--primary-300);
-}
-
-/* -------------------------------------------------------------------------- */
-/*                            Transition Animations                           */
-/* -------------------------------------------------------------------------- */
-.load-enter {
-    opacity: 0;
-}
-
-.load-enter-active {
-    opacity: 1;
-    transition: opacity 300ms;
-}
-
-.load-exit {
-    opacity: 1;
-}
-
-.load-exit-active {
-    opacity: 0;
-    transition: opacity 300ms;
+    color: var(--primary-300);
 }
