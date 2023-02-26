@@ -59,10 +59,10 @@ export default function Projects() {
   const sortTableByDate = () => {
     setSortParam("Date");
     if (sortAscending) {
-      setProjects(projects.sort((a, b) => a.creation_date - b.creation_date));
+      setProjects(projects.sort((a, b) => new Date(b.creation_date) - new Date(a.creation_date)));
       setSortAscending(false);
     } else {
-      setProjects(projects.sort((a, b) => b.creation_date - a.creation_date));
+      setProjects(projects.sort((a, b) => new Date(a.creation_date) - new Date(b.creation_date)));
       setSortAscending(true);
     }
   };
@@ -96,7 +96,7 @@ export default function Projects() {
           <ul className="peer-focus:visible invisible peer-focus:opacity-100 shadow-md w-28 p-2 absolute opacity-0 overflow-hidden transition-all duration-300 bg-neutral-50 text-xs max-h-32 overflow-y-auto overflow-x-hidden scrollbar-light scroll-thin-y">
             <li
               onClick={() => setFrameworks([])}
-              className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${
+              className={`hover:bg-neutral-100 border-b p-1 cursor-pointer ${
                 !frameworks.length && "text-primary-300"
               }`}
             >
@@ -104,8 +104,9 @@ export default function Projects() {
             </li>
             {uniqueFrameworks.map((item) => (
               <li
+                key={item}
                 onClick={() => updateFrameworks(item)}
-                className={`hover:bg-neutral-100 border-b capitalize p-1 cursor-pointer ${
+                className={`hover:bg-neutral-100 border-b p-1 cursor-pointer ${
                   frameworks.includes(item) && "text-primary-300"
                 }`}
               >
@@ -116,7 +117,7 @@ export default function Projects() {
           </ul>
         </div>
       </div>
-      <table className="text-sm border-separate border-spacing-x-0 border-spacing-y-2">
+      <table key={sortAscending + frameworks} className="animate-appear text-sm border-separate border-spacing-x-0 border-spacing-y-2">
         <thead className="text-neutral-200/80">
           <th
             onClick={sortTableByProject}
@@ -129,7 +130,7 @@ export default function Projects() {
             Project
           </th>
           <th className="font-normal border-b border-neutral-200/30"></th>
-          <th className="cursor-pointer font-normal border-b border-neutral-200/30">
+          <th className="font-normal border-b border-neutral-200/30">
             Frameworks
           </th>
           <th
@@ -149,18 +150,17 @@ export default function Projects() {
               className="h-12 hover:bg-neutral-100/50 transition-all cursor-pointer"
             >
               <td className="border-y border-l rounded-tl-lg rounded-bl-lg p-2 border-neutral-100">
-                <div className="flex items-center w-32 h-20 rounded-lg overflow-hidden">
+                <div className="flex items-center w-32 h-20 rounded-md overflow-hidden border">
                   <img
                     src={project.thumbnail}
                     alt={project.title}
-                    className="scale-125"
                   />
                 </div>
               </td>
               <td className="border-y p-4 border-neutral-100">
                 {project.title}
               </td>
-              <td className="border-y pl-4 border-neutral-100">
+              <td className="border-y pl-4 border-neutral-100 max-w-[20vw]">
                 <div className="flex flex-row justify-center items-center flex-wrap gap-1">
                   {project.tech.map((tech) => (
                     <Chip

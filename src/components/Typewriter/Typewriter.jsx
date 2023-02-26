@@ -38,7 +38,7 @@ const Typewriter = ({ phrases, restartingIndex = 0 }) => {
         }
       }
     }
-  }, [index]);
+  }, [index, adding, phrases, phraseIndex, restartingIndex, selectedPhrase]);
 
   return (
     <>

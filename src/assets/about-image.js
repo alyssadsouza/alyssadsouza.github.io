@@ -246,7 +246,7 @@ export default function AboutImage() {
               <div className="screen-text">
                 <CodeTypewriter
                   headers={[
-                    `function HelloWorld() {\n\tconsole.log("Hello!");\n}`,
+                    `function HelloWorld() {\n\tconsole.log("Hello, World!");\n}`,
                   ]}
                 />
               </div>

@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import Chip from "./Chip";
 import useProject from "../../hooks/useProject";
+import Chip from "./Chip";
+import ImageCarousel from "./ImageCarousel";
 import { ReactComponent as CodeIcon } from "../../assets/icons/code.svg";
 
 export default function Project() {
@@ -9,7 +10,7 @@ export default function Project() {
   const project = useProject();
 
   return (
-    <div className="animate-appear">
+    <div className="animate-appear md:mt-[7vh] md:h-[93vh] md:overflow-y-auto md:overflow-x-hidden scrollbar-light">
       {!project ? (
         <div className="flex flex-col items-center justify-center w-full h-screen">
           <div className="flex flex-col items-center gap-4 animate-appear">
@@ -32,10 +33,10 @@ export default function Project() {
             ← Back to Projects
           </Link>
           <h2 className="text-3xl mt-2 mb-1 font-display font-bold">
-            {project?.title}
+            {project.title}
           </h2>
           <div className="flex flex-row justify-between items-center w-full">
-            <div className="flex flex-row gap-2 my-4">
+            <div className="flex flex-row items-center flex-wrap gap-2 my-4">
               {project.tech.map((item) => (
                 <Chip
                   key={item}
@@ -59,16 +60,17 @@ export default function Project() {
             </div>
           </div>
           <h3 className="text-xl py-4 font-display font-bold">Description</h3>
-          <p className="my-2">{project?.content?.DESCRIPTION}</p>
+          <p className="my-2">{project.content?.DESCRIPTION}</p>
           <h3 className="text-xl py-4 font-display font-bold">
             How I Built It
           </h3>
-          {project?.content?.HOW_I_BUILT_IT?.map((paragraph, i) => (
+          {project.content?.HOW_I_BUILT_IT?.map((paragraph, i) => (
             <div key={`${paragraph}-${i}`}>
               <p className="my-2">{paragraph}</p>
             </div>
           ))}
-          <div className="flex flex-col text-left">
+          {project.video ? (
+            <div className="flex flex-col text-left">
             <h3 className="text-xl font-bold font-display py-4">Demo</h3>
             <p className="pb-4 md:py-0 my-2">
               This was my team's submission video demoing the application we
@@ -86,10 +88,15 @@ export default function Project() {
             <iframe
               title={`project-video-${project?.project}`}
               className="w-full md:py-4 h-[50vh] rounded-xl"
-              src={project?.video}
+              src={project.video}
               allowFullScreen
             ></iframe>
           </div>
+          ) : (
+            <div className="my-4">
+              <ImageCarousel images={project.images} />
+            </div>
+          )}
         </div>
       )}
     </div>

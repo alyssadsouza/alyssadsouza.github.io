@@ -40,7 +40,7 @@ const CodeTypewriter = ({ headers, restartingIndex = 0 }) => {
         }
       }
     }
-  }, [index]);
+  }, [index, adding, headerIndex, headerText, headers, restartingIndex]);
 
   return (
     <>

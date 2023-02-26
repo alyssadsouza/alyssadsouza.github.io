@@ -10,17 +10,17 @@
 	{
 		"tab": "Frontend",
 		"content": [
-			"Experienced using Figma for mock-ups to design and implement UIs",
-			"Awarded Best UI/UX design for a recipe UI I designed and created at HawkHacks",
-			"Experience with vector illustration and animation"
+			"Experienced using React to implement UIs with stateful components and hooks",
+			"Completed two internships working with React to maintain and update product applications",
+			"Experience with React context and routers, and using React + TypeScript"
 		]
 	},
 	{
 		"tab": "Backend",
 		"content": [
-			"Experienced using Figma for mock-ups to design and implement UIs",
-			"Awarded Best UI/UX design for a recipe UI I designed and created at HawkHacks",
-			"Experience with vector illustration and animation"
+			"Experience setting up RESTful API endpoints with Python (Flask) and NodeJS (Express)",
+			"Experience working across the stack during hackathons to implement the complete app",
+			"Experience with NoSQL (MongoDB) and SQL (Postgres) database integration into backend APIs"
 		]
 	}
 ]

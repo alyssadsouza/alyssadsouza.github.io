@@ -9,7 +9,7 @@ export default function Tab({ tab, defaultOpenState }) {
   }, [defaultOpenState]);
 
   return (
-    <div className="animate-appear">
+    <div className="animate-appear w-full">
       <div
         className={`${
           isOpen ? "max-h-[1000px]" : "max-h-[5.5rem]"
