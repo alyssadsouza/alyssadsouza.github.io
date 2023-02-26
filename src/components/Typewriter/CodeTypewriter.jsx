@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-const Typewriter = ({ headers, restartingIndex = 0 }) => {
+const CodeTypewriter = ({ headers, restartingIndex = 0 }) => {
   /* Typewriter effect */
   const [header, setHeader] = useState("");
   const [adding, setAdding] = useState(true);
@@ -38,15 +40,15 @@ const Typewriter = ({ headers, restartingIndex = 0 }) => {
         }
       }
     }
-  }, [index]);
+  }, [index, adding, headerIndex, headerText, headers, restartingIndex]);
 
   return (
     <>
-      {/* {header} */}
-      {<span dangerouslySetInnerHTML={{ __html: header }} />}
-      <span className="caret"></span>
+      <SyntaxHighlighter language="javascript" style={oneDark} showLineNumbers wrapLongLines wrapLines customStyle={{"padding": 0}}>
+        {header}
+      </SyntaxHighlighter>
     </>
   );
 };
 
-export default Typewriter;
+export default CodeTypewriter;
