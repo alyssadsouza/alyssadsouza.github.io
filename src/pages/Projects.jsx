@@ -173,7 +173,8 @@ export default function Projects() {
                   </div>
                 </td>
                 <td className="border-y p-4 border-neutral-100">
-                  {project.title}
+                  <div>{project.title}</div>
+				  <div className="text-xs text-neutral-400">{project.content?.DESCRIPTION}</div>
                 </td>
                 <td className="border-y pl-4 border-neutral-100 max-w-[20vw]">
                   <div className="flex flex-row justify-center items-center flex-wrap gap-1">

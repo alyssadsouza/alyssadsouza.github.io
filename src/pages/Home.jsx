@@ -27,7 +27,7 @@ function Home() {
               </h2>
               <p>
                 I'm a second-year at the University of Waterloo and as a co-op
-                student I’m actively looking for web development internships.
+                student I’m actively looking for software development internships.
                 This portfolio showcases my skills (including vector
                 illustration and animation) and some of the projects I’ve worked
                 on.

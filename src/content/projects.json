@@ -7,8 +7,9 @@
         "creation_date": "July 1, 2022",
         "tech": ["React", "Flask", "SQL"],
         "link": "https://github.com/Shivam-J-07/eatco",
+		"devpostLink": "https://devpost.com/software/eatco",
         "video": "https://www.youtube.com/embed/E1fSFT5oQjs?start=44",
-        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/001/932/384/datas/medium.png",
+        "thumbnail": "https://img.youtube.com/vi/E1fSFT5oQjs/maxresdefault.jpg",
         "content": {
           "DESCRIPTION": "An eco-conscious recipe app that encourages users to eat less meat, reducing their carbon footprint.",
           "HOW_I_BUILT_IT": [
@@ -24,8 +25,9 @@
         "color": "secondary",
         "tech": ["React", "Flask", "MongoDB", "PyTorch"],
         "link": "https://github.com/alyssadsouza/ht6-2022",
+		"devpostLink": "https://devpost.com/software/terms-and-procrastination",
         "video": "https://www.youtube.com/embed/DQGtgrXZQDM",
-        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/194/600/datas/medium.png",
+        "thumbnail": "https://img.youtube.com/vi/DQGtgrXZQDM/maxresdefault.jpg",
         "content": {
           "DESCRIPTION": "A chrome extension that keeps you informed of your privacy by parsing webpages you visit for their terms and privacy policy and provides a simplified summary of them.",
           "HOW_I_BUILT_IT": [
@@ -40,8 +42,9 @@
         "creation_date": "June 5, 2021",
         "tech": ["Django", "SQL"],
         "link": "https://github.com/alyssadsouza/SPOT",
+		"devpostLink": "https://devpost.com/software/spot-oc28w1",
         "video": "https://www.youtube.com/embed/IE0xMSTcOe8",
-        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/001/559/254/datas/medium.png",
+        "thumbnail": "https://img.youtube.com/vi/IE0xMSTcOe8/maxresdefault.jpg",
         "content": {
           "DESCRIPTION": "A beginner friendly project manager to encourage young developers starting out to take on side projects.",
           "HOW_I_BUILT_IT": [
@@ -56,8 +59,9 @@
         "creation_date": "Feb 18, 2023",
         "tech": ["React", "TypeScript", "Fast API", "Cohere API", "NLTK"],
         "link": "https://github.com/alyssadsouza/savvant",
+		"devpostLink": "https://devpost.com/software/savvant",
         "video": "https://www.youtube.com/embed/Z87lOSmQRqs",
-        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/393/955/datas/gallery.jpg",
+        "thumbnail": "https://img.youtube.com/vi/Z87lOSmQRqs/maxresdefault.jpg",
         "content": {
           "DESCRIPTION": "An NLP app that processes e-commerce reviews with sentiment analysis to help determine if you should buy a product.",
           "HOW_I_BUILT_IT": [
@@ -73,13 +77,14 @@
         "creation_date": "Sept 17, 2022",
         "tech": ["React", "Flask", "CockroachDB", "WebSocket", "Google Maps API"],
         "link": "https://github.com/Shivam-J-07/ReCycle",
+		"devpostLink": "https://devpost.com/software/recycle-9eu6j0",
         "video": "",
         "images": [
           "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/226/390/datas/gallery.jpg", 
           "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/226/394/datas/gallery.jpg",
           "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/226/395/datas/gallery.jpg"
         ],
-        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_thumbnail_photos/002/225/666/datas/medium.png",
+        "thumbnail": "https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/226/390/datas/gallery.jpg",
         "content": {
           "DESCRIPTION": "Recycle bikes in your community with organized bike loans and rentals from people in your area.",
           "HOW_I_BUILT_IT": [
