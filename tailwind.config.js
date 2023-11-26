@@ -4,6 +4,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      screens: {
+        md: "900px",
+      },
       colors: {
         grayscale: {
           DEFAULT: "#212121",
