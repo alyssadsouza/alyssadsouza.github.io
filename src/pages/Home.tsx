@@ -8,11 +8,11 @@ function Home() {
         <h2>I'm a software engineering undergrad.</h2>
         <p>
           I'm a second-year at the University of Waterloo and as a co-op student
-          I’m actively looking for software development internships. This
-          portfolio showcases my skills and some of the projects I’ve worked on.{" "}
+          I'm actively looking for software development internships. This
+          portfolio showcases my skills and some of the projects I've worked on.{" "}
         </p>
       </div>
-      <div className="flex flex-grow max-w-2xl p-8 min-w-[24rem]">
+      <div className="flex flex-grow max-w-2xl md:p-8 sm:min-w-[24rem]">
         <HomeIcon className="w-full h-full" />
       </div>
     </div>

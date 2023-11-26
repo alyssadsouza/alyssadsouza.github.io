@@ -17,7 +17,7 @@ const paths = [
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-10 flex justify-end w-full h-24 p-8 font-display">
+    <header className="sticky top-0 z-10 flex justify-end w-full p-8 shadow-sm font-display bg-neutral-50/50 backdrop-blur-md md:backdrop-blur-none md:shadow-none md:bg-transparent">
       <nav className="flex items-center gap-4">
         {paths.map((path) => (
           <NavLink
