@@ -79,9 +79,11 @@ module.exports = {
         },
         link: {
           DEFAULT: "#3A8CE9",
+          300: "#83B7F1",
           400: "#5FA1ED",
           500: "#3A8CE9",
           600: "#1870D3",
+          700: "#1255A1",
         },
       },
       keyframes: {

@@ -18,7 +18,7 @@ function About() {
                 "I love building software.",
               ],
               autoStart: true,
-			  delay: 75,
+			  delay: 50,
               loop: true,
             }}
           />

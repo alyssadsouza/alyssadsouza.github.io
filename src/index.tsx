@@ -6,6 +6,7 @@ import Root from "./layouts/Root";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Projects from "./pages/Projects.js";
 
 import "./index.css";
 import "./animations.css";
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-	errorElement: <NotFound />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -23,6 +24,14 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
+      },
+      {
+        path: "/projects/:projectId",
+        element: <></>,
       },
     ],
   },

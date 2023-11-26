@@ -11,6 +11,9 @@ function Home() {
             onInit={(typewriter) => {
               typewriter.typeString("I'm Alyssa").start();
             }}
+            options={{
+              delay: 75,
+            }}
           />
         </h1>
         <h2>I'm a software engineering undergrad.</h2>

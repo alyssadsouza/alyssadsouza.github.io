@@ -16,4 +16,7 @@
 	h3 {
 		@apply text-2xl font-bold font-display;
 	}
+	a {
+		@apply text-link hover:text-link-300 hover:underline
+	}
 }
