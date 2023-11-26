@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+	* {
+		@apply text-grayscale
+	}
+	h1 {
+		@apply text-4xl font-bold font-display;
+	}
+	h2 {
+		@apply text-2xl font-display;
+	}
+	h3 {
+		@apply text-xl;
+	}
+}

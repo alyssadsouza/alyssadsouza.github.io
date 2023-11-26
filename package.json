@@ -4,35 +4,22 @@
   "private": true,
   "homepage": "http://alyssadsouza.github.io/",
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@headlessui/react": "^1.6.5",
-    "@heroicons/react": "^1.0.6",
-    "@lottiefiles/lottie-interactivity": "^1.6.0",
-    "@lottiefiles/lottie-player": "^1.5.7",
-    "@mui/icons-material": "^5.8.4",
-    "@mui/material": "^5.8.7",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "prismjs": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.4.0",
     "react-router": "^6.8.1",
-    "react-router-dom": "^6.8.1",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.20.0",
     "react-syntax-highlighter": "^15.5.0",
-    "typewriter-effect": "^2.19.0",
-    "web-vitals": "^2.1.4"
+    "typewriter-effect": "^2.19.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "preinstall": "npx only-allow pnpm",
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,9 +40,26 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.17",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.12.0",
+    "@vitejs/plugin-react": "^4.2.0",
     "autoprefixer": "^10.4.7",
-    "gh-pages": "^4.0.0",
+    "eslint": "^8.54.0",
+    "eslint-config-standard-with-typescript": "^40.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.2",
+    "gh-pages": "^6.1.0",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4"
+    "tailwindcss": "^3.1.4",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.2",
+    "vite-plugin-svgr": "^4.2.0",
+    "vite-tsconfig-paths": "^4.2.1"
   }
 }
