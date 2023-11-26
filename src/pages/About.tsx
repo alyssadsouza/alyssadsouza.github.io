@@ -1,3 +1,5 @@
+import Typewriter from "typewriter-effect";
+
 import AboutImage from "../icons/About";
 
 function About() {
@@ -6,8 +8,21 @@ function About() {
       <div className="flex flex-grow md:max-w-2xl md:p-8 sm:min-w-[24rem]">
         <AboutImage />
       </div>
-      <div className="flex flex-col justify-center gap-4 md:max-w-lg md:mb-32">
-        <h1>I'm a web developer.</h1>
+      <div className="flex flex-col justify-center gap-4 md:max-w-lg">
+        <h1>
+          <Typewriter
+            options={{
+              strings: [
+                "I'm a web developer.",
+                "I'm passionate about good design.",
+                "I love building software.",
+              ],
+              autoStart: true,
+			  delay: 75,
+              loop: true,
+            }}
+          />
+        </h1>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro fugit
           impedit similique quis ex, quo, laborum, error sunt tempora aliquid

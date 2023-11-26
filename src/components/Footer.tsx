@@ -4,7 +4,6 @@ import LinkedIn from "../icons/LinkedIn";
 const Footer = () => {
   return (
     <footer className="flex items-center justify-center w-full gap-4 p-4 ">
-      <hr />
       <a
         href="https://github.com/alyssadsouza"
         target="_blank"
