@@ -1,7 +1,9 @@
-const Home = ({className}: {className?: string}) => (
+const Home = ({ className }: { className?: string }) => (
   <svg
-	className={className}
+    className={className}
     viewBox="0 0 783 668"
+    width={"100%"}
+    height={"100%"}
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >

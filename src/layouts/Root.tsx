@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
 import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 
 function Root() {
   return (
@@ -8,6 +9,7 @@ function Root() {
       <div className="flex flex-col flex-grow p-6 sm:p-12">
         <Outlet />
       </div>
+      <Footer />
     </div>
   );
 }

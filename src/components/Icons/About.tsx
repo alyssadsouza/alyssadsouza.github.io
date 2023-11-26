@@ -3,6 +3,8 @@ const About = ({ className }: { className?: string }) => {
     <svg
       className={className}
       viewBox="0 0 890 447"
+	  width={"100%"}
+	  height={"100%"}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
