@@ -1,4 +1,4 @@
-import HomeIcon from "../components/Icons/Home";
+import HomeIcon from "../icons/Home";
 
 function Home() {
   return (

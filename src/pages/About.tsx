@@ -1,4 +1,4 @@
-import AboutImage from "../components/Icons/About";
+import AboutImage from "../icons/About";
 
 function About() {
   return (
