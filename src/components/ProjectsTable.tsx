@@ -81,7 +81,7 @@ export default function ProjectsTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div>
+      <div className="sticky top-0 z-50 bg-neutral/80 backdrop-blur-md">
         {/* Mobile table header */}
         <div className="grid items-center grid-cols-5 gap-2 mb-4 font-bold sm:hidden text-grayscale-300 font-display">
           <span>Sort by</span>
@@ -118,7 +118,7 @@ export default function ProjectsTable() {
           to={`/projects/${project.id}`}
           className="hover:no-underline text-grayscale hover:text-grayscale"
         >
-          <div className="grid w-full gap-8 p-4 transition-all rounded-lg shadow-sm sm:grid-cols-5 bg-neutral-50 hover:bg-neutral-200/20">
+          <div className="grid w-full gap-8 p-4 transition-all rounded-lg shadow-sm sm:grid-cols-5 bg-neutral-50 hover:bg-neutral-50/50">
             <span className="flex flex-col gap-2">
               <b>{project.title}</b>
               <img
