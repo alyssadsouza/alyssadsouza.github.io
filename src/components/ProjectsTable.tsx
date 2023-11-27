@@ -81,7 +81,7 @@ export default function ProjectsTable() {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="sticky top-0 z-50 bg-neutral/80 backdrop-blur-md">
+      <div className="top-0 md:z-50 md:sticky bg-neutral/80 backdrop-blur-md">
         {/* Mobile table header */}
         <div className="grid items-center grid-cols-5 gap-2 mb-4 font-bold sm:hidden text-grayscale-300 font-display">
           <span>Sort by</span>
