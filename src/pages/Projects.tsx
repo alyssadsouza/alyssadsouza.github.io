@@ -4,7 +4,7 @@ import ProjectsTable from "../components/ProjectsTable";
 
 function Projects() {
   return (
-    <div className="flex flex-col gap-12 mx-auto max-w-7xl">
+    <div className="flex flex-col gap-12 mx-auto max-w-7xl animate-appear">
       <div className="flex flex-col max-w-4xl gap-4">
         <h1>
           <Typewriter

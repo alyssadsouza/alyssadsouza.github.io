@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects.js";
-import ProjectView from "./components/ProjectView";
+import ProjectView from "./pages/ProjectView";
 
 import "./index.css";
 import "./animations.css";

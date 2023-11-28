@@ -4,7 +4,7 @@ import AboutImage from "../icons/About";
 
 function About() {
   return (
-    <div className="flex flex-col justify-center flex-grow h-full gap-12 lg:gap-24 md:flex-row">
+    <div className="flex flex-col justify-center flex-grow h-full gap-12 lg:gap-24 md:flex-row animate-appear">
       <div className="flex flex-grow md:max-w-2xl md:p-8 sm:min-w-[24rem]">
         <AboutImage />
       </div>

@@ -1,10 +1,11 @@
 import Typewriter from "typewriter-effect";
 
 import HomeIcon from "../icons/Home";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div className="flex flex-col justify-center flex-grow h-full gap-12 lg:gap-24 md:flex-row">
+    <div className="flex flex-col justify-center flex-grow h-full gap-12 lg:gap-24 md:flex-row animate-appear">
       <div className="flex flex-col justify-center gap-4 md:max-w-lg md:mb-32">
         <h1 className="text-5xl">
           <Typewriter
@@ -22,6 +23,12 @@ function Home() {
           I'm actively looking for software development internships. This
           portfolio showcases my skills and some of the projects I've worked on.{" "}
         </p>
+        <Link
+          to="/projects"
+          className="flex items-center gap-2 px-4 py-1 text-sm text-white transition-all border rounded-full group bg-secondary-300 hover:bg-secondary-400 hover:text-white hover:no-underline w-fit"
+        >
+          See My Projects →
+        </Link>
       </div>
       <div className="flex flex-grow md:max-w-2xl md:p-8 sm:min-w-[24rem]">
         <HomeIcon className="w-full h-full" />
