@@ -100,7 +100,7 @@ export default function ProjectsTable() {
         </div>
 
         {/* Tablet + Desktop table header */}
-        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-primary font-display">
+        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-secondary-400 font-display">
           <ProjectTableHeader label="Project" value={sortParams[0]} />
           <span className="flex items-center col-span-3">Description</span>
           <ProjectTableHeader
@@ -109,7 +109,7 @@ export default function ProjectsTable() {
             className="justify-center"
           />
         </div>
-        <hr className="border-grayscale-50" />
+        <hr className="border-secondary-100" />
       </div>
 
       {projects.map((project) => (
@@ -118,7 +118,7 @@ export default function ProjectsTable() {
           to={`/projects/${project.id}`}
           className="hover:no-underline text-grayscale hover:text-grayscale"
         >
-          <div className="grid w-full gap-8 p-4 transition-all rounded-lg shadow-sm sm:grid-cols-5 bg-neutral-50 hover:bg-neutral-200/30">
+          <div className="grid w-full gap-8 p-4 transition-all border rounded-lg sm:grid-cols-5 border-secondary-100 hover:bg-secondary-50/20">
             <span className="flex flex-col gap-2">
               <b>{project.title}</b>
               <img
