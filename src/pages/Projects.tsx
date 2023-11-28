@@ -18,7 +18,7 @@ function Projects() {
         </h1>
         <p>
           These are a few projects I've worked on that highlight my skills and
-          interests. If you want to see more short term group projects I've
+          interests. If you want to see more short term team projects I've
           worked on, check out my{" "}
           <a
             href="https://devpost.com/alyssadsouza"

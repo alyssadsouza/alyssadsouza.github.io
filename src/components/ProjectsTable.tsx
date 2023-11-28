@@ -118,7 +118,7 @@ export default function ProjectsTable() {
           to={`/projects/${project.id}`}
           className="hover:no-underline text-grayscale hover:text-grayscale"
         >
-          <div className="grid w-full gap-8 p-4 transition-all rounded-lg shadow-sm sm:grid-cols-5 bg-neutral-50 hover:bg-neutral-50/50">
+          <div className="grid w-full gap-8 p-4 transition-all rounded-lg shadow-sm sm:grid-cols-5 bg-neutral-50 hover:bg-neutral-200/30">
             <span className="flex flex-col gap-2">
               <b>{project.title}</b>
               <img
@@ -127,7 +127,7 @@ export default function ProjectsTable() {
                 alt=""
               />
             </span>
-            <span className="flex flex-col col-span-3 gap-4 text-sm">
+            <span className="flex flex-col justify-between col-span-3 gap-4 md:text-base">
               {project.description}
               <span className="flex flex-wrap content-center gap-1">
                 {project.tags.map((tag) => (
@@ -135,9 +135,9 @@ export default function ProjectsTable() {
                 ))}
               </span>
             </span>
-            <span className="col-span-3 text-sm text-left sm:col-span-1 sm:text-center sm:text-grayscale text-grayscale-300">
+            <span className="col-span-3 text-left md:text-base sm:col-span-1 sm:text-center sm:text-grayscale text-grayscale-300">
               <span className="sm:hidden">Created on </span>
-              {new Date(project.creationDate).toLocaleDateString()}
+              {new Date(project.creationDate).toDateString()}
             </span>
           </div>
         </Link>

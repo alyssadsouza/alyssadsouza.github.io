@@ -24,7 +24,7 @@ const Header = () => {
             key={path.path}
             to={path.path}
             className={({ isActive }) =>
-              `no-underline ${isActive ? "text-primary hover:text-primary" : "text-grayscale hover:text-primary transition-colors"}`
+              `hover:no-underline ${isActive ? "text-primary hover:text-primary" : "text-grayscale hover:text-primary transition-colors"}`
             }
           >
             {path.name}

@@ -16,7 +16,7 @@ function Home() {
             }}
           />
         </h1>
-        <h2>I'm a software engineering undergrad.</h2>
+        <h2 className="font-normal">I'm a software engineering undergrad.</h2>
         <p>
           I'm a second-year at the University of Waterloo and as a co-op student
           I'm actively looking for software development internships. This

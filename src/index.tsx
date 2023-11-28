@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects.js";
+import ProjectView from "./components/ProjectView";
 
 import "./index.css";
 import "./animations.css";
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/projects/:projectId",
-        element: <></>,
+        element: <ProjectView />,
       },
     ],
   },
