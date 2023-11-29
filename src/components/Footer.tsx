@@ -10,14 +10,14 @@ const Footer = () => {
         target="_blank"
         rel="noreferrer"
       >
-        <GitHub className="w-6 h-6 transition-all text-neutral-300 hover:text-primary" />
+        <GitHub className="w-6 h-6 transition-all text-neutral-300 hover:text-primary dark:text-secondary-400 dark:hover:text-secondary-100" />
       </Link>
       <Link
         to="https://www.linkedin.com/in/alyssa-dsouza"
         target="_blank"
         rel="noreferrer"
       >
-        <LinkedIn className="w-6 h-6 transition-all text-neutral-300 hover:text-primary" />
+        <LinkedIn className="w-6 h-6 transition-all text-neutral-300 hover:text-primary dark:text-secondary-400 dark:hover:text-secondary-100" />
       </Link>
     </footer>
   );

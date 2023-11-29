@@ -5,7 +5,7 @@
 
 @layer base {
 	h1, h2, h3, p {
-		@apply text-grayscale
+		@apply text-grayscale dark:text-neutral-50
 	}
 	h1 {
 		@apply text-4xl font-bold font-display;
@@ -17,6 +17,6 @@
 		@apply text-2xl font-bold font-display;
 	}
 	a {
-		@apply text-link hover:text-link-300 hover:underline
+		@apply text-link dark:text-link-300 hover:text-link-300 dark:hover:text-link-500 hover:underline
 	}
 }

@@ -66,24 +66,26 @@ export default function ProjectsTable() {
         className={`flex items-center gap-2 ${className}`}
       >
         <span>{label}</span>
-        <div><Arrow
-          className={`w-5 ${
-            sortParam && sortParam.value !== value?.value
-              ? "hidden"
-              : sortOrder && sortOrder.value === "DESCENDING"
-              ? "rotate-180"
-              : ""
-          }`}
-        /></div>
+        <div>
+          <Arrow
+            className={`w-5 ${
+              sortParam && sortParam.value !== value?.value
+                ? "hidden"
+                : sortOrder && sortOrder.value === "DESCENDING"
+                ? "rotate-180"
+                : ""
+            }`}
+          />
+        </div>
       </button>
     );
   };
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="top-0 md:z-50 md:sticky bg-neutral/80 backdrop-blur-md">
+      <div className="top-0 md:z-50 md:sticky bg-neutral/80 dark:bg-secondary-700/80 backdrop-blur-md">
         {/* Mobile table header */}
-        <div className="grid items-center grid-cols-5 gap-2 mb-4 font-bold sm:hidden text-grayscale-300 font-display">
+        <div className="grid items-center grid-cols-5 gap-2 mb-4 font-bold sm:hidden text-grayscale-300 dark:text-secondary-200">
           <span>Sort by</span>
           <Select
             defaultValue={sortParam}
@@ -100,7 +102,7 @@ export default function ProjectsTable() {
         </div>
 
         {/* Tablet + Desktop table header */}
-        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-secondary-400 font-display">
+        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-neutral-400 dark:text-secondary-200">
           <ProjectTableHeader label="Project" value={sortParams[0]} />
           <span className="flex items-center col-span-3">Description</span>
           <ProjectTableHeader
@@ -109,16 +111,16 @@ export default function ProjectsTable() {
             className="justify-center"
           />
         </div>
-        <hr className="border-secondary-100" />
+        <hr className="mt-2 border-neutral-700/20 dark:border-secondary-200/50" />
       </div>
 
       {projects.map((project) => (
         <Link
           key={project.id}
           to={`/projects/${project.id}`}
-          className="hover:no-underline text-grayscale hover:text-grayscale"
+          className="hover:no-underline text-grayscale dark:text-neutral-50 dark:hover:text-neutral-50 hover:text-grayscale"
         >
-          <div className="grid w-full gap-8 p-4 transition-all border rounded-lg sm:grid-cols-5 border-secondary-100 hover:bg-secondary-50/20">
+          <div className="grid w-full gap-8 p-4 transition-all rounded-lg sm:grid-cols-5 bg-neutral-200/30 dark:bg-secondary-500/30 dark:hover:bg-secondary-500/60 hover:bg-neutral-200/60">
             <span className="flex flex-col gap-2">
               <b>{project.title}</b>
               <img
@@ -135,7 +137,7 @@ export default function ProjectsTable() {
                 ))}
               </span>
             </span>
-            <span className="col-span-3 text-left md:text-base sm:col-span-1 sm:text-center sm:text-grayscale text-grayscale-300">
+            <span className="col-span-3 text-left md:text-base sm:col-span-1 sm:text-center sm:text-grayscale text-grayscale-300 dark:sm:text-neutral-50 dark:text-secondary-300 dark:hover:text-neutral-50">
               <span className="sm:hidden">Created on </span>
               {new Date(project.creationDate).toDateString()}
             </span>

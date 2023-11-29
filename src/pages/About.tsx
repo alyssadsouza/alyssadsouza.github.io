@@ -1,12 +1,14 @@
 import Typewriter from "typewriter-effect";
 
 import AboutImage from "../icons/About";
+import AboutDark from "../icons/AboutDark";
 
 function About() {
   return (
     <div className="flex flex-col justify-center flex-grow h-full gap-12 lg:gap-24 md:flex-row animate-appear">
       <div className="flex flex-grow md:max-w-2xl md:p-8 sm:min-w-[24rem]">
-        <AboutImage />
+        <AboutImage className="dark:hidden" />
+		<AboutDark className="hidden dark:block" />
       </div>
       <div className="flex flex-col justify-center gap-4 md:max-w-lg">
         <h1>

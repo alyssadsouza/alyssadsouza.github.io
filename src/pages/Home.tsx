@@ -1,7 +1,8 @@
 import Typewriter from "typewriter-effect";
 
-import HomeIcon from "../icons/Home";
+import HomeImage from "../icons/Home";
 import { Link } from "react-router-dom";
+import HomeDark from "../icons/HomeDark";
 
 function Home() {
   return (
@@ -25,13 +26,14 @@ function Home() {
         </p>
         <Link
           to="/projects"
-          className="flex items-center gap-2 px-4 py-1 text-sm text-white transition-all border rounded-full group bg-secondary-300 hover:bg-secondary-400 hover:text-white hover:no-underline w-fit"
+          className="flex items-center gap-2 px-4 py-1 text-white transition-all rounded-full group bg-secondary-300 dark:bg-secondary-400 dark:hover:bg-secondary-500 hover:bg-secondary-400 hover:text-neutral-50 hover:no-underline dark:text-neutral-50 dark:hover:text-neutral-50 w-fit"
         >
           See My Projects →
         </Link>
       </div>
       <div className="flex flex-grow md:max-w-2xl md:p-8 sm:min-w-[24rem]">
-        <HomeIcon className="w-full h-full" />
+        <HomeImage className="dark:hidden" />
+        <HomeDark className="hidden dark:block" />
       </div>
     </div>
   );
