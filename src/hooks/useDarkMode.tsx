@@ -1,24 +1,14 @@
 import { useEffect, useState } from "react";
 
 const useDarkMode = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+  );
   useEffect(() => {
-    if (
-      localStorage.theme === "dark" ||
-      (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      setDarkMode(true);
-    } else {
-      setDarkMode(false);
-    }
-    // Whenever the user explicitly chooses light mode
-    localStorage.theme = "light";
-    // Whenever the user explicitly chooses dark mode
-    localStorage.theme = "dark";
-    // Whenever the user explicitly chooses to respect the OS preference
-    localStorage.removeItem("theme");
-  }, []);
+    darkMode
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+  }, [darkMode]);
   return { darkMode, setDarkMode };
 };
 
