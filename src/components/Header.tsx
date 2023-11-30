@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import DarkMode from "../icons/DarkMode";
 import LightMode from "../icons/LightMode";
+import useDarkMode from "../hooks/useDarkMode";
 
 const paths = [
   {
@@ -17,13 +18,8 @@ const paths = [
   },
 ];
 
-const Header = ({
-  darkMode,
-  setDarkMode,
-}: {
-  darkMode: boolean;
-  setDarkMode: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
+const Header = () => {
+  const { darkMode, setDarkMode } = useDarkMode();
   return (
     <header className="sticky top-0 z-10 flex justify-end w-full px-8 py-4 font-medium shadow-sm bg-neutral-50/50 dark:bg-secondary-600/50 backdrop-blur-md md:backdrop-blur-none md:shadow-none md:bg-transparent dark:md:bg-transparent md:static">
       <nav className="flex items-center gap-4">
