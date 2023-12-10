@@ -102,7 +102,7 @@ export default function ProjectsTable() {
         </div>
 
         {/* Tablet + Desktop table header */}
-        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-neutral-400 dark:text-secondary-200">
+        <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-primary dark:text-secondary-200">
           <ProjectTableHeader label="Project" value={sortParams[0]} />
           <span className="flex items-center col-span-3">Description</span>
           <ProjectTableHeader

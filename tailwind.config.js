@@ -11,6 +11,7 @@ export default {
       colors: {
         grayscale: {
           DEFAULT: "#212121",
+		  10: "#F1F1F1",
           50: "#CECECE",
           100: "#C4C4C4",
           200: "#B0B0B0",

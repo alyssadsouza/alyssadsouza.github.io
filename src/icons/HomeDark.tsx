@@ -1,7 +1,7 @@
 const HomeDark = ({ className }: { className?: string }) => (
   <svg
-    width="{100%}"
-    height="{100%}"
+    width={"100%"}
+    height={"100%"}
     className={className}
     viewBox="0 0 783 668"
     fill="none"
