@@ -8,7 +8,7 @@ const About = ({ className }: { className?: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="About" clip-path="url(#clip0_602_148)">
+      <g id="About" clipPath="url(#clip0_602_148)">
         <path
           id="path245-4"
           d="M0 284.548L446.293 104.299L890 268.022L446.293 447L0 284.548Z"
