@@ -40,7 +40,7 @@ const AboutDark = ({ className }: { className?: string }) => {
             <path
               id="path411-4"
               d="M582.398 143.01C599.8 143.01 613.909 136.725 613.909 128.971C613.909 121.217 599.8 114.93 582.398 114.93C564.995 114.93 550.888 121.217 550.888 128.971C550.888 136.725 564.995 143.01 582.398 143.01Z"
-              className="fill-secondary-800"
+              className="fill-secondary-900"
             />
             <path
               id="path413-0"
@@ -82,7 +82,7 @@ const AboutDark = ({ className }: { className?: string }) => {
               <path
                 id="path925"
                 d="M289.945 143.03L281.733 140.054L548.898 32.8635L556.059 35.477L289.945 143.03Z"
-                className="fill-secondary-800"
+                className="fill-secondary-900"
               />
               <path
                 id="path2686"
@@ -161,12 +161,12 @@ const AboutDark = ({ className }: { className?: string }) => {
             <path
               id="path32809"
               d="M163.409 177.293C163.409 177.293 144.91 152.21 114.517 210.297C84.1234 268.386 106.588 179.934 106.588 179.934C106.588 179.934 6.1607 224.82 44.4823 172.011C82.8021 119.205 163.409 177.293 163.409 177.293Z"
-              className="fill-secondary-800"
+              className="fill-secondary-900"
             />
             <path
               id="path32809-4"
               d="M183.465 197.642C183.465 197.642 201.965 172.559 232.357 230.646C262.749 288.734 245.571 185.759 245.571 185.759C245.571 185.759 340.712 245.167 302.392 192.36C264.07 139.553 183.465 197.642 183.465 197.642Z"
-              className="fill-secondary-800"
+              className="fill-secondary-900"
             />
             <path
               id="path33945"
@@ -181,12 +181,12 @@ const AboutDark = ({ className }: { className?: string }) => {
             <path
               id="path33945-1"
               d="M183.851 196.427C183.851 196.427 248.601 170.023 222.172 100.053C195.744 30.0836 224.815 5 224.815 5C224.815 5 150.816 61.768 173.28 121.176C195.744 180.584 183.851 196.427 183.851 196.427Z"
-              className="fill-secondary-800"
+              className="fill-secondary-900"
             />
             <path
               id="path33949"
               d="M175.209 191.703C175.209 191.703 104.052 28.0776 55.7061 60.6948C7.36153 93.3119 0 125.81 0 125.81C0 125.81 49.215 84.3796 76.1201 106.605C103.025 128.831 175.209 191.703 175.209 191.703Z"
-              className="fill-secondary-800"
+              className="fill-secondary-900"
             />
           </g>
           <g id="Vector 14" style={{ mixBlendMode: "luminosity" }}>

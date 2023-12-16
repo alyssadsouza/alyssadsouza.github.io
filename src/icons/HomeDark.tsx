@@ -65,12 +65,12 @@ const HomeDark = ({ className }: { className?: string }) => (
           <path
             id="path32809"
             d="M393.282 114.946C393.282 114.946 382.529 100.366 364.863 134.13C347.196 167.895 360.254 116.481 360.254 116.481C360.254 116.481 301.879 142.572 324.154 111.876C346.428 81.1811 393.282 114.946 393.282 114.946Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="path32809-4"
             d="M404.94 126.774C404.94 126.774 415.693 112.194 433.359 145.958C451.025 179.723 441.04 119.867 441.04 119.867C441.04 119.867 496.342 154.399 474.068 123.704C451.793 93.0089 404.94 126.774 404.94 126.774Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="path33945"
@@ -85,12 +85,12 @@ const HomeDark = ({ className }: { className?: string }) => (
           <path
             id="path33945-1"
             d="M405.164 126.068C405.164 126.068 442.801 110.72 427.439 70.0492C412.077 29.3781 428.975 14.7979 428.975 14.7979C428.975 14.7979 385.962 47.7951 399.02 82.3271C412.077 116.859 405.164 126.068 405.164 126.068Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="path33949"
             d="M400.141 123.322C400.141 123.322 358.78 28.2121 330.678 47.1713C302.577 66.1305 298.298 85.0206 298.298 85.0206C298.298 85.0206 326.905 60.9385 342.544 73.8575C358.183 86.7766 400.141 123.322 400.141 123.322Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
         </g>
         <g id="laptop">
@@ -224,7 +224,7 @@ const HomeDark = ({ className }: { className?: string }) => (
           <path
             id="path29096-9-18"
             d="M459.367 264.336C470.602 264.336 479.711 260.279 479.711 255.274C479.711 250.269 470.602 246.211 459.367 246.211C448.131 246.211 439.023 250.269 439.023 255.274C439.023 260.279 448.131 264.336 459.367 264.336Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="path31113"
@@ -246,7 +246,7 @@ const HomeDark = ({ className }: { className?: string }) => (
           <path
             id="path29096-97"
             d="M136.311 629.058C176.629 629.058 209.314 612.299 209.314 591.625C209.314 570.951 176.629 554.192 136.311 554.192C95.9933 554.192 63.3091 570.951 63.3091 591.625C63.3091 612.299 95.9933 629.058 136.311 629.058Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="rect38357"
@@ -256,7 +256,7 @@ const HomeDark = ({ className }: { className?: string }) => (
           <path
             id="path37531"
             d="M130.443 332.85C142.262 437.01 182.373 470.024 210.635 457.671C238.897 445.318 282.173 427.67 252.145 480.613C222.116 533.555 152.344 530.026 136.447 526.496C120.549 522.967 30.4634 500.025 8.38354 386.199C-30.4114 221.479 114.691 276.532 130.443 332.85Z"
-            className="fill-secondary-800"
+            className="fill-secondary-900"
           />
           <path
             id="Vector 13"
@@ -323,7 +323,7 @@ const HomeDark = ({ className }: { className?: string }) => (
         <path
           id="path26561-9"
           d="M481.116 150.851L528.284 169.394V27.2895L481.116 9.39136V150.851Z"
-          className="fill-secondary-800"
+          className="fill-secondary-900"
         />
         <g id="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17">
           <path
@@ -337,7 +337,7 @@ const HomeDark = ({ className }: { className?: string }) => (
             className="fill-secondary-700"
           />
         </g>
-        <g id="laptop-text">
+        <g id="laptop-text" className="animate-pulse">
           <path
             id="path26561-9-4_2"
             d="M541 66.5L680 119V116.867L541 64V66.5Z"
@@ -409,7 +409,7 @@ const HomeDark = ({ className }: { className?: string }) => (
             className="fill-secondary-700"
           />
         </g>
-        <g id="laptop-text_2">
+        <g id="laptop-text_2" className="animate-pulse">
           <path
             id="path26561-9-4_13"
             d="M487 23.7103L525 38.6262V38.0202L487 23V23.7103Z"
@@ -466,7 +466,7 @@ const HomeDark = ({ className }: { className?: string }) => (
             className="fill-secondary-500"
           />
         </g>
-        <g id="laptop-text_3">
+        <g id="laptop-text_3" className="animate-pulse">
           <path
             id="path26561-9-4_24"
             d="M487 58.7103L525 73.6262V73.0202L487 58V58.7103Z"

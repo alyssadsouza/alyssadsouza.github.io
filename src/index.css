@@ -17,6 +17,6 @@
 		@apply text-2xl font-bold font-display;
 	}
 	a {
-		@apply text-link dark:text-link-300 hover:text-link-300 dark:hover:text-link-500 hover:underline
+		@apply text-link dark:text-link-300 hover:text-link-300 dark:hover:text-link-500
 	}
 }
