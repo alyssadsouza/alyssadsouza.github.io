@@ -26,7 +26,7 @@ function Home() {
         </p>
         <Link
           to="/projects"
-          className="flex items-center gap-2 px-4 py-1 text-white transition-all rounded-full group bg-secondary-300 dark:bg-secondary-400 dark:hover:bg-secondary-500 hover:bg-secondary-400 hover:text-neutral-50 hover:no-underline dark:text-neutral-50 dark:hover:text-neutral-50 w-fit"
+          className="flex items-center gap-2 px-4 py-1 text-white transition-all rounded-full group bg-secondary-400 hover:bg-secondary-500 hover:text-neutral-50 hover:no-underline dark:text-neutral-50 dark:hover:text-neutral-50 w-fit"
         >
           See My Projects →
         </Link>

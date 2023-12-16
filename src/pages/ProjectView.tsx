@@ -9,7 +9,7 @@ import Code from "../icons/Code";
 export default function ProjectView() {
   const { currentProject } = useProject();
   return (
-    <div className="flex justify-center mx-auto max-w-7xl animate-appear">
+    <div className="flex justify-center max-w-3xl mx-auto animate-appear">
       {currentProject ? (
         <div className="flex flex-col gap-8">
           <Link to="/projects" className="w-fit">
@@ -49,21 +49,19 @@ export default function ProjectView() {
           <hr className="border-grayscale-50 dark:border-secondary-600" />
 
           <div className="flex flex-col gap-12">
-            <div className="flex flex-col gap-16 md:flex-row">
-              <div className="min-w-[50%] min-h-[25rem]">
-                <iframe
-                  title={`project-video-${currentProject.title}`}
-                  className="w-full h-full"
-                  src={currentProject.videoUrl}
-                  allowFullScreen
-                ></iframe>
-              </div>
-              <div className="flex flex-col gap-4">
-                <h2>What is it?</h2>
-                {currentProject.whatIsIt.map((paragraph, index) => (
-                  <p key={`what-is-it-${index}`}>{paragraph}</p>
-                ))}
-              </div>
+            <div className="min-w-full min-h-[30rem]">
+              <iframe
+                title={`project-video-${currentProject.title}`}
+                className="w-full h-full"
+                src={currentProject.videoUrl}
+                allowFullScreen
+              ></iframe>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h2>What is it?</h2>
+              {currentProject.whatIsIt.map((paragraph, index) => (
+                <p key={`what-is-it-${index}`}>{paragraph}</p>
+              ))}
             </div>
             <div className="flex flex-col gap-4">
               <h2>How it Works</h2>
