@@ -19,4 +19,8 @@
 	a {
 		@apply text-link dark:text-link-300 hover:text-link-300 dark:hover:text-link-500 transition-all
 	}
+
+	.content div {
+		@apply flex flex-col gap-8
+	}
 }

@@ -8,6 +8,11 @@ import Code from "../icons/Code";
 
 export default function ProjectView() {
   const { currentProject } = useProject();
+
+  const Content = currentProject?.content
+    ? currentProject.content
+    : () => <></>;
+
   return (
     <div className="flex justify-center max-w-3xl mx-auto animate-appear">
       {currentProject ? (
@@ -34,7 +39,7 @@ export default function ProjectView() {
                 to={currentProject.repositoryUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-1 font-medium transition-all border rounded-full border-primary text-primary hover:bg-primary dark:border-primary-400 dark:text-primary-400 dark:hover:bg-primary-400 dark:hover:text-white hover:text-white hover:no-underline w-fit"
+                className="flex items-center gap-2 px-4 py-1 font-medium transition-all border rounded-full border-primary text-primary hover:bg-primary dark:border-primary-300 dark:text-primary-300 dark:hover:bg-primary-300 dark:hover:text-white hover:text-white hover:no-underline w-fit"
               >
                 <span>See the Code</span>
                 <Code className="w-4" />
@@ -48,7 +53,7 @@ export default function ProjectView() {
           </div>
           <hr className="border-grayscale-50 dark:border-secondary-600" />
 
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 content">
             <div className="min-w-full min-h-[30rem]">
               <iframe
                 title={`project-video-${currentProject.title}`}
@@ -57,24 +62,7 @@ export default function ProjectView() {
                 allowFullScreen
               ></iframe>
             </div>
-            <div className="flex flex-col gap-4">
-              <h2>What is it?</h2>
-              {currentProject.whatIsIt.map((paragraph, index) => (
-                <p key={`what-is-it-${index}`}>{paragraph}</p>
-              ))}
-            </div>
-            <div className="flex flex-col gap-4">
-              <h2>How it Works</h2>
-              {currentProject.howItWorks.map((paragraph, index) => (
-                <p key={`how-it-works-${index}`}>{paragraph}</p>
-              ))}
-            </div>
-            <div className="flex flex-col gap-4">
-              <h2>How it's Built</h2>
-              {currentProject.howItsBuilt.map((paragraph, index) => (
-                <p key={`how-its-built-${index}`}>{paragraph}</p>
-              ))}
-            </div>
+            <Content />
           </div>
         </div>
       ) : (
