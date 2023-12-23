@@ -10,7 +10,6 @@ import Projects from "./pages/Projects.js";
 import ProjectView from "./pages/ProjectView";
 
 import "./index.css";
-import "./animations.css";
 
 const router = createBrowserRouter([
   {

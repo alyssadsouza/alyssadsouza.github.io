@@ -20,9 +20,11 @@ function Home() {
         </h1>
         <h2 className="font-normal">I'm a software engineering undergrad.</h2>
         <p>
-          I'm a second-year at the University of Waterloo and as a co-op student
-          I'm actively looking for software development internships. This
-          portfolio showcases my skills and some of the projects I've worked on.{" "}
+          I'm a third-year at the University of Waterloo and as a student in the
+          co-op program I'm actively looking for software development
+          internships to expand and challenge my skillset. This portfolio
+          showcases my skills and interests through some of the projects I've
+          worked on.
         </p>
         <Link
           to="/projects"
