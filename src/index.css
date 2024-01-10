@@ -42,10 +42,6 @@
     @apply my-4;
   }
 
-  .content img {
-    @apply sm:max-w-[30rem] mx-auto my-4;
-  }
-
   .content h2 {
     @apply mt-6;
   }
