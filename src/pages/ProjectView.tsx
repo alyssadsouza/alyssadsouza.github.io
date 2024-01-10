@@ -25,26 +25,32 @@ export default function ProjectView() {
               <h1>{currentProject.title}</h1>
               <p>{currentProject.description}</p>
             </div>
-            <div className="flex flex-wrap items-center gap-4 text-sm">
-              <Link
-                to={currentProject.tryItOutUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-1 font-medium text-white transition-all border rounded-full dark:hover:text-white dark:text-white group hover:border-emerald-600 border-emerald-500 bg-emerald-500 hover:bg-emerald-600 hover:text-white hover:no-underline w-fit"
-              >
-                <span>Try it Out</span>
-                <Rocket className="w-4 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />
-              </Link>
-              <Link
-                to={currentProject.repositoryUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-2 px-4 py-1 font-medium transition-all border rounded-full border-primary text-primary hover:bg-primary dark:border-primary-300 dark:text-primary-300 dark:hover:bg-primary-300 dark:hover:text-white hover:text-white hover:no-underline w-fit"
-              >
-                <span>See the Code</span>
-                <Code className="w-4" />
-              </Link>
-            </div>
+            {(currentProject.tryItOutUrl || currentProject.repositoryUrl) && (
+              <div className="flex flex-wrap items-center gap-4 text-sm">
+                {currentProject.tryItOutUrl && (
+                  <Link
+                    to={currentProject.tryItOutUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 px-4 py-1 font-medium text-white transition-all border rounded-full dark:hover:text-white dark:text-white group hover:border-emerald-600 border-emerald-500 bg-emerald-500 hover:bg-emerald-600 hover:text-white hover:no-underline w-fit"
+                  >
+                    <span>Try it Out</span>
+                    <Rocket className="w-4 transition-all group-hover:-translate-y-1 group-hover:translate-x-1" />
+                  </Link>
+                )}
+                {currentProject.repositoryUrl && (
+                  <Link
+                    to={currentProject.repositoryUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-2 px-4 py-1 font-medium transition-all border rounded-full border-primary text-primary hover:bg-primary dark:border-primary-300 dark:text-primary-300 dark:hover:bg-primary-300 dark:hover:text-white hover:text-white hover:no-underline w-fit"
+                  >
+                    <span>See the Code</span>
+                    <Code className="w-4" />
+                  </Link>
+                )}
+              </div>
+            )}
             <div className="flex flex-wrap gap-2">
               {currentProject.tags.map((tag) => (
                 <Chip key={tag}>{tag}</Chip>

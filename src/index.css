@@ -7,7 +7,8 @@
   h1,
   h2,
   h3,
-  p {
+  p,
+  li {
     @apply antialiased text-grayscale dark:text-neutral-50;
   }
   h1 {
@@ -22,9 +23,27 @@
   a {
     @apply transition-all text-link dark:text-link-300 hover:text-link-300 dark:hover:text-link-500;
   }
+  ol li {
+    @apply list-decimal;
+  }
+  code {
+    @apply p-1 text-sm rounded text-secondary-600 bg-grayscale-50 dark:bg-secondary-900 dark:text-secondary-200;
+  }
 
   .content div {
-    @apply flex flex-col gap-4;
+    @apply flex flex-col gap-6;
+  }
+
+  .content ol {
+    @apply ml-8;
+  }
+
+  .content li {
+    @apply my-4;
+  }
+
+  .content img {
+    @apply sm:max-w-[30rem] mx-auto my-4;
   }
 
   .content h2 {

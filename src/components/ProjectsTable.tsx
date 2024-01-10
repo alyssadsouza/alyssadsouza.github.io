@@ -104,7 +104,7 @@ export default function ProjectsTable() {
         {/* Tablet + Desktop table header */}
         <div className="hidden w-full gap-8 px-4 font-bold sm:grid sm:grid-cols-5 text-primary dark:text-secondary-200">
           <ProjectTableHeader label="Project" value={sortParams[0]} />
-          <span className="flex items-center col-span-3">Description</span>
+          <span className="col-span-3"></span>
           <ProjectTableHeader
             label="Created On"
             value={sortParams[1]}
@@ -121,16 +121,14 @@ export default function ProjectsTable() {
           className="hover:no-underline text-grayscale dark:text-neutral-50 dark:hover:text-neutral-50 hover:text-grayscale"
         >
           <div className="grid w-full gap-8 p-4 transition-all rounded-lg sm:grid-cols-5 bg-neutral-200/30 dark:bg-secondary-500/30 dark:hover:bg-secondary-500/60 hover:bg-neutral-200/60">
-            <span className="flex flex-col gap-2">
-              <b>{project.title}</b>
-              <img
-                className="hidden rounded-md md:block"
-                src={project.thumbnailUrl}
-                alt=""
-              />
-            </span>
-            <span className="flex flex-col justify-between col-span-3 gap-4 md:text-base">
-              {project.description}
+            <div className="hidden md:block">
+              <img className="object-cover w-full h-full rounded-md" src={project.thumbnailUrl} alt="" />
+            </div>
+            <span className="flex flex-col justify-between col-span-4 gap-4 md:col-span-3 md:text-base">
+              <div className="flex flex-col gap-1">
+                <p><b>{project.title}</b></p>
+                <p>{project.description}</p>
+              </div>
               <span className="flex flex-wrap content-center gap-1">
                 {project.tags.map((tag) => (
                   <Chip key={tag}>{tag}</Chip>

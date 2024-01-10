@@ -1,7 +1,5 @@
 import { NavLink } from "react-router-dom";
-import DarkMode from "../icons/DarkMode";
-import LightMode from "../icons/LightMode";
-import useDarkMode from "../hooks/useDarkMode";
+import DarkModeToggle from "./DarkModeToggle";
 
 const paths = [
   {
@@ -19,7 +17,6 @@ const paths = [
 ];
 
 const Header = () => {
-  const { darkMode, setDarkMode } = useDarkMode();
   return (
     <header className="sticky top-0 z-10 flex justify-end w-full px-8 py-4 font-medium shadow-sm bg-neutral-50/50 dark:bg-secondary-600/50 backdrop-blur-md md:backdrop-blur-none md:shadow-none md:bg-transparent dark:md:bg-transparent md:static">
       <nav className="flex items-center gap-4">
@@ -38,37 +35,7 @@ const Header = () => {
             {path.name}
           </NavLink>
         ))}
-        <button
-          className="flex gap-2 px-1 py-[0.2rem] rounded-full bg-neutral-200 dark:bg-secondary-600 hover:bg-neutral-300 dark:hover:bg-secondary-500 transition-all"
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          <div
-            className={`p-[0.25rem] ${
-              !darkMode ? "bg-primary-400 rounded-full" : ""
-            }`}
-          >
-            <LightMode
-              className={`w-4 ${
-                !darkMode
-                  ? "text-white"
-                  : "text-secondary-400 dark:text-secondary-200"
-              }`}
-            />
-          </div>
-          <div
-            className={`p-[0.25rem] ${
-              darkMode ? "bg-secondary-300 rounded-full" : ""
-            }`}
-          >
-            <DarkMode
-              className={`w-4 ${
-                darkMode
-                  ? "text-white"
-                  : "text-neutral-400 dark:text-secondary-200"
-              }`}
-            />
-          </div>
-        </button>
+        <DarkModeToggle />
       </nav>
     </header>
   );
