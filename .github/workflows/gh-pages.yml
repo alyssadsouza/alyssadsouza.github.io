@@ -45,7 +45,7 @@ jobs:
         run: pnpm install
 
       - name: Build React site
-        run: pnpm build
+        run: pnpm vite build
 
       - name: Deploy GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
