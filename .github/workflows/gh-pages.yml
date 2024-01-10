@@ -44,7 +44,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build React site
+      - name: Build site
         run: pnpm vite build
 
       - name: Deploy GitHub Pages
