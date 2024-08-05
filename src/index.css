@@ -26,6 +26,9 @@
   ol li {
     @apply list-decimal;
   }
+  ul li {
+    @apply list-disc;
+  }
   code {
     @apply p-1 text-sm rounded text-secondary-600 bg-grayscale-50 dark:bg-secondary-900 dark:text-secondary-200;
   }
@@ -34,7 +37,7 @@
     @apply flex flex-col gap-6;
   }
 
-  .content ol {
+  .content ol, ul {
     @apply ml-8;
   }
 

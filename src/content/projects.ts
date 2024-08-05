@@ -3,10 +3,10 @@ import {
   ReactComponent as savvantHtml,
 } from "./savvant.md";
 
-// import {
-//   attributes as rentriteAttributes,
-//   ReactComponent as rentriteHtml,
-// } from "./rent-rite.md";
+import {
+  attributes as rentriteAttributes,
+  ReactComponent as rentriteHtml,
+} from "./rent-rite.md";
 
 export type Project = {
   id: string;
@@ -23,5 +23,5 @@ export type Project = {
 
 export const projects: Project[] = [
   { ...savvantAttributes, content: savvantHtml },
-//   { ...rentriteAttributes, content: rentriteHtml },
+  { ...rentriteAttributes, content: rentriteHtml },
 ];
