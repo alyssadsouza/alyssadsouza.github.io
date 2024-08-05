@@ -26,24 +26,28 @@ function About() {
           />
         </h1>
         <p>
-          I'm currently in my third year at the University of Waterloo, studying
-          an undergraduate degree in Software Engineering. I'm also a student in
-          the co-op program, which uniquely lets me alternate between studying
-          and gaining work experience through 4-month internships.
+          I'm currently in my third year at the University of Waterloo, pursuing
+          an undergraduate degree in Software Engineering. As a student in the
+          co-op program, I have the unique opportunity to alternate between
+          academic studies and gaining practical work experience through 4-month
+          internships.
         </p>
         <p>
-          So far I've had the chance to work at small startups, contributing
-          directly to their codebase and improving user experiences with their
-          products. These experiences have honed my web development skills and
-          reinforced key aspects of my degree, from design practices to quality
-          assurance and problem-solving.
+          My work experience spans a range of environments, from small startups
+          and a non-profit research organization to IT consulting for a global
+          food service company. In each role, I have contributed directly to
+          codebases and enhanced client experiences with various services and
+          products. These opportunities have honed my web development skills and
+          reinforced crucial aspects of my degree, including design practices,
+          quality assurance, and problem-solving.
         </p>
         <p>
-          Lately, I've been delving into the impact of big data across various
-          industries, exploring data processing and analysis through personal
-          projects. Overall, I'm looking to expand my skillset with every new
-          experience and work on something impactful that demonstrates how cool
-          software is.
+          Recently, I've been exploring data processing and analysis through
+          personal projects. During my latest internship, I focused on data
+          extraction, utilizing techniques such as web crawling, python
+          scripting, and prompt engineering to extract and clean data. Overall,
+          I'm looking to continue expanding my skillset with each new experience
+          and to work on projects that make a tangible difference.
         </p>
       </div>
     </div>
