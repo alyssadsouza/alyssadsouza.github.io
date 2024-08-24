@@ -11,6 +11,7 @@ tags:
   - "Fast API"
   - "React + TS"
 repositoryUrl: "https://github.com/ShivamJ07/RentRite"
+tryItOutUrl: "https://rent-rite.vercel.app/"
 videoUrl: "https://drive.google.com/file/d/10O6HdGpyJRKPhlgwmQVKQWOthnBsaUxZ/preview"
 thumbnailUrl: "https://lh3.googleusercontent.com/d/1ZUgG_vduuaTCBxzcCJBw1c33t50iSDDS?authuser=0"
 description: "A price prediction model and price trend analysis tool for apartment rentals in major Canadian cities."

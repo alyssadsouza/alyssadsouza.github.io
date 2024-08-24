@@ -33,13 +33,12 @@ function About() {
           internships.
         </p>
         <p>
-          My work experience spans a range of environments, from small startups
-          and a non-profit research organization to IT consulting for a global
-          food service company. In each role, I have contributed directly to
-          codebases and enhanced client experiences with various services and
-          products. These opportunities have honed my web development skills and
-          reinforced crucial aspects of my degree, including design practices,
-          quality assurance, and problem-solving.
+          My work experience spans a range of environments, from software
+          development at startups and a non-profit research organization, to
+          data extraction for a global food service company. In each role I’ve
+          contributed directly to codebases, which honed my development
+          skills and reinforced key elements of my degree, such as design
+          patterns, quality assurance, and problem-solving.
         </p>
         <p>
           Recently, I've been exploring data processing and analysis through
