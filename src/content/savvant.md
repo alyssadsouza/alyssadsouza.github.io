@@ -24,7 +24,7 @@ We came up with Savvant: an ML app that uses natural language processing and web
 
 The funny thing about the project is that we didn’t realize it was *mildly illegal* to be scraping reviews from Amazon until our web scraper got blocked from making reviews right after recording our demo (more about that in the section below). So we didn’t even end up with a working demo by the end of it solely for the reason that Amazon blocked our web scraper. However, as a proof-of-concept, this project did stand to be inspiration for future projects, and it was my first decent experience with data pipelines and integrating ML models into a full-stack application. It became a concrete example to refer to when working on [RentRite](https://github.com/ShivamJ07/RentRite).
 
-## How it Works
+<h2 id="how-it-works">How it Works</h2>
 
 The project was built as a full stack app. The backend performed the web crawling to extract product reviews, and subsequently fed that data to the model to receive a prediction for the sentiment of each review. We could then deliver the analysis of the product to the user by exposing an endpoint with a [FastAPI](https://fastapi.tiangolo.com/) app. To make this accessible to users we built a frontend in [React](https://react.dev/) with [TypeScript](https://www.typescriptlang.org/docs/), which let users call our API endpoint from a minimal UI.
 

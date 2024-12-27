@@ -5,6 +5,7 @@ import useProject from "../hooks/useProject";
 import Chip from "../components/Chip";
 import Rocket from "../icons/Rocket";
 import Code from "../icons/Code";
+import TableOfContents from "../components/TOC";
 
 export default function ProjectView() {
   const { currentProject } = useProject();
@@ -13,8 +14,13 @@ export default function ProjectView() {
     ? currentProject.content
     : () => <></>;
 
+	const sections = [
+		{ id: "what-is-it", title: "What is it?" },
+		{ id: "how-it-works", title: "How it Works" },
+		];
+
   return (
-    <div className="flex justify-center max-w-3xl mx-auto animate-appear">
+    <div className="flex max-w-7xl mx-auto animate-appear">
       {currentProject ? (
         <div className="flex flex-col gap-8">
           <Link to="/projects" className="w-fit">
@@ -23,7 +29,7 @@ export default function ProjectView() {
           <div className="flex flex-col max-w-4xl gap-6">
             <div>
               <h1>{currentProject.title}</h1>
-              <p>{currentProject.description}</p>
+              <p className="text-sm text-gray-500 dark:text-secondary-300">{currentProject.description}</p>
             </div>
             {(currentProject.tryItOutUrl || currentProject.repositoryUrl) && (
               <div className="flex flex-wrap items-center gap-4 text-sm">
@@ -57,19 +63,21 @@ export default function ProjectView() {
               ))}
             </div>
           </div>
-          <hr className="border-grayscale-50 dark:border-secondary-600" />
+          {/* <hr className="border-grayscale-50 dark:border-secondary-600" /> */}
 
-          <div className="flex flex-col gap-12 content">
-            <div className="min-w-full min-h-[30rem]">
-              <iframe
-                title={`project-video-${currentProject.title}`}
-                className="w-full h-full"
-                src={currentProject.videoUrl}
-                allowFullScreen
-              ></iframe>
-            </div>
-            <Content />
-          </div>
+		  <div className="flex justify-between gap-16">
+			<div className="flex flex-col gap-12 max-w-4xl content">
+				<iframe
+				title={`project-video-${currentProject.title}`}
+				className="w-full h-[35rem]"
+				src={currentProject.videoUrl}
+				allowFullScreen
+				></iframe>
+				<Content />
+			</div>
+			<TableOfContents sections={sections} />
+		  </div>
+
         </div>
       ) : (
         <div className="flex flex-col gap-3 text-center">
