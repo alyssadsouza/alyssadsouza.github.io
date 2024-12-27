@@ -37,13 +37,9 @@ The project has several key components: data acquisition, model training, an API
 Users interact with RentRite through two main workflows:
 
 
-1. **Price Predictions**: Users can get price predictions for specific properties based on detailed parameters such as location, size, and amenities. This is helpful for property owners trying to maximize their revenue or renters planning their budgets. For example, a user can find out the expected price for a one-bed apartment (600 SqFt, 1 bath, pets allowed, dishwasher) in Liberty Village, Toronto.
+1. **Price Predictions**: Users can get price predictions for specific properties based on detailed parameters such as location, size, and amenities. This is helpful for property owners trying to maximize their revenue or renters planning their budgets. For example, a user can find out the expected price for a one-bed apartment (600 SqFt, 1 bath, pets allowed, dishwasher) in Liberty Village, Toronto. ![Price Predictions section of the UI](https://lh3.googleusercontent.com/d/1YUbickGVuA_W-C5e2ROmVqicCHTeDSL5?authuser=0)
 
-![Price Predictions section of the UI](https://lh3.googleusercontent.com/d/1YUbickGVuA_W-C5e2ROmVqicCHTeDSL5?authuser=0)
-
-2. **Market Trends**: Users can get overarching information about rental prices in specific geographic areas. For example, they can find out the average studio prices in Toronto or which condos have the cheapest price per square foot for a 1-bed in Edmonton. We use Tableau to create interactive visualizations based on the parameters specified by the user.
-
-![Market Trends section of the UI](https://lh3.googleusercontent.com/d/14LL5rFMkP46V9V9erpvKNKKr-G9sVpCX?authuser=0)
+2. **Market Trends**: Users can get overarching information about rental prices in specific geographic areas. For example, they can find out the average studio prices in Toronto or which condos have the cheapest price per square foot for a 1-bed in Edmonton. We use Tableau to create interactive visualizations based on the parameters specified by the user. ![Market Trends section of the UI](https://lh3.googleusercontent.com/d/14LL5rFMkP46V9V9erpvKNKKr-G9sVpCX?authuser=0)
 
 ### API Workflow
 
