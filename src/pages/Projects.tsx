@@ -17,25 +17,16 @@ function Projects() {
           />
         </h1>
         <p>
-          These are a few projects I've worked on that highlight my skills and
-          interests. If you want to see more short term team projects I've
-          worked on, check out my{" "}
-          <a
-            href="https://devpost.com/alyssadsouza"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Devpost
-          </a>{" "}
-          for hackathon submissions that were done over a weekend. My{" "}
+          I've documented a few of the projects that I've worked on which
+          highlight my skills and interests here. If you want to see more of my
+          work, see my{" "}
           <a
             href="https://github.com/alyssadsouza"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
-          </a>{" "}
-          also has most projects I've worked on.
+          </a>.
         </p>
       </div>
       <ProjectsTable />

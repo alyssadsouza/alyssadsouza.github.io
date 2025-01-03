@@ -20,11 +20,10 @@ function Home() {
         </h1>
         <h2 className="font-normal">I'm a software engineering undergrad.</h2>
         <p>
-          I'm a third-year at the University of Waterloo and as a student in the
-          co-op program I'm actively looking for software development
-          internships to expand and challenge my skillset. This portfolio
-          showcases my skills and interests through some of the projects I've
-          worked on.
+          I'm a fourth-year Software Engineering student at the University of
+          Waterloo, specializing in AI and Computational Math. With multiple
+          co-op terms of hands-on experience, I'm actively seeking software
+          development roles where I can apply and further develop my skills.
         </p>
         <Link
           to="/projects"

@@ -26,27 +26,19 @@ function About() {
           />
         </h1>
         <p>
-          I'm currently in my third year at the University of Waterloo, pursuing
-          an undergraduate degree in Software Engineering. As a student in the
-          co-op program, I have the unique opportunity to alternate between
-          academic studies and gaining practical work experience through 4-month
-          internships.
+          I'll be graduating in May 2026 from the University of Waterloo's Software
+          Engineering program, with extensive co-op experience across startups,
+          research labs, and enterprise environments. My work has ranged from
+          building scalable software systems to developing automation tools,
+          always with a focus on delivering clean, maintainable code.
         </p>
         <p>
-          My work experience spans a range of environments, from software
-          development at startups and a non-profit research organization, to
-          data extraction for a global food service company. In each role I’ve
-          contributed directly to codebases, which honed my development
-          skills and reinforced key elements of my degree, such as design
-          patterns, quality assurance, and problem-solving.
-        </p>
-        <p>
-          Recently, I've been exploring data processing and analysis through
-          personal projects. During my latest internship, I focused on data
-          extraction, utilizing techniques such as web crawling, python
-          scripting, and prompt engineering to extract and clean data. Overall,
-          I'm looking to continue expanding my skillset with each new experience
-          and to work on projects that make a tangible difference.
+          As part of my degree, I've most recently completed coursework in software
+          design and architecture, as well as computer networks, strengthening
+          my understanding of distributed systems, network protocols, and
+          performance modeling. I'm excited to apply these skills to software
+          development roles that demand both technical depth and creative
+          problem-solving.
         </p>
       </div>
     </div>
