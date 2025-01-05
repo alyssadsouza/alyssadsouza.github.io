@@ -122,7 +122,7 @@ export default function ProjectsTable() {
         >
           <div className="grid w-full gap-8 p-4 transition-all rounded-lg sm:grid-cols-5 bg-neutral-200/30 dark:bg-secondary-500/30 dark:hover:bg-secondary-500/60 hover:bg-neutral-200/60">
             <div className="hidden md:block">
-              <img className="object-cover w-full h-full rounded-md" src={project.thumbnailUrl} alt="" />
+              <img className="object-cover w-full h-32 rounded-md" src={project.thumbnailUrl} alt="" />
             </div>
             <span className="flex flex-col justify-between col-span-4 gap-4 md:col-span-3 md:text-base">
               <div className="flex flex-col gap-1">

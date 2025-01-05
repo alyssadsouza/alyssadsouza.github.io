@@ -57,13 +57,13 @@ export default function ProjectView() {
               ))}
             </div>
           </div>
-          <hr className="border-grayscale-50 dark:border-secondary-600" />
+          <hr/>
 
           <div className="flex flex-col gap-12 content">
             <div className="min-w-full min-h-[30rem]">
               <iframe
                 title={`project-video-${currentProject.title}`}
-                className="w-full h-full"
+                className="sm:max-w-full h-full"
                 src={currentProject.videoUrl}
                 allowFullScreen
               ></iframe>

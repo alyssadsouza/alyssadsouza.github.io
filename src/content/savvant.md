@@ -11,7 +11,7 @@ tags:
 repositoryUrl: "https://github.com/alyssadsouza/savvant"
 videoUrl: "https://www.youtube.com/embed/Z87lOSmQRqs"
 thumbnailUrl: "https://github.com/alyssadsouza/alyssadsouza.github.io/blob/main/src/images/savvant-homepage.png?raw=true"
-description: "An NLP app that processes e-commerce reviews with sentiment analysis to help determine if you should buy a product."
+description: "An NLP app that analyzes e-commerce reviews using sentiment analysis to assess product quality and assist with informed purchasing decisions."
 ---
 
 ## What is it?

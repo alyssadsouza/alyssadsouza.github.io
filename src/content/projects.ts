@@ -1,4 +1,9 @@
 import {
+  attributes as f1tenthAttributes,
+  ReactComponent as f1tenthHtml,
+} from "./f1tenth.md";
+
+import {
   attributes as savvantAttributes,
   ReactComponent as savvantHtml,
 } from "./savvant.md";
@@ -22,6 +27,7 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  { ...f1tenthAttributes, content: f1tenthHtml },
   { ...savvantAttributes, content: savvantHtml },
   { ...rentriteAttributes, content: rentriteHtml },
 ];

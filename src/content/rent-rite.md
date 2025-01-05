@@ -3,7 +3,6 @@ id: "rentrite"
 title: "RentRite"
 creationDate: "Nov 12, 2023"
 tags: 
-  - "ML"
   - "Random Forests"
   - "numpy"
   - "pandas"
@@ -11,8 +10,8 @@ tags:
   - "Fast API"
   - "React + TS"
 repositoryUrl: "https://github.com/ShivamJ07/RentRite"
-tryItOutUrl: "https://rent-rite.vercel.app/"
-videoUrl: "https://drive.google.com/file/d/10O6HdGpyJRKPhlgwmQVKQWOthnBsaUxZ/preview"
+# tryItOutUrl: "https://rent-rite.vercel.app/"
+videoUrl: "https://drive.google.com/file/d/1WTX6H7Ipr7Af-1TmTXb9m_bz2Vx8toSa/preview"
 thumbnailUrl: "https://lh3.googleusercontent.com/d/1ZUgG_vduuaTCBxzcCJBw1c33t50iSDDS?authuser=0"
 description: "A price prediction model and price trend analysis tool for apartment rentals in major Canadian cities."
 ---
@@ -35,7 +34,6 @@ The project has several key components: data acquisition, model training, an API
 ### User Workflow
 
 Users interact with RentRite through two main workflows:
-
 
 1. **Price Predictions**: Users can get price predictions for specific properties based on detailed parameters such as location, size, and amenities. This is helpful for property owners trying to maximize their revenue or renters planning their budgets. For example, a user can find out the expected price for a one-bed apartment (600 SqFt, 1 bath, pets allowed, dishwasher) in Liberty Village, Toronto. ![Price Predictions section of the UI](https://lh3.googleusercontent.com/d/1YUbickGVuA_W-C5e2ROmVqicCHTeDSL5?authuser=0)
 
@@ -79,4 +77,4 @@ As some general thoughts:
 - Using Tableau for visualizations makes the data more accessible and insightful, and it was really easy to integrate into the web app.
 - Using a random forest model from scikit-learn for our price predictions made it very effective for data that matches our training set, but definitely limits its effectiveness on outlier data, so reworking to a different type of model would probably greatly improve its success. After learning more about using ML models for data analysis and prediction, I would love to return to this project and experiment to get better results.
 
-With solid improvements to the model side, insights and predictions from RentRite can genuinely help people make better rental decisions, whether they are looking for a new place during their internships or trying to set competitive rental prices. Overall, working on this project taught me a lot about data pipelines, machine learning, and the practical aspects of deploying a full-stack application so I definitely consider it a worthwhile effort.
+For now we've stopped data collection since the time and resources spent on scraping thousands of listings monthly isn't justified for a project that we aren't actively improving. However, with solid improvements to the model side, insights and predictions from RentRite can genuinely help people make better rental decisions, whether they are looking for a new place during their internships or trying to set competitive rental prices, so it's always worth considering returning to. Overall, working on this project taught me a lot about data pipelines, machine learning, and the practical aspects of deploying a full-stack application so I definitely consider it a worthwhile effort.
